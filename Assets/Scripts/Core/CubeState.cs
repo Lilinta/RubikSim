@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using static Mapping;
 
 /// <summary>
@@ -22,6 +23,19 @@ public class CubeState
         for (int i = 0; i < cubies.Length; i++)
         {
             cubies[i] = new Cubie();
+        }
+        for (int i = 0; i < cubies.Length; i++)
+        {
+            Vector3Int pos = IdxToPos(i);
+            int x = pos.x;
+            int y = pos.y;
+            int z = pos.z;
+            if (x != 1) cubies[i][0] = -1;
+            if (y != 1) cubies[i][1] = -1;
+            if (z != 1) cubies[i][2] = -1;
+            if (x != -1) cubies[i][3] = -1;
+            if (y != -1) cubies[i][4] = -1;
+            if (z != -1) cubies[i][5] = -1;
         }
     }
 

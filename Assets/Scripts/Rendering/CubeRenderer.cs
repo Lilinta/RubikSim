@@ -87,18 +87,18 @@ public class CubeRenderer : MonoBehaviour
         for (int i = 0; i < tmp.Length; i++)
         {
             layer[idx] = cubies[tmp[i]];
-            Debug.Log("GetLayer corner: " + tmp[i].ToString());
+            //Debug.Log("GetLayer corner: " + tmp[i].ToString());
             idx++;
         }
         tmp = GetEdges(face);
         for (int i = 0; i < tmp.Length; i++)
         {
             layer[idx] = cubies[tmp[i]];
-            Debug.Log("GetLayer edges: " + tmp[i].ToString());
+            //Debug.Log("GetLayer edges: " + tmp[i].ToString());
             idx++;
         }
         layer[idx] = cubies[GetCenter(face)];
-        Debug.Log("GetLayer center: " + GetCenter(face).ToString());
+        //Debug.Log("GetLayer center: " + GetCenter(face).ToString());
         idx++;
         if (idx != 9) throw new Exception("GetLayer: " + idx.ToString());
         return layer;

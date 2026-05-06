@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using UnityEngine;
 
 /// <summary>
@@ -14,7 +15,7 @@ using UnityEngine;
 /// This class contains no state and acts as a global lookup table
 /// describing the geometric structure of the cube.
 /// </summary>
-class Mapping
+static class Mapping
 {
     public const int FRONT = 0;
     public const int UP = 1;
@@ -22,7 +23,26 @@ class Mapping
     public const int BACK = 3;
     public const int DOWN = 4;
     public const int LEFT = 5;
+    public static int[] CORNER_LIST = new int[] {0, 2, 20, 18, 6, 8, 26, 24};
+    public static int[] EDGE_LIST = new int[] { 9, 1, 11, 19, 15, 7, 17, 25, 3, 5, 23, 21};
+    public static int[] TO_KOCIEMBA_IDX;
 
+    static Mapping()
+    {
+        TO_KOCIEMBA_IDX = new int[27];
+        for (int i = 0; i < TO_KOCIEMBA_IDX.Length; i++)
+        {
+            TO_KOCIEMBA_IDX[i] = 0;
+        }
+        for (int i = 0; i < CORNER_LIST.Length; i++)
+        {
+            TO_KOCIEMBA_IDX[CORNER_LIST[i]] = i;
+        }
+        for (int i = 0; i < EDGE_LIST.Length; i++)
+        {
+            TO_KOCIEMBA_IDX[EDGE_LIST[i]] = i;
+        }
+    }
     /// <summary>
     /// Converts a linear cubie index (0..26) into its 3D position in cube space.
     /// 
@@ -215,14 +235,29 @@ class Mapping
     /// </summary>
     /// <param name="face">Face index</param>
     /// <returns>Rotation axis vector</returns>
-    public static Vector3 GetAxis(int face)
+    public static Vector3Int GetAxis(int face)
     {
-        if (face == FRONT) return new Vector3(1, 0, 0);
-        else if (face == UP) return new Vector3(0, 1, 0);
-        else if (face == RIGHT) return new Vector3(0, 0, 1);
-        else if (face == BACK) return new Vector3(-1, 0, 0);
-        else if (face == DOWN) return new Vector3(0, -1, 0);
-        else if (face == LEFT) return new Vector3(0, 0, -1);
+        if (face == FRONT) return new Vector3Int(1, 0, 0);
+        else if (face == UP) return new Vector3Int(0, 1, 0);
+        else if (face == RIGHT) return new Vector3Int(0, 0, 1);
+        else if (face == BACK) return new Vector3Int(-1, 0, 0);
+        else if (face == DOWN) return new Vector3Int(0, -1, 0);
+        else if (face == LEFT) return new Vector3Int(0, 0, -1);
         else throw new Exception("GetAxis: Invalid value for face");
+    }
+
+    public static Move IdxToMove(int idx)
+    {
+        if (idx >= 18 || idx < 0) throw new Exception("IdxToMove: Invalid value for idx");;
+        int face = idx / 3;
+        int type = idx % 3;
+        if (type == 0) return new Move(face, false, false);
+        else if (type == 1) return new Move(face, false, true);
+        else return new Move(face, true, false);
+    }
+
+    public static int MoveToIdx(Move move)
+    {
+        return move.face * 3 + Convert.ToInt32(move.rev) * 2 + Convert.ToInt32(move.is180) * 1;
     }
 }

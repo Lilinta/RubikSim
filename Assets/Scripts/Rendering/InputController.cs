@@ -65,5 +65,13 @@ public class InputController : MonoBehaviour
         {
             gameManager.Scramble();
         }
+        if (Keyboard.current.sKey.wasPressedThisFrame)
+        {
+            gameManager.Solve();
+        }
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            gameManager.DebugOutput();
+        }
     }
 }

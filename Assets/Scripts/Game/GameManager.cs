@@ -18,15 +18,40 @@ public class GameManager : MonoBehaviour
 {
     public CubeRenderer render;
     public CubeAnimator animator;
-
-    private CubeState currentState;
+    private KociembaSolver solver = new KociembaSolver();
+    private CubeState current_state;
     private bool is_static = true;
     void Start()
     {
-        currentState = new CubeState();
-        render.Initialize(currentState);
+        current_state = new CubeState();
+        render.Initialize(current_state);
     }
 
+    public void DebugOutput()
+    {
+        CubieModel start = new CubieModel(current_state);
+        // Đảm bảo tables đã build
+        Debug.Log("_________________________");
+        Debug.Log("CubieModel");
+        Debug.Log("CO: ");
+        DebugArray(start.corner_ori);
+        Debug.Log("EO: ");
+        DebugArray(start.edge_ori);
+        Debug.Log("CP: ");
+        DebugArray(start.corner_perm);
+        Debug.Log("EP: ");
+        DebugArray(start.edge_perm);
+        Debug.Log("-------------------------");
+    }
+    void DebugArray(int[] arr)
+    {
+        string txt = string.Empty;
+        foreach (int i in arr)
+        {
+            txt += i.ToString() + " ";
+        }
+        Debug.Log(txt);
+    }
     /// <summary>
     /// Attempts to apply a move to the cube.
     /// 
@@ -56,8 +81,8 @@ public class GameManager : MonoBehaviour
         yield return animator.AnimateMove(move);
 
         is_static = true;
-        currentState.ApplyMove(move);
-        render.RenderState(currentState);
+        current_state.ApplyMove(move);
+        render.RenderState(current_state);
     }
 
     /// <summary>
@@ -66,21 +91,29 @@ public class GameManager : MonoBehaviour
 
     public void Scramble()
     {
-        StartCoroutine(ScrambleRoutine());
+        List<Move> scramble = Scrambler.GenerateScramble(30);
+        StartCoroutine(ApplyMoveSeqRoutine(scramble));
     }
 
+    public void Solve()
+    {
+        List<Move> moves = solver.Solve(current_state);
+        StartCoroutine(ApplyMoveSeqRoutine(moves));
+    }
     /// <summary>
     /// Coroutine that applies a series of scramble moves sequentially,
     /// waiting for each move to finish before starting the next.
     /// </summary>
-    private IEnumerator ScrambleRoutine()
+    private IEnumerator ApplyMoveSeqRoutine(List<Move> moves)
     {
-        List<Move> scramble = Scrambler.GenerateScramble(30);
-        for (int i = 0;;)
+        if (moves.Count != 0)
         {
-            if (ApplyMove(scramble[i])) i++;
-            if (i >= scramble.Count) break;
-            yield return null;
+            for (int i = 0; ;)
+            {
+                if (ApplyMove(moves[i])) i++;
+                if (i >= moves.Count) break;
+                yield return null;
+            }
         }
     }
 }
