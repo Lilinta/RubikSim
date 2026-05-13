@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_challenge_mode_events" kind="class" language="C#" prot="public">
+    <compoundname>ChallengeModeEvents</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_challenge_mode_events_1ab621deeb5d399ce4c4519554a80b1c73" prot="private" static="no" mutable="no">
+        <type>UIDocument</type>
+        <definition>UIDocument ChallengeModeEvents.document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <qualifiedname>ChallengeModeEvents.document</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="11" column="24" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_challenge_mode_events_1a715c83a894c9106bb037984e74e77a78" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button ChallengeModeEvents.return_button</definition>
+        <argsstring></argsstring>
+        <name>return_button</name>
+        <qualifiedname>ChallengeModeEvents.return_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="12" column="20" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_challenge_mode_events_1a982948a67a80783dd6bfa3b7d2fd98eb" prot="private" static="no" mutable="no">
+        <type>Label</type>
+        <definition>Label ChallengeModeEvents.timer_label</definition>
+        <argsstring></argsstring>
+        <name>timer_label</name>
+        <qualifiedname>ChallengeModeEvents.timer_label</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="13" column="19" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_challenge_mode_events_1a02d0b0514fed93d192166b880d8e2e8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeModeEvents.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>ChallengeModeEvents.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="15" column="18" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_challenge_mode_events_1add2cc7e7c71fff823e8a72241c1ee464" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeModeEvents.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>ChallengeModeEvents.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="24" column="18" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_challenge_mode_events_1a1f6ffdb9a5f9cd2829086bf24f32daca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeModeEvents.OnReturnClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnReturnClick</name>
+        <qualifiedname>ChallengeModeEvents.OnReturnClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="29" column="18" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_challenge_mode_events_1ad91f9f9b07042dc68f6e3ad8f6db1f21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeModeEvents.UpdateTimer</definition>
+        <argsstring>(float time)</argsstring>
+        <name>UpdateTimer</name>
+        <qualifiedname>ChallengeModeEvents.UpdateTimer</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Updates the UI label with the formatted elapsed time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ChallengeModeEvents.cs" line="38" column="17" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="38" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages UI interactions for the Challenge Mode (UI Toolkit). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ChallengeModeEvents</label>
+        <link refid="class_challenge_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ChallengeModeEvents</label>
+        <link refid="class_challenge_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/ChallengeModeEvents.cs" line="9" column="7" bodyfile="Scripts/UI/ChallengeModeEvents.cs" bodystart="10" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_challenge_mode_events_1a02d0b0514fed93d192166b880d8e2e8e" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>Awake</name></member>
+      <member refid="class_challenge_mode_events_1ab621deeb5d399ce4c4519554a80b1c73" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>document</name></member>
+      <member refid="class_challenge_mode_events_1add2cc7e7c71fff823e8a72241c1ee464" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>OnDisable</name></member>
+      <member refid="class_challenge_mode_events_1a1f6ffdb9a5f9cd2829086bf24f32daca" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>OnReturnClick</name></member>
+      <member refid="class_challenge_mode_events_1a715c83a894c9106bb037984e74e77a78" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>return_button</name></member>
+      <member refid="class_challenge_mode_events_1a982948a67a80783dd6bfa3b7d2fd98eb" prot="private" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>timer_label</name></member>
+      <member refid="class_challenge_mode_events_1ad91f9f9b07042dc68f6e3ad8f6db1f21" prot="public" virt="non-virtual"><scope>ChallengeModeEvents</scope><name>UpdateTimer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

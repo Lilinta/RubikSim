@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_2d7708a101661e394f02dd24c82fe353" kind="dir">
+    <compoundname>Scripts/Core</compoundname>
+    <innerfile refid="_cube_state_8cs">CubeState.cs</innerfile>
+    <innerfile refid="_cubie_8cs">Cubie.cs</innerfile>
+    <innerfile refid="_mapping_8cs">Mapping.cs</innerfile>
+    <innerfile refid="_move_8cs">Move.cs</innerfile>
+    <innerfile refid="_scrambler_8cs">Scrambler.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Core/"/>
+  </compounddef>
+</doxygen>

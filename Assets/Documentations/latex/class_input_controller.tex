@@ -1,0 +1,49 @@
+\doxysection{Input\+Controller Class Reference}
+\hypertarget{class_input_controller}{}\label{class_input_controller}\index{InputController@{InputController}}
+
+
+Temporary input handler used for testing cube interactions via keyboard. Only function when pkey is pressed.  
+
+
+Inheritance diagram for Input\+Controller:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_input_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_game_manager}{Game\+Manager}} \doxymbox{\hyperlink{class_input_controller_aa07f8935ed606c164ce25aabde591104}{game\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Temporary input handler used for testing cube interactions via keyboard. Only function when pkey is pressed. 
+
+This controller maps specific keyboard keys to Rubik’s Cube face moves and forwards them to Game\+Manager for execution. It is designed for rapid debugging and development before the final mouse-\/based gesture input system is implemented.
+
+Key mappings:\+ F or 0 → Front face U or 1 → Up face R or 2 → Right face B or 3 → Back face D or 4 → Down face L or 5 → Left face
+
+Holding the Shift key while pressing a face key will apply the move in reverse (counter–clockwise).
+
+Pressing:\+ K → Triggers a scramble sequence. S → Triggers a solving sequence Q → Debug Output
+
+This script uses Unity\textquotesingle{}s new Input System (Unity\+Engine.\+Input\+System) and checks for key presses every frame in Update.
+
+Note:\+ This controller is intended only for development and testing purposes. In the final version of the application, cube manipulation will be driven by mouse drag gestures and raycasting instead of direct keyboard input. 
+
+\label{class_input_controller_doc-variable-members}
+\Hypertarget{class_input_controller_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_input_controller_aa07f8935ed606c164ce25aabde591104}\index{InputController@{InputController}!gameManager@{gameManager}}
+\index{gameManager@{gameManager}!InputController@{InputController}}
+\doxysubsubsection{\texorpdfstring{gameManager}{gameManager}}
+{\footnotesize\ttfamily \label{class_input_controller_aa07f8935ed606c164ce25aabde591104} 
+\doxymbox{\hyperlink{class_game_manager}{Game\+Manager}} Input\+Controller.\+game\+Manager}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Rendering/\+\doxymbox{\hyperlink{_input_controller_8cs}{Input\+Controller.\+cs}}\end{DoxyCompactItemize}

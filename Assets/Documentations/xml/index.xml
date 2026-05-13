@@ -1,0 +1,366 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.17.0" xml:lang="en-US">
+  <compound refid="class_camera_controller" kind="class"><name>CameraController</name>
+    <member refid="class_camera_controller_1a53c76c1371f4e5575793b1fb66a7f53b" kind="variable"><name>cam</name></member>
+    <member refid="class_camera_controller_1a8ed06bba3c7a7202e4f67299341267e6" kind="variable"><name>rotate_sensitivity</name></member>
+    <member refid="class_camera_controller_1ad47c6f319a98a9b0709afde15aa813a1" kind="variable"><name>zoom_sensitivity</name></member>
+    <member refid="class_camera_controller_1ad3a0b0ab324774254514b2c744aecfb8" kind="variable"><name>target</name></member>
+    <member refid="class_camera_controller_1a6c1a8c2ca7e67154970931ed2a88563e" kind="variable"><name>minZoom</name></member>
+    <member refid="class_camera_controller_1a5ede1338f553ab75fb61f85405fda8e7" kind="variable"><name>maxZoom</name></member>
+    <member refid="class_camera_controller_1a7c4f486f4bcbd1d54a346fdce9707bd5" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_challenge_manager" kind="class"><name>ChallengeManager</name>
+    <member refid="class_challenge_manager_1a277ca967fd83378f37938873539c4022" kind="variable"><name>game_manager</name></member>
+    <member refid="class_challenge_manager_1ac24fd52f81d5c6027915a9b92a205ea2" kind="variable"><name>challenge_mode_events</name></member>
+    <member refid="class_challenge_manager_1ace5e26cebbcc766133b9495dd4c43785" kind="variable"><name>celebration_sound</name></member>
+    <member refid="class_challenge_manager_1a7047dd81603fee2e17a547b082700d9f" kind="variable"><name>time</name></member>
+    <member refid="class_challenge_manager_1a9e54520f473e31a18d10afaf0fc744db" kind="variable"><name>finished</name></member>
+    <member refid="class_challenge_manager_1a15dfadd0f1038f4239274b3edd273e0d" kind="function"><name>Start</name></member>
+    <member refid="class_challenge_manager_1a62cb1f1da05c5301502a5c5777e673c0" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_challenge_mode_events" kind="class"><name>ChallengeModeEvents</name>
+    <member refid="class_challenge_mode_events_1ab621deeb5d399ce4c4519554a80b1c73" kind="variable"><name>document</name></member>
+    <member refid="class_challenge_mode_events_1a715c83a894c9106bb037984e74e77a78" kind="variable"><name>return_button</name></member>
+    <member refid="class_challenge_mode_events_1a982948a67a80783dd6bfa3b7d2fd98eb" kind="variable"><name>timer_label</name></member>
+    <member refid="class_challenge_mode_events_1a02d0b0514fed93d192166b880d8e2e8e" kind="function"><name>Awake</name></member>
+    <member refid="class_challenge_mode_events_1add2cc7e7c71fff823e8a72241c1ee464" kind="function"><name>OnDisable</name></member>
+    <member refid="class_challenge_mode_events_1a1f6ffdb9a5f9cd2829086bf24f32daca" kind="function"><name>OnReturnClick</name></member>
+    <member refid="class_challenge_mode_events_1ad91f9f9b07042dc68f6e3ad8f6db1f21" kind="function"><name>UpdateTimer</name></member>
+  </compound>
+  <compound refid="class_coordinate" kind="class"><name>Coordinate</name>
+    <member refid="class_coordinate_1a564a2844092f4c007bf0e4244b27645a" kind="variable"><name>fact</name></member>
+    <member refid="class_coordinate_1ad4e909f9d4ee6367a2acfc0b05874526" kind="variable"><name>comb</name></member>
+    <member refid="class_coordinate_1a2fea93e87b51253631c3d0655e26855f" kind="function"><name>Coordinate</name></member>
+    <member refid="class_coordinate_1a6dc3889eec92307cb337416bc59c206b" kind="function"><name>IsSliceEdge</name></member>
+    <member refid="class_coordinate_1a41d4142ccf7cad16dfd8fed9f6dd9bc3" kind="function"><name>PermToIdx</name></member>
+    <member refid="class_coordinate_1a86b27d79051c4d2e8c4d578ec5e8962f" kind="function"><name>IdxToPerm</name></member>
+    <member refid="class_coordinate_1ae7234edd248246ace682aa883fc77ecd" kind="function"><name>EncodeCO</name></member>
+    <member refid="class_coordinate_1a8ad413edaec6d7becfd9f3d65c752e82" kind="function"><name>DecodeCO</name></member>
+    <member refid="class_coordinate_1a03bd1b4cbe0ec47eb9cb890c547bc08a" kind="function"><name>EncodeEO</name></member>
+    <member refid="class_coordinate_1a6f65721aa7301fae5adbcad4ecf5060e" kind="function"><name>DecodeEO</name></member>
+    <member refid="class_coordinate_1a7f95c605582c5ca434d7276e88db7527" kind="function"><name>EncodeUDSlice</name></member>
+    <member refid="class_coordinate_1a1f6500ea35281594f8a2202f1b4b6e24" kind="function"><name>DecodeUDSlice</name></member>
+    <member refid="class_coordinate_1ab93e61ae81e56c4928edbc7c48a06ffc" kind="function"><name>EncodeCornerPerm</name></member>
+    <member refid="class_coordinate_1a5d988691e93947bfda68d3bfca6025ab" kind="function"><name>DecodeCornerPerm</name></member>
+    <member refid="class_coordinate_1abc6e6f9f75bbfa0b17fb3cba08a846fe" kind="function"><name>EncodeEdgePerm</name></member>
+    <member refid="class_coordinate_1ad6a88828158c99481e4588ea2eef0fc6" kind="function"><name>DecodeEdgePerm</name></member>
+    <member refid="class_coordinate_1a9ccd0a78d4f236fa845cc6263c9218cc" kind="function"><name>EncodeUDSlice2</name></member>
+    <member refid="class_coordinate_1a10a073cc65f8bbdb07f2fee0477fd272" kind="function"><name>DecodeUDSlice2</name></member>
+  </compound>
+  <compound refid="class_cube_animator" kind="class"><name>CubeAnimator</name>
+    <member refid="class_cube_animator_1a41fa18534ecebf8b5a761e7363a9a62e" kind="variable"><name>rotate_speed</name></member>
+    <member refid="class_cube_animator_1a89a1bec30183fc7dda7978af9f5b04c4" kind="variable"><name>render</name></member>
+    <member refid="class_cube_animator_1af92dfe465af2781d89e8a1086a74326b" kind="function"><name>AnimateMove</name></member>
+  </compound>
+  <compound refid="class_cube_renderer" kind="class"><name>CubeRenderer</name>
+    <member refid="class_cube_renderer_1a76f0ba7d2c05ea9e39b08eaebc84da8f" kind="variable"><name>cubie_prefab</name></member>
+    <member refid="class_cube_renderer_1acc283f993759eecbac3078cc76d5b452" kind="variable"><name>cubies</name></member>
+    <member refid="class_cube_renderer_1aae4f27c4a89111fa310df9793cac6a62" kind="function"><name>Initialize</name></member>
+    <member refid="class_cube_renderer_1aa209ca63c47a0e7d78587e19a7e7049e" kind="function"><name>RenderState</name></member>
+    <member refid="class_cube_renderer_1a8a9977a62312e9b6a9c6270767a037a3" kind="function"><name>GetLayer</name></member>
+    <member refid="class_cube_renderer_1a0656c952b329c1e68f05f979f80c2c89" kind="function"><name>CreateCubies</name></member>
+  </compound>
+  <compound refid="class_cube_state" kind="class"><name>CubeState</name>
+    <member refid="class_cube_state_1a8bc26b052b48c9fa9ee53feb49e72214" kind="variable"><name>cubies</name></member>
+    <member refid="class_cube_state_1aaaaef5797e38934aa6b6f937bd91922c" kind="property"><name>this[int index]</name></member>
+    <member refid="class_cube_state_1a34a88d82d702e3dac2c5c3d0a0862323" kind="function"><name>CubeState</name></member>
+    <member refid="class_cube_state_1aa11a5282d16427ddafb21a2889fdbd89" kind="function"><name>Clone</name></member>
+    <member refid="class_cube_state_1aaab9444d4ed836e51f53b66a49015ee7" kind="function"><name>ApplyMove</name></member>
+    <member refid="class_cube_state_1aef91d0fda6fd48d2944a1875cce8fdc0" kind="function"><name>IsSolved</name></member>
+    <member refid="class_cube_state_1ae0b2ef17e1e0425ae573a53f57f7e159" kind="function"><name>IsValid</name></member>
+  </compound>
+  <compound refid="class_cubie" kind="class"><name>Cubie</name>
+    <member refid="class_cubie_1a39e96a809e9eb148b11dce1e7616524f" kind="variable"><name>color</name></member>
+    <member refid="class_cubie_1a42f175e577ec79bd5b964cd556a6e9eb" kind="property"><name>this[int index]</name></member>
+    <member refid="class_cubie_1aa1866b569e691d135a290ccff2ecc2ec" kind="function"><name>Cubie</name></member>
+    <member refid="class_cubie_1a42403b7e36fe3f78648a3fd8fc703d38" kind="function"><name>ApplyMove</name></member>
+  </compound>
+  <compound refid="class_cubie_model" kind="class"><name>CubieModel</name>
+    <member refid="class_cubie_model_1a8099667036df88cbbef7987e39ede025" kind="variable"><name>corner_perm</name></member>
+    <member refid="class_cubie_model_1ae8c79b1a2a03004a72cc2d011bce2714" kind="variable"><name>corner_ori</name></member>
+    <member refid="class_cubie_model_1a24fddfd21000aff30a460c2f78886de3" kind="variable"><name>edge_perm</name></member>
+    <member refid="class_cubie_model_1aa61f36891715a1ebe9a0427f706af1c3" kind="variable"><name>edge_ori</name></member>
+    <member refid="class_cubie_model_1a54f382f794b763a5521ccc9283b512b5" kind="variable"><name>FACE_CORNERS</name></member>
+    <member refid="class_cubie_model_1a8ba4fa23e1fa51b3cbed62e0207a7834" kind="variable"><name>FACE_EDGES</name></member>
+    <member refid="class_cubie_model_1a6b7e54b12dff3b9558a6b53375067d73" kind="variable"><name>CORNER_ORI_DELTA</name></member>
+    <member refid="class_cubie_model_1a7f41b0b29d3d9ea6fe8f7d0e87285107" kind="variable"><name>EDGE_ORI_DELTA</name></member>
+    <member refid="class_cubie_model_1ab6cc56d2bb3e37471272c60224276718" kind="function"><name>CubieModel</name></member>
+    <member refid="class_cubie_model_1aec5a3ca7fd6fdd0177c7f8759b38d759" kind="function"><name>CubieModel</name></member>
+    <member refid="class_cubie_model_1ac364e66e090dc9d18d1fc62d0d7ee476" kind="function"><name>Clone</name></member>
+    <member refid="class_cubie_model_1a4f6be8ba56b91dbd00bf4f92b7753d88" kind="function"><name>ApplyMove</name></member>
+    <member refid="class_cubie_model_1ac2bac3679d7f95b17d23110cf3c68bfb" kind="function"><name>IsSolvable</name></member>
+    <member refid="class_cubie_model_1a90c1fa06c139994c08d79dcdfa71e147" kind="function"><name>ApplyQuarterClockwiseMove</name></member>
+    <member refid="class_cubie_model_1a6d7e04f0f23acbdde41a850532e30e22" kind="function"><name>Cycle</name></member>
+    <member refid="class_cubie_model_1afa9243fbdcbada9d23c8fdfb7c16955c" kind="function"><name>PermParity</name></member>
+  </compound>
+  <compound refid="class_face_button_events" kind="class"><name>FaceButtonEvents</name>
+    <member refid="class_face_button_events_1ad10f52159a15d008be71e0dae3359416" kind="function"><name>OnFaceButtonClick</name></member>
+  </compound>
+  <compound refid="class_free_mode_events" kind="class"><name>FreeModeEvents</name>
+    <member refid="class_free_mode_events_1aba4a65966ebf6534c78c4b9a551bcd9f" kind="variable"><name>game_manager</name></member>
+    <member refid="class_free_mode_events_1a1b57627aa66a66a43cf03f40b4ee604b" kind="variable"><name>solver_manager</name></member>
+    <member refid="class_free_mode_events_1aeb33c986f5ab54e5268488ee25e51f01" kind="variable"><name>import_container</name></member>
+    <member refid="class_free_mode_events_1aa647c734f0d1643ae790f06be960e62a" kind="variable"><name>touch_surfaces</name></member>
+    <member refid="class_free_mode_events_1a13137b47cdd1893515f1daed4a3b492a" kind="variable"><name>document</name></member>
+    <member refid="class_free_mode_events_1a38b37645905f9aa4f23cd15fe954dfe7" kind="variable"><name>container</name></member>
+    <member refid="class_free_mode_events_1acd08e25a389b7f63c10be04b72395f6a" kind="variable"><name>return_button</name></member>
+    <member refid="class_free_mode_events_1a3ae1c4897ca4667e3586a2634d2ba81d" kind="variable"><name>import_button</name></member>
+    <member refid="class_free_mode_events_1a41846cf3c8c11f1cc5ab89be60191ef2" kind="variable"><name>scramble_button</name></member>
+    <member refid="class_free_mode_events_1a6c452dedcce0082c56e7cc64d7a58920" kind="variable"><name>solve_button</name></member>
+    <member refid="class_free_mode_events_1a4a5e2ea2a0c06aa5fa9f0c6b7e3de5ca" kind="variable"><name>solver_container</name></member>
+    <member refid="class_free_mode_events_1aa5eed745c0bcd5f653493e098ce209bf" kind="variable"><name>solver_return_button</name></member>
+    <member refid="class_free_mode_events_1a6d003105edcd97974c8309cf84efd930" kind="variable"><name>solver_backward_button</name></member>
+    <member refid="class_free_mode_events_1a429e3d98b6e423adedaecdbcf3c480fe" kind="variable"><name>solver_forward_button</name></member>
+    <member refid="class_free_mode_events_1a59d5de67250ec2e342cb1e23c0dc3545" kind="variable"><name>is_solvable</name></member>
+    <member refid="class_free_mode_events_1a1e0dd686cdc07f06e57af3e8f7f59713" kind="function"><name>Awake</name></member>
+    <member refid="class_free_mode_events_1ac4605806c2a42799d3b458c71bdcfe25" kind="function"><name>OnDisable</name></member>
+    <member refid="class_free_mode_events_1aaedea9b5d3fd1b68abe686f7566c69e3" kind="function"><name>OnReturnClick</name></member>
+    <member refid="class_free_mode_events_1a43d7115334b2e00fff6603ac9875fdf7" kind="function"><name>OnImportClick</name></member>
+    <member refid="class_free_mode_events_1a56da8d4d2ca3643ad3abb8e4b79bef5e" kind="function"><name>OnScrambleClick</name></member>
+    <member refid="class_free_mode_events_1a4fc56f1d2b32692398af360052fb05fa" kind="function"><name>OnSolveClick</name></member>
+    <member refid="class_free_mode_events_1a769063761e9c6ca5d2c8dbe026791241" kind="function"><name>OnSolverReturnClick</name></member>
+    <member refid="class_free_mode_events_1acfe3eeb87ab22ff9c518d0696815af39" kind="function"><name>OnSolverBackwardClick</name></member>
+    <member refid="class_free_mode_events_1abff548a65f8ee8da5ca008b40cd02dc9" kind="function"><name>OnSolverForwardClick</name></member>
+    <member refid="class_free_mode_events_1a563d09f27f1970dfa702476f6f49c18c" kind="function"><name>IsSolvable</name></member>
+  </compound>
+  <compound refid="class_game_manager" kind="class"><name>GameManager</name>
+    <member refid="class_game_manager_1a9c19f150ad2c89a989602809a2d15bcb" kind="variable"><name>render</name></member>
+    <member refid="class_game_manager_1ac3ac243b5a86f43928b763882deff38e" kind="variable"><name>animator</name></member>
+    <member refid="class_game_manager_1a7d7f7b6a375b53bc347d151a79cc56b2" kind="variable"><name>current_state</name></member>
+    <member refid="class_game_manager_1af8cea40d614a1d7c6354ae836d2bbc28" kind="variable"><name>solver</name></member>
+    <member refid="class_game_manager_1aa5913a1369f0f2c65a2cad37bd1ec311" kind="variable"><name>is_static</name></member>
+    <member refid="class_game_manager_1a5ccfacd027ad08eeb4ff1f25a7f59c98" kind="function"><name>Start</name></member>
+    <member refid="class_game_manager_1a3be6a54512750f421eaad8a5c3d98934" kind="function"><name>DebugArray</name></member>
+    <member refid="class_game_manager_1ab862d2bfd5f8b7100e983252c8f00053" kind="function"><name>ApplyMoveRoutine</name></member>
+    <member refid="class_game_manager_1a1d069eb68ed793d6b716a2bf4bc59ced" kind="function"><name>ApplyMoveSeqRoutine</name></member>
+    <member refid="class_game_manager_1a57823aded891b017efede1e7c4e1bd78" kind="function"><name>DebugOutput</name></member>
+    <member refid="class_game_manager_1a31bdf6c3c101d3164a633eba843bd608" kind="function"><name>ApplyMove</name></member>
+    <member refid="class_game_manager_1af5e71ad1f9947c863e37335262e6b073" kind="function"><name>Import</name></member>
+    <member refid="class_game_manager_1aa344e962c743cef379f9509418e4c275" kind="function"><name>IsSolvable</name></member>
+    <member refid="class_game_manager_1a29130044c8fcd6eff082eb95a419ab40" kind="function"><name>Scramble</name></member>
+    <member refid="class_game_manager_1a8c5fc33f2108d9f6d1f4feec9195d2db" kind="function"><name>GetSolverMoves</name></member>
+    <member refid="class_game_manager_1a1fa92c3e2f085a4eb340474804203236" kind="function"><name>Solve</name></member>
+    <member refid="class_game_manager_1a83117f07437de42743711b3b4241b799" kind="function"><name>IsSolved</name></member>
+  </compound>
+  <compound refid="class_import_events" kind="class"><name>ImportEvents</name>
+    <member refid="class_import_events_1a3168a89c5a5a17cce6c5f891486d97fa" kind="variable"><name>import_container</name></member>
+    <member refid="class_import_events_1a7032aec5190a400e00101cfefb3df596" kind="variable"><name>touch_surfaces</name></member>
+    <member refid="class_import_events_1a0ebf4a0f128e9bd5469c533e099ba26f" kind="variable"><name>game_manager</name></member>
+    <member refid="class_import_events_1aba1a3efc714ce79b53e19b7850fe950e" kind="variable"><name>free_mode_events</name></member>
+    <member refid="class_import_events_1a23a5d8aed56ab08064d5c7a0e12cd180" kind="function"><name>OnCancelButtonClick</name></member>
+    <member refid="class_import_events_1a9950e2f9ac0f438a01b184b828e1e573" kind="function"><name>OnConfirmButtonClick</name></member>
+  </compound>
+  <compound refid="class_input_controller" kind="class"><name>InputController</name>
+    <member refid="class_input_controller_1aa07f8935ed606c164ce25aabde591104" kind="variable"><name>gameManager</name></member>
+    <member refid="class_input_controller_1ad9e34992c71083e5b53669fa7ba33144" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="class_kociemba_solver" kind="class"><name>KociembaSolver</name>
+    <member refid="class_kociemba_solver_1a3ba5c160f7d1c8b1db848d69e7fc6ebc" kind="variable"><name>phase1</name></member>
+    <member refid="class_kociemba_solver_1a96603dbb4fd3d40371fbcf40accb0a52" kind="variable"><name>phase2</name></member>
+    <member refid="class_kociemba_solver_1ab96f1064a15ce885532a65ffdd48eab9" kind="function"><name>KociembaSolver</name></member>
+    <member refid="class_kociemba_solver_1ab67fcc5651c4c71642aff9b1e6118559" kind="function"><name>Solve</name></member>
+  </compound>
+  <compound refid="class_main_menu_events" kind="class"><name>MainMenuEvents</name>
+    <member refid="class_main_menu_events_1a7d89bac034e86120a9b660097e4d5300" kind="variable"><name>document</name></member>
+    <member refid="class_main_menu_events_1afbab7ceebf4a853a21ad05755eb17e6e" kind="variable"><name>challenge_mode_button</name></member>
+    <member refid="class_main_menu_events_1ae864754a7a47067590983deff53b9606" kind="variable"><name>free_mode_button</name></member>
+    <member refid="class_main_menu_events_1aca3486f9de0c33a09103a3cd15f95745" kind="variable"><name>multiplayer_mode_button</name></member>
+    <member refid="class_main_menu_events_1aeeeed60b1e0f4b6e0eb7ded8652108f5" kind="variable"><name>exit_button</name></member>
+    <member refid="class_main_menu_events_1a5ae8dd301c720e9ba9ebfc71427f9b8e" kind="function"><name>Awake</name></member>
+    <member refid="class_main_menu_events_1a44175db2a087ed78f510dc0a1264158c" kind="function"><name>OnDisable</name></member>
+    <member refid="class_main_menu_events_1a38c4c791b9219444f7fdfbd674899592" kind="function"><name>OnChallengeModeClick</name></member>
+    <member refid="class_main_menu_events_1a9ff1a42c7685e8e6a3c33d60297c41bb" kind="function"><name>OnFreeModeClick</name></member>
+    <member refid="class_main_menu_events_1a87818295b19cb8de1ebc7c22c1161dd2" kind="function"><name>OnMultiplayerModeClick</name></member>
+    <member refid="class_main_menu_events_1a1deb4e92f965f9bd3de49d65a2dd723d" kind="function"><name>OnExitClick</name></member>
+  </compound>
+  <compound refid="class_mapping" kind="class"><name>Mapping</name>
+    <member refid="class_mapping_1a1a78c4644cbed2794332919a7c56a73d" kind="variable"><name>FRONT</name></member>
+    <member refid="class_mapping_1ad9ffbd65c832740f820b7d5dc2e28dc4" kind="variable"><name>UP</name></member>
+    <member refid="class_mapping_1afe0ffb9b5c5693ac4cc7c27d7530d682" kind="variable"><name>RIGHT</name></member>
+    <member refid="class_mapping_1a7cba65d851655b0a7ac6b7705af01e8c" kind="variable"><name>BACK</name></member>
+    <member refid="class_mapping_1a838f7e214e852656f9193eacd23109c4" kind="variable"><name>DOWN</name></member>
+    <member refid="class_mapping_1a10602ecdaa121145301534fe28340330" kind="variable"><name>LEFT</name></member>
+    <member refid="class_mapping_1aee35792a81eb8fb604a51be5357b0d9e" kind="variable"><name>CORNER_LIST</name></member>
+    <member refid="class_mapping_1a14e4cb8d45811f77cb34ca0cb9df7185" kind="variable"><name>EDGE_LIST</name></member>
+    <member refid="class_mapping_1aa34444ed32fe198257f43d7daf252290" kind="variable"><name>TO_KOCIEMBA_IDX</name></member>
+    <member refid="class_mapping_1af201534280183ac1a137a9071f985386" kind="function"><name>Mapping</name></member>
+    <member refid="class_mapping_1ab638bf5f300d6d7c9e711ba2e2f6609d" kind="function"><name>IdxToPos</name></member>
+    <member refid="class_mapping_1a19f85635bfbd526ab5726459e126b669" kind="function"><name>PosToIdx</name></member>
+    <member refid="class_mapping_1a6850cb189c5bc2a64a94438e8f55f70f" kind="function"><name>GetColor</name></member>
+    <member refid="class_mapping_1a381d6725e60b05f9c94708028d7ce89b" kind="function"><name>GetColorIdx</name></member>
+    <member refid="class_mapping_1a1a12115972203bc57d20c0c1663c7bc5" kind="function"><name>GetAdjacent</name></member>
+    <member refid="class_mapping_1ad15a351f714d56df1299fe46d6c28b1e" kind="function"><name>GetCorners</name></member>
+    <member refid="class_mapping_1a50a18bf3d76c9315dcca7f51f4e1e4bb" kind="function"><name>GetEdges</name></member>
+    <member refid="class_mapping_1a44eea08b50a67d1e2a2b3f8890e6ccaf" kind="function"><name>GetCenter</name></member>
+    <member refid="class_mapping_1aca7dc9f1affb41b4048feba50e3d654c" kind="function"><name>GetAxis</name></member>
+    <member refid="class_mapping_1a389e0e987f48784e25e6440561a1898d" kind="function"><name>IdxToMove</name></member>
+    <member refid="class_mapping_1a598488f54f5dae07ba1ed2b76293cce2" kind="function"><name>MoveToIdx</name></member>
+  </compound>
+  <compound refid="class_move" kind="class"><name>Move</name>
+    <member refid="class_move_1a5991c96f7dc2a28a88914f97d1ad27b0" kind="variable"><name>face</name></member>
+    <member refid="class_move_1aa2aa3da1b9e01423c9005fe70e4ae0f6" kind="variable"><name>rev</name></member>
+    <member refid="class_move_1a9febd7b347395fa040153d609c406b11" kind="variable"><name>is180</name></member>
+    <member refid="class_move_1a3404bb18b336b4b73a694ba04182019f" kind="variable"><name>rng</name></member>
+    <member refid="class_move_1a9142d9caa44ca547568c5b6183dce2a8" kind="function"><name>Move</name></member>
+    <member refid="class_move_1a85007162b85ccec224d3bbdbfdd9c8b3" kind="function"><name>Move</name></member>
+    <member refid="class_move_1a311ba258166ab0499384992b8c19da0b" kind="function"><name>Move</name></member>
+    <member refid="class_move_1a22569998f6e40e7cf5f49ff7f76c4971" kind="function"><name>Move</name></member>
+    <member refid="class_move_1a73e6c67661a25fa52ffbb6323a67344a" kind="function"><name>GetInvertedMove</name></member>
+    <member refid="class_move_1a05af98850891e881af40d7d73dfd583f" kind="function"><name>GetRandomMove</name></member>
+  </compound>
+  <compound refid="class_move_tables" kind="class"><name>MoveTables</name>
+    <member refid="class_move_tables_1a5baddf5aae6da9705cbfe997a935a15f" kind="variable"><name>co_move</name></member>
+    <member refid="class_move_tables_1aef97b317e1a31be38f5d08ac8512d54f" kind="variable"><name>eo_move</name></member>
+    <member refid="class_move_tables_1aa7e88f989a1807ee020b45a4c1685002" kind="variable"><name>uds_move</name></member>
+    <member refid="class_move_tables_1af1d487024f1c99555b2922dc8ba5dd07" kind="variable"><name>cp_move</name></member>
+    <member refid="class_move_tables_1a421d955ccdb432d608491e3171bdbf8b" kind="variable"><name>ep_move</name></member>
+    <member refid="class_move_tables_1abe6c56e30ad15247335e4b475a10886d" kind="variable"><name>uds2_move</name></member>
+    <member refid="class_move_tables_1a7dffa47626599b9c1c466faaeb2d7728" kind="variable"><name>initialized</name></member>
+    <member refid="class_move_tables_1a2eccc22dea128c93a26a90800681b0c7" kind="function"><name>Init</name></member>
+    <member refid="class_move_tables_1a1e87800e025fb71e8bb1705a623e29a9" kind="function"><name>BuildCOMove</name></member>
+    <member refid="class_move_tables_1aab531db41e6299d58ac191bfc67c6d54" kind="function"><name>BuildEOMove</name></member>
+    <member refid="class_move_tables_1a5808c09ed48be6622e2beb0270e7ebb5" kind="function"><name>BuildUDSliceMove</name></member>
+    <member refid="class_move_tables_1a415580dc8bade59feab05cf30ec9b5bf" kind="function"><name>BuildCPMove</name></member>
+    <member refid="class_move_tables_1abd01689a4bedcf2faa2e74cda669fbad" kind="function"><name>BuildEPMove</name></member>
+    <member refid="class_move_tables_1ae1535baa53abc4e4e58fd2bed9a2063e" kind="function"><name>BuildUDSlice2Move</name></member>
+  </compound>
+  <compound refid="class_phase1_solver" kind="class"><name>Phase1Solver</name>
+    <member refid="class_phase1_solver_1a8da38fb91f7aeadcb701606e044dd936" kind="variable"><name>solution</name></member>
+    <member refid="class_phase1_solver_1acfde5aa843badcfac927c783f91d06cd" kind="variable"><name>_co</name></member>
+    <member refid="class_phase1_solver_1a5c6974079f1c53ca0ee706e97c0aea84" kind="variable"><name>_eo</name></member>
+    <member refid="class_phase1_solver_1a5eaa352c7937875bcf4b2a39bd47095e" kind="variable"><name>_uds</name></member>
+    <member refid="class_phase1_solver_1a11838f53adbace09340fac150d86075f" kind="function"><name>Phase1Solver</name></member>
+    <member refid="class_phase1_solver_1a2cc3740215c15fb38f7caab938ff6e22" kind="function"><name>Solve</name></member>
+    <member refid="class_phase1_solver_1a1e58c915605bc085a78c9bcc028183ba" kind="function"><name>Search</name></member>
+    <member refid="class_phase1_solver_1a8d433baa9d23428cd1a448d4f28e3d3c" kind="function"><name>Heuristic</name></member>
+  </compound>
+  <compound refid="class_phase2_solver" kind="class"><name>Phase2Solver</name>
+    <member refid="class_phase2_solver_1a11fbd3bc0cf792b96a75eb37deaf5feb" kind="variable"><name>solution</name></member>
+    <member refid="class_phase2_solver_1a0661f5b90a2d3af3068e06a0fcc36627" kind="variable"><name>phase2_moves</name></member>
+    <member refid="class_phase2_solver_1aa307e715b151df83c734aea2637d24fe" kind="variable"><name>_cp</name></member>
+    <member refid="class_phase2_solver_1a9393cc57b4fceb40dbe5c78bd420694e" kind="variable"><name>_ep</name></member>
+    <member refid="class_phase2_solver_1a347ee69f01667bdbdf8bc8f9d4cc1fbd" kind="variable"><name>_uds2</name></member>
+    <member refid="class_phase2_solver_1a99d151ccebc9bef2f60652a6ad56384c" kind="function"><name>Phase2Solver</name></member>
+    <member refid="class_phase2_solver_1a4213fd44265081bda749c8a0eaaeaa2e" kind="function"><name>Solve</name></member>
+    <member refid="class_phase2_solver_1a40313c5356d3e7d231ad21bdc7f1c882" kind="function"><name>Search</name></member>
+    <member refid="class_phase2_solver_1a70a87c81072952a292b7895d3353333b" kind="function"><name>Heuristic</name></member>
+  </compound>
+  <compound refid="class_pruning_tables" kind="class"><name>PruningTables</name>
+    <member refid="class_pruning_tables_1ab42383c9df6d22b8fc04054dd1de2813" kind="variable"><name>co_eo_prune</name></member>
+    <member refid="class_pruning_tables_1a6e98f28021b0503d9fe60c944676e2c8" kind="variable"><name>eo_uds_prune</name></member>
+    <member refid="class_pruning_tables_1aa8cffdc4db1acd1b0e5c70aab46be287" kind="variable"><name>cp_uds2_prune</name></member>
+    <member refid="class_pruning_tables_1a3c5decb130cb1e8be86da77e9abb2bc0" kind="variable"><name>ep_uds2_prune</name></member>
+    <member refid="class_pruning_tables_1a95900da66f52c63fb0334581e2d409cd" kind="variable"><name>_co</name></member>
+    <member refid="class_pruning_tables_1a0c50a7bc46eaa7ea71901e2d1fab999b" kind="variable"><name>_eo</name></member>
+    <member refid="class_pruning_tables_1a7d63c8169f6116bb302a14f4627a4ba9" kind="variable"><name>_uds</name></member>
+    <member refid="class_pruning_tables_1a21d233c3af5720177cd9c2a49b514cb2" kind="variable"><name>_cp</name></member>
+    <member refid="class_pruning_tables_1a7bb3f69206f3e6b87e1001f2dee90e39" kind="variable"><name>_ep</name></member>
+    <member refid="class_pruning_tables_1a5ebca9cf3132fe71b2a4811c769a2df9" kind="variable"><name>_uds2</name></member>
+    <member refid="class_pruning_tables_1a53178acf7b15a81639b706940a7fc211" kind="variable"><name>initialized</name></member>
+    <member refid="class_pruning_tables_1abfe8d299cf9f7aac79d17e5d69dfc753" kind="function"><name>Init</name></member>
+    <member refid="class_pruning_tables_1a2e9bbaf812f51178e4c909a6f1d36c8e" kind="function"><name>Fill</name></member>
+    <member refid="class_pruning_tables_1a14d3011ac69f86e32d5b20a45cbf9b7b" kind="function"><name>Build_CO_EO</name></member>
+    <member refid="class_pruning_tables_1ad7d8430075dccc8bfb70a6927bdb5a54" kind="function"><name>Build_EO_UDS</name></member>
+    <member refid="class_pruning_tables_1a913900694cffc70f6d2d555c7029c48a" kind="function"><name>Build_CP_UDS2</name></member>
+    <member refid="class_pruning_tables_1a5a8ab07e53af4d35276957380b2a04bb" kind="function"><name>Build_EP_UDS2</name></member>
+  </compound>
+  <compound refid="class_scrambler" kind="class"><name>Scrambler</name>
+    <member refid="class_scrambler_1a4caebf22b483e5cde34bb96535c04493" kind="variable"><name>rng</name></member>
+    <member refid="class_scrambler_1a1ae6f4c56e4b60e72c7c3e3713ca8669" kind="function"><name>GenerateScramble</name></member>
+  </compound>
+  <compound refid="class_solver_manager" kind="class"><name>SolverManager</name>
+    <member refid="class_solver_manager_1a49872fb96d95ad30250b19d98331dd49" kind="variable"><name>game_manager</name></member>
+    <member refid="class_solver_manager_1a2da0909385241871ad190a21b3f9e8cd" kind="variable"><name>current_moves</name></member>
+    <member refid="class_solver_manager_1a698dd560d75eb635204413fda7895d97" kind="variable"><name>idx</name></member>
+    <member refid="class_solver_manager_1a707e28ec290de87b793d0a50730e8d97" kind="function"><name>Init</name></member>
+    <member refid="class_solver_manager_1a3db6c4c08801ef596e39ce7c64f150ab" kind="function"><name>Backward</name></member>
+    <member refid="class_solver_manager_1a6349b47e27b50ddf8d85c4c209fb8905" kind="function"><name>Forward</name></member>
+  </compound>
+  <compound refid="class_touch_surfaces" kind="class"><name>TouchSurfaces</name>
+    <member refid="class_touch_surfaces_1acce9c5a050bfdfc97530745accff9bbc" kind="variable"><name>manager</name></member>
+    <member refid="class_touch_surfaces_1aeb8679572dcad562ea54c1bb842ab293" kind="variable"><name>enable</name></member>
+    <member refid="class_touch_surfaces_1a091dc3eac8f40f26315c19d83d9e2166" kind="function"><name>Update</name></member>
+  </compound>
+  <compound refid="namespace_mapping" kind="namespace"><name>Mapping</name>
+  </compound>
+  <compound refid="namespacestatic" kind="namespace"><name>static</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections" kind="namespace"><name>System::Collections</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_input_system" kind="namespace"><name>UnityEngine::InputSystem</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_scene_management" kind="namespace"><name>UnityEngine::SceneManagement</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i" kind="namespace"><name>UnityEngine::UI</name>
+  </compound>
+  <compound refid="namespace_unity_engine_1_1_u_i_elements" kind="namespace"><name>UnityEngine::UIElements</name>
+  </compound>
+  <compound refid="_cube_state_8cs" kind="file"><name>CubeState.cs</name>
+  </compound>
+  <compound refid="_cubie_8cs" kind="file"><name>Cubie.cs</name>
+  </compound>
+  <compound refid="_mapping_8cs" kind="file"><name>Mapping.cs</name>
+  </compound>
+  <compound refid="_move_8cs" kind="file"><name>Move.cs</name>
+  </compound>
+  <compound refid="_scrambler_8cs" kind="file"><name>Scrambler.cs</name>
+  </compound>
+  <compound refid="_challenge_manager_8cs" kind="file"><name>ChallengeManager.cs</name>
+  </compound>
+  <compound refid="_game_manager_8cs" kind="file"><name>GameManager.cs</name>
+  </compound>
+  <compound refid="_solver_manager_8cs" kind="file"><name>SolverManager.cs</name>
+  </compound>
+  <compound refid="_camera_controller_8cs" kind="file"><name>CameraController.cs</name>
+  </compound>
+  <compound refid="_cube_animator_8cs" kind="file"><name>CubeAnimator.cs</name>
+  </compound>
+  <compound refid="_cube_renderer_8cs" kind="file"><name>CubeRenderer.cs</name>
+  </compound>
+  <compound refid="_input_controller_8cs" kind="file"><name>InputController.cs</name>
+  </compound>
+  <compound refid="_touch_surfaces_8cs" kind="file"><name>TouchSurfaces.cs</name>
+  </compound>
+  <compound refid="_coordinate_8cs" kind="file"><name>Coordinate.cs</name>
+  </compound>
+  <compound refid="_cubie_model_8cs" kind="file"><name>CubieModel.cs</name>
+  </compound>
+  <compound refid="_kociemba_solver_8cs" kind="file"><name>KociembaSolver.cs</name>
+  </compound>
+  <compound refid="_move_tables_8cs" kind="file"><name>MoveTables.cs</name>
+  </compound>
+  <compound refid="_phase1_solver_8cs" kind="file"><name>Phase1Solver.cs</name>
+  </compound>
+  <compound refid="_phase2_solver_8cs" kind="file"><name>Phase2Solver.cs</name>
+  </compound>
+  <compound refid="_pruning_tables_8cs" kind="file"><name>PruningTables.cs</name>
+  </compound>
+  <compound refid="_challenge_mode_events_8cs" kind="file"><name>ChallengeModeEvents.cs</name>
+  </compound>
+  <compound refid="_face_button_events_8cs" kind="file"><name>FaceButtonEvents.cs</name>
+  </compound>
+  <compound refid="_free_mode_events_8cs" kind="file"><name>FreeModeEvents.cs</name>
+  </compound>
+  <compound refid="_import_events_8cs" kind="file"><name>ImportEvents.cs</name>
+  </compound>
+  <compound refid="_main_menu_events_8cs" kind="file"><name>MainMenuEvents.cs</name>
+  </compound>
+  <compound refid="dir_2d7708a101661e394f02dd24c82fe353" kind="dir"><name>Scripts/Core</name>
+  </compound>
+  <compound refid="dir_7e9987e2ba0883a71ec23d5b1de55d72" kind="dir"><name>Scripts/Game</name>
+  </compound>
+  <compound refid="dir_7924e68fa63289e5bbb4318a9ae65414" kind="dir"><name>Scripts/Rendering</name>
+  </compound>
+  <compound refid="dir_4edcbb236dfd51dd81727243a38df6a0" kind="dir"><name>Scripts</name>
+  </compound>
+  <compound refid="dir_5731c39f04496b079ea102b455316d3a" kind="dir"><name>Scripts/Solver</name>
+  </compound>
+  <compound refid="dir_cf3cba7cb859b249fb665d794c791dc5" kind="dir"><name>Scripts/UI</name>
+  </compound>
+</doxygenindex>

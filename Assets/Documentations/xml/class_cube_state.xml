@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_cube_state" kind="class" language="C#" prot="public">
+    <compoundname>CubeState</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cube_state_1a8bc26b052b48c9fa9ee53feb49e72214" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cubie" kindref="compound">Cubie</ref>[]</type>
+        <definition>Cubie [] CubeState.cubies</definition>
+        <argsstring></argsstring>
+        <name>cubies</name>
+        <qualifiedname>CubeState.cubies</qualifiedname>
+        <briefdescription>
+<para>Array of 27 cubies making up the 3x3x3 cube. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="16" column="11" bodyfile="Scripts/Core/CubeState.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_cube_state_1aaaaef5797e38934aa6b6f937bd91922c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_cubie" kindref="compound">Cubie</ref></type>
+        <definition>Cubie CubeState.this[int index]</definition>
+        <argsstring></argsstring>
+        <name>this[int index]</name>
+        <qualifiedname>CubeState.this[int index]</qualifiedname>
+        <briefdescription>
+<para>Indexer to access a cubie at a specific array index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array index (0..26).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_cubie" kindref="compound">Cubie</ref> object at that index.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="67" column="18" bodyfile="Scripts/Core/CubeState.cs" bodystart="68" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cube_state_1a34a88d82d702e3dac2c5c3d0a0862323" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CubeState.CubeState</definition>
+        <argsstring>()</argsstring>
+        <name>CubeState</name>
+        <qualifiedname>CubeState.CubeState</qualifiedname>
+        <briefdescription>
+<para>Initializes a solved 3x3 Rubik&apos;s Cube state. Cubies that are inside or on faces they don&apos;t belong to are assigned -1 for those colors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="22" column="12" bodyfile="Scripts/Core/CubeState.cs" bodystart="22" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_state_1aa11a5282d16427ddafb21a2889fdbd89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cube_state" kindref="compound">CubeState</ref></type>
+        <definition>CubeState CubeState.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <qualifiedname>CubeState.Clone</qualifiedname>
+        <briefdescription>
+<para>Creates a deep copy of this <ref refid="class_cube_state" kindref="compound">CubeState</ref>. Useful for AI search algorithms like IDA* to explore branches without modifying the current state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A cloned <ref refid="class_cube_state" kindref="compound">CubeState</ref> instance.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="49" column="22" bodyfile="Scripts/Core/CubeState.cs" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_state_1aaab9444d4ed836e51f53b66a49015ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubeState.ApplyMove</definition>
+        <argsstring>(Move move)</argsstring>
+        <name>ApplyMove</name>
+        <qualifiedname>CubeState.ApplyMove</qualifiedname>
+        <param>
+          <type><ref refid="class_move" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Applies a move to the cube state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Steps:<orderedlist>
+<listitem><para>Permute corner cubies</para>
+</listitem><listitem><para>Permute edge cubies</para>
+</listitem><listitem><para>Update orientation of affected cubies</para>
+</listitem></orderedlist>
+</para>
+<para>This function maintains cube validity.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_move" kindref="compound">Move</ref> to apply</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="84" column="17" bodyfile="Scripts/Core/CubeState.cs" bodystart="84" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_state_1aef91d0fda6fd48d2944a1875cce8fdc0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CubeState.IsSolved</definition>
+        <argsstring>()</argsstring>
+        <name>IsSolved</name>
+        <qualifiedname>CubeState.IsSolved</qualifiedname>
+        <briefdescription>
+<para>Checks whether the cube is in a solved state. A face is solved if all its stickers match the center sticker&apos;s color. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if all faces are uniform in color.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="131" column="17" bodyfile="Scripts/Core/CubeState.cs" bodystart="131" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_state_1ae0b2ef17e1e0425ae573a53f57f7e159" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CubeState.IsValid</definition>
+        <argsstring>()</argsstring>
+        <name>IsValid</name>
+        <qualifiedname>CubeState.IsValid</qualifiedname>
+        <briefdescription>
+<para>Validates the cube state to ensure it is physically possible. Checks for unique corner and edge combinations and proper color placement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the cube state is valid, otherwise false.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/CubeState.cs" line="155" column="17" bodyfile="Scripts/Core/CubeState.cs" bodystart="155" bodyend="206"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents the full logical state of a 3x3 Rubik&apos;s Cube. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The cube consists of 27 cubies stored in a fixed-size array. State updates occur in two stages:<orderedlist>
+<listitem><para>Permuting cubie positions (shuffling pointers in the array)</para>
+</listitem><listitem><para>Updating cubie internal orientation (calling ApplyMove on individual cubies) </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <location file="Scripts/Core/CubeState.cs" line="13" column="7" bodyfile="Scripts/Core/CubeState.cs" bodystart="14" bodyend="207"/>
+    <listofallmembers>
+      <member refid="class_cube_state_1aaab9444d4ed836e51f53b66a49015ee7" prot="public" virt="non-virtual"><scope>CubeState</scope><name>ApplyMove</name></member>
+      <member refid="class_cube_state_1aa11a5282d16427ddafb21a2889fdbd89" prot="public" virt="non-virtual"><scope>CubeState</scope><name>Clone</name></member>
+      <member refid="class_cube_state_1a34a88d82d702e3dac2c5c3d0a0862323" prot="public" virt="non-virtual"><scope>CubeState</scope><name>CubeState</name></member>
+      <member refid="class_cube_state_1a8bc26b052b48c9fa9ee53feb49e72214" prot="private" virt="non-virtual"><scope>CubeState</scope><name>cubies</name></member>
+      <member refid="class_cube_state_1aef91d0fda6fd48d2944a1875cce8fdc0" prot="public" virt="non-virtual"><scope>CubeState</scope><name>IsSolved</name></member>
+      <member refid="class_cube_state_1ae0b2ef17e1e0425ae573a53f57f7e159" prot="public" virt="non-virtual"><scope>CubeState</scope><name>IsValid</name></member>
+      <member refid="class_cube_state_1aaaaef5797e38934aa6b6f937bd91922c" prot="public" virt="non-virtual"><scope>CubeState</scope><name>this[int index]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

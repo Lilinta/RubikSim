@@ -1,0 +1,53 @@
+\doxysection{Scrambler Class Reference}
+\hypertarget{class_scrambler}{}\label{class_scrambler}\index{Scrambler@{Scrambler}}
+
+
+Generates random scramble sequences for the Rubik\textquotesingle{}s Cube.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ \doxymbox{\hyperlink{class_scrambler_a1ae6f4c56e4b60e72c7c3e3713ca8669}{Generate\+Scramble}} (int len=-\/1)
+\begin{DoxyCompactList}\small\item\em Generates a scramble sequence of specified length. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates random scramble sequences for the Rubik\textquotesingle{}s Cube. 
+
+The generated sequence avoids:\+
+\begin{DoxyItemize}
+\item Two consecutive moves on the same face (e.\+g., R R)
+\item Redundant patterns such as ABA where A and B are opposite faces belonging to the same axis group (e.\+g., U D U is invalid).
+\end{DoxyItemize}
+
+This produces more realistic and effective scrambles similar to official World Cube Association (WCA) rules. 
+
+\label{class_scrambler_doc-func-members}
+\Hypertarget{class_scrambler_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_scrambler_a1ae6f4c56e4b60e72c7c3e3713ca8669}\index{Scrambler@{Scrambler}!GenerateScramble@{GenerateScramble}}
+\index{GenerateScramble@{GenerateScramble}!Scrambler@{Scrambler}}
+\doxysubsubsection{\texorpdfstring{GenerateScramble()}{GenerateScramble()}}
+{\footnotesize\ttfamily \label{class_scrambler_a1ae6f4c56e4b60e72c7c3e3713ca8669} 
+List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ Scrambler.\+Generate\+Scramble (\begin{DoxyParamCaption}\item[{int}]{len}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a scramble sequence of specified length. 
+
+The sequence satisfies constraints to prevent trivial or redundant moves, such as moving the same face twice or sandwiching opposite faces.
+
+
+\begin{DoxyParams}{Parameters}
+{\em len} & Number of moves in the scramble. If -\/1, a random length between 20 and 30 is used.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A List of random \doxylink{class_move}{Move} objects representing the scramble.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Core/\+\doxymbox{\hyperlink{_scrambler_8cs}{Scrambler.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_5731c39f04496b079ea102b455316d3a" kind="dir">
+    <compoundname>Scripts/Solver</compoundname>
+    <innerfile refid="_coordinate_8cs">Coordinate.cs</innerfile>
+    <innerfile refid="_cubie_model_8cs">CubieModel.cs</innerfile>
+    <innerfile refid="_kociemba_solver_8cs">KociembaSolver.cs</innerfile>
+    <innerfile refid="_move_tables_8cs">MoveTables.cs</innerfile>
+    <innerfile refid="_phase1_solver_8cs">Phase1Solver.cs</innerfile>
+    <innerfile refid="_phase2_solver_8cs">Phase2Solver.cs</innerfile>
+    <innerfile refid="_pruning_tables_8cs">PruningTables.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/"/>
+  </compounddef>
+</doxygen>

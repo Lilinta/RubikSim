@@ -768,6 +768,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: CubieCore
       objectReference: {fileID: 0}
+    - target: {fileID: 1227571965645201734, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030884916381208471, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2812867185204420584, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3782260130614184681, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6258420078591827179, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7106603632074908198, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7964131860564805008, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882852993975188008, guid: 30be736443d7f8c419c6e6e3b1f071e4, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,0 +1,91 @@
+\doxysection{Cubie Class Reference}
+\hypertarget{class_cubie}{}\label{class_cubie}\index{Cubie@{Cubie}}
+
+
+Represents a single cubie (small cube) of the Rubik\textquotesingle{}s Cube.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cubie_aa1866b569e691d135a290ccff2ecc2ec}{Cubie}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new \doxylink{class_cubie}{Cubie} with default face colors corresponding to face indices. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cubie_a42403b7e36fe3f78648a3fd8fc703d38}{Apply\+Move}} (\doxymbox{\hyperlink{class_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Applies a face rotation to this cubie by permuting its internal face colors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_cubie_a42f175e577ec79bd5b964cd556a6e9eb}{this\+[int index]\+}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Indexer to get or set the color index of a specific face of this cubie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single cubie (small cube) of the Rubik\textquotesingle{}s Cube. 
+
+Each cubie stores the color index of its 6 faces. The cubie itself does not know its spatial position; that is handled by \doxylink{class_cube_state}{Cube\+State}.
+
+Rotation affects only the ordering of its face colors. 
+
+\label{class_cubie_doc-constructors}
+\Hypertarget{class_cubie_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cubie_aa1866b569e691d135a290ccff2ecc2ec}\index{Cubie@{Cubie}!Cubie@{Cubie}}
+\index{Cubie@{Cubie}!Cubie@{Cubie}}
+\doxysubsubsection{\texorpdfstring{Cubie()}{Cubie()}}
+{\footnotesize\ttfamily \label{class_cubie_aa1866b569e691d135a290ccff2ecc2ec} 
+Cubie.\+Cubie (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new \doxylink{class_cubie}{Cubie} with default face colors corresponding to face indices. 
+
+
+
+\label{class_cubie_doc-func-members}
+\Hypertarget{class_cubie_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cubie_a42403b7e36fe3f78648a3fd8fc703d38}\index{Cubie@{Cubie}!ApplyMove@{ApplyMove}}
+\index{ApplyMove@{ApplyMove}!Cubie@{Cubie}}
+\doxysubsubsection{\texorpdfstring{ApplyMove()}{ApplyMove()}}
+{\footnotesize\ttfamily \label{class_cubie_a42403b7e36fe3f78648a3fd8fc703d38} 
+void Cubie.\+Apply\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Applies a face rotation to this cubie by permuting its internal face colors. 
+
+This does NOT change the cubie\textquotesingle{}s position in the 3D grid. It updates which color faces which direction after a rotation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The \doxylink{class_move}{Move} object describing the rotation.\\
+\hline
+\end{DoxyParams}
+
+
+\label{class_cubie_doc-property-members}
+\Hypertarget{class_cubie_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cubie_a42f175e577ec79bd5b964cd556a6e9eb}\index{Cubie@{Cubie}!this\+[int index]\+@{this[int index]}}
+\index{this\+[int index]\+@{this[int index]}!Cubie@{Cubie}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{class_cubie_a42f175e577ec79bd5b964cd556a6e9eb} 
+int Cubie.\+this\+[int index]\+\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indexer to get or set the color index of a specific face of this cubie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The face index constant (0..5).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The color index present on that face.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Core/\+\doxymbox{\hyperlink{_cubie_8cs}{Cubie.\+cs}}\end{DoxyCompactItemize}

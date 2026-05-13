@@ -1,0 +1,559 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_mapping" kind="class" language="C#" prot="public">
+    <compoundname>Mapping</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_mapping_1a1a78c4644cbed2794332919a7c56a73d" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.FRONT</definition>
+        <argsstring></argsstring>
+        <name>FRONT</name>
+        <qualifiedname>Mapping.FRONT</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Index for the Front face (usually Blue). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="20" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1ad9ffbd65c832740f820b7d5dc2e28dc4" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.UP</definition>
+        <argsstring></argsstring>
+        <name>UP</name>
+        <qualifiedname>Mapping.UP</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Index for the Up/Top face (usually Yellow). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="22" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1afe0ffb9b5c5693ac4cc7c27d7530d682" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.RIGHT</definition>
+        <argsstring></argsstring>
+        <name>RIGHT</name>
+        <qualifiedname>Mapping.RIGHT</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Index for the Right face (usually Red). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="24" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1a7cba65d851655b0a7ac6b7705af01e8c" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.BACK</definition>
+        <argsstring></argsstring>
+        <name>BACK</name>
+        <qualifiedname>Mapping.BACK</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Index for the Back face (usually Green). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="26" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1a838f7e214e852656f9193eacd23109c4" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.DOWN</definition>
+        <argsstring></argsstring>
+        <name>DOWN</name>
+        <qualifiedname>Mapping.DOWN</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Index for the Down/Bottom face (usually White). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="28" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1a10602ecdaa121145301534fe28340330" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Mapping.LEFT</definition>
+        <argsstring></argsstring>
+        <name>LEFT</name>
+        <qualifiedname>Mapping.LEFT</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Index for the Left face (usually Orange/Magenta). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="30" column="22" bodyfile="Scripts/Core/Mapping.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1aee35792a81eb8fb604a51be5357b0d9e" prot="public" static="yes" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Mapping.CORNER_LIST</definition>
+        <argsstring></argsstring>
+        <name>CORNER_LIST</name>
+        <qualifiedname>Mapping.CORNER_LIST</qualifiedname>
+        <initializer>= new int[] {0, 2, 20, 18, 6, 8, 26, 24}</initializer>
+        <briefdescription>
+<para>List of indices representing the 8 corner cubies in the internal array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="32" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1a14e4cb8d45811f77cb34ca0cb9df7185" prot="public" static="yes" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Mapping.EDGE_LIST</definition>
+        <argsstring></argsstring>
+        <name>EDGE_LIST</name>
+        <qualifiedname>Mapping.EDGE_LIST</qualifiedname>
+        <initializer>= new int[] { 9, 1, 11, 19, 15, 7, 17, 25, 3, 5, 23, 21}</initializer>
+        <briefdescription>
+<para>List of indices representing the 12 edge cubies in the internal array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="34" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mapping_1aa34444ed32fe198257f43d7daf252290" prot="public" static="yes" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Mapping.TO_KOCIEMBA_IDX</definition>
+        <argsstring></argsstring>
+        <name>TO_KOCIEMBA_IDX</name>
+        <qualifiedname>Mapping.TO_KOCIEMBA_IDX</qualifiedname>
+        <briefdescription>
+<para>Mapping array to convert internal indices to Kociemba solver indexing format. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="36" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_mapping_1af201534280183ac1a137a9071f985386" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static Mapping.Mapping</definition>
+        <argsstring>()</argsstring>
+        <name>Mapping</name>
+        <qualifiedname>Mapping.Mapping</qualifiedname>
+        <briefdescription>
+<para>Static constructor to initialize precomputed mapping tables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="41" column="12" bodyfile="Scripts/Core/Mapping.cs" bodystart="41" bodyend="56"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_mapping_1ab638bf5f300d6d7c9e711ba2e2f6609d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3Int</type>
+        <definition>static Vector3Int Mapping.IdxToPos</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>IdxToPos</name>
+        <qualifiedname>Mapping.IdxToPos</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Converts a linear cubie index (0..26) into its 3D position in cube space. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Coordinate system: x, y, z ∈ {-1, 0, 1}</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Linear cubie index (0..26).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>3D position as Vector3Int.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="66" column="30" bodyfile="Scripts/Core/Mapping.cs" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a19f85635bfbd526ab5726459e126b669" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Mapping.PosToIdx</definition>
+        <argsstring>(Vector3Int Pos)</argsstring>
+        <name>PosToIdx</name>
+        <qualifiedname>Mapping.PosToIdx</qualifiedname>
+        <param>
+          <type>Vector3Int</type>
+          <declname>Pos</declname>
+        </param>
+        <briefdescription>
+<para>Converts a 3D cube position (x,y,z) into its linear array index (0..26). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position in cube space (x,y,z) where components are in {-1, 0, 1}.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Linear cubie index.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="76" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="76" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a6850cb189c5bc2a64a94438e8f55f70f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Color</type>
+        <definition>static Color Mapping.GetColor</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetColor</name>
+        <qualifiedname>Mapping.GetColor</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the Unity Color corresponding to a given face index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The face index constant.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The Unity Color associated with that face.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="86" column="25" bodyfile="Scripts/Core/Mapping.cs" bodystart="86" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a381d6725e60b05f9c94708028d7ce89b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Mapping.GetColorIdx</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>GetColorIdx</name>
+        <qualifiedname>Mapping.GetColorIdx</qualifiedname>
+        <param>
+          <type>Color</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Maps a Unity Color back to its corresponding face index. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Unity Color to check.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Face index constant, or -1 if no match found.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="102" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="102" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a1a12115972203bc57d20c0c1663c7bc5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int[] Mapping.GetAdjacent</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetAdjacent</name>
+        <qualifiedname>Mapping.GetAdjacent</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the 4 adjacent face indices surrounding a given face, ordered clockwise when looking directly at that face. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of 4 adjacent face indices.</para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Exception</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Thrown if face index is invalid.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="120" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="120" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1ad15a351f714d56df1299fe46d6c28b1e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int[] Mapping.GetCorners</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetCorners</name>
+        <qualifiedname>Mapping.GetCorners</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the 4 corner cubie indices of a given face, ordered clockwise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of 4 cubie indices (corners).</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="157" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="157" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a50a18bf3d76c9315dcca7f51f4e1e4bb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int[]</type>
+        <definition>static int[] Mapping.GetEdges</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetEdges</name>
+        <qualifiedname>Mapping.GetEdges</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the 4 edge cubie indices of a given face, ordered clockwise. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of 4 cubie indices (edges).</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="194" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="194" bodyend="224"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a44eea08b50a67d1e2a2b3f8890e6ccaf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Mapping.GetCenter</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetCenter</name>
+        <qualifiedname>Mapping.GetCenter</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the center cubie index of a given face. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Target face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Center cubie index.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="231" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="231" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1aca7dc9f1affb41b4048feba50e3d654c" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector3Int</type>
+        <definition>static Vector3Int Mapping.GetAxis</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetAxis</name>
+        <qualifiedname>Mapping.GetAxis</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Returns the 3D rotation axis for a given face used for Unity animations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Rotation axis as a Vector3Int.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="247" column="30" bodyfile="Scripts/Core/Mapping.cs" bodystart="247" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a389e0e987f48784e25e6440561a1898d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_move" kindref="compound">Move</ref></type>
+        <definition>static Move Mapping.IdxToMove</definition>
+        <argsstring>(int idx)</argsstring>
+        <name>IdxToMove</name>
+        <qualifiedname>Mapping.IdxToMove</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Converts a move index (0..17) to a <ref refid="class_move" kindref="compound">Move</ref> object. Mapping: 6 faces * 3 types (normal, 180, reverse). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_move" kindref="compound">Move</ref> index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="class_move" kindref="compound">Move</ref> object representation.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="264" column="24" bodyfile="Scripts/Core/Mapping.cs" bodystart="264" bodyend="272"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mapping_1a598488f54f5dae07ba1ed2b76293cce2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Mapping.MoveToIdx</definition>
+        <argsstring>(Move move)</argsstring>
+        <name>MoveToIdx</name>
+        <qualifiedname>Mapping.MoveToIdx</qualifiedname>
+        <param>
+          <type><ref refid="class_move" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Converts a <ref refid="class_move" kindref="compound">Move</ref> object to its corresponding integer index (0..17). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_move" kindref="compound">Move</ref> object to convert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Integer index of the move.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Mapping.cs" line="279" column="23" bodyfile="Scripts/Core/Mapping.cs" bodystart="279" bodyend="282"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides static mapping utilities for Rubik&apos;s Cube representation. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class defines:<itemizedlist>
+<listitem><para>Face indices constants (FRONT, UP, RIGHT, BACK, DOWN, LEFT)</para>
+</listitem><listitem><para>Conversion between linear cubie index (0..26) and 3D position</para>
+</listitem><listitem><para>Face color mapping</para>
+</listitem><listitem><para>Precomputed structural relationships (adjacent faces, corners, edges, centers)</para>
+</listitem><listitem><para>Rotation axis for each face</para>
+</listitem></itemizedlist>
+</para>
+<para>This class contains no state and acts as a global lookup table describing the geometric structure of the cube. </para>
+    </detaileddescription>
+    <location file="Scripts/Core/Mapping.cs" line="17" column="8" bodyfile="Scripts/Core/Mapping.cs" bodystart="18" bodyend="283"/>
+    <listofallmembers>
+      <member refid="class_mapping_1a7cba65d851655b0a7ac6b7705af01e8c" prot="public" virt="non-virtual"><scope>Mapping</scope><name>BACK</name></member>
+      <member refid="class_mapping_1aee35792a81eb8fb604a51be5357b0d9e" prot="public" virt="non-virtual"><scope>Mapping</scope><name>CORNER_LIST</name></member>
+      <member refid="class_mapping_1a838f7e214e852656f9193eacd23109c4" prot="public" virt="non-virtual"><scope>Mapping</scope><name>DOWN</name></member>
+      <member refid="class_mapping_1a14e4cb8d45811f77cb34ca0cb9df7185" prot="public" virt="non-virtual"><scope>Mapping</scope><name>EDGE_LIST</name></member>
+      <member refid="class_mapping_1a1a78c4644cbed2794332919a7c56a73d" prot="public" virt="non-virtual"><scope>Mapping</scope><name>FRONT</name></member>
+      <member refid="class_mapping_1a1a12115972203bc57d20c0c1663c7bc5" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetAdjacent</name></member>
+      <member refid="class_mapping_1aca7dc9f1affb41b4048feba50e3d654c" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetAxis</name></member>
+      <member refid="class_mapping_1a44eea08b50a67d1e2a2b3f8890e6ccaf" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetCenter</name></member>
+      <member refid="class_mapping_1a6850cb189c5bc2a64a94438e8f55f70f" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetColor</name></member>
+      <member refid="class_mapping_1a381d6725e60b05f9c94708028d7ce89b" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetColorIdx</name></member>
+      <member refid="class_mapping_1ad15a351f714d56df1299fe46d6c28b1e" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetCorners</name></member>
+      <member refid="class_mapping_1a50a18bf3d76c9315dcca7f51f4e1e4bb" prot="public" virt="non-virtual"><scope>Mapping</scope><name>GetEdges</name></member>
+      <member refid="class_mapping_1a389e0e987f48784e25e6440561a1898d" prot="public" virt="non-virtual"><scope>Mapping</scope><name>IdxToMove</name></member>
+      <member refid="class_mapping_1ab638bf5f300d6d7c9e711ba2e2f6609d" prot="public" virt="non-virtual"><scope>Mapping</scope><name>IdxToPos</name></member>
+      <member refid="class_mapping_1a10602ecdaa121145301534fe28340330" prot="public" virt="non-virtual"><scope>Mapping</scope><name>LEFT</name></member>
+      <member refid="class_mapping_1af201534280183ac1a137a9071f985386" prot="private" virt="non-virtual"><scope>Mapping</scope><name>Mapping</name></member>
+      <member refid="class_mapping_1a598488f54f5dae07ba1ed2b76293cce2" prot="public" virt="non-virtual"><scope>Mapping</scope><name>MoveToIdx</name></member>
+      <member refid="class_mapping_1a19f85635bfbd526ab5726459e126b669" prot="public" virt="non-virtual"><scope>Mapping</scope><name>PosToIdx</name></member>
+      <member refid="class_mapping_1afe0ffb9b5c5693ac4cc7c27d7530d682" prot="public" virt="non-virtual"><scope>Mapping</scope><name>RIGHT</name></member>
+      <member refid="class_mapping_1aa34444ed32fe198257f43d7daf252290" prot="public" virt="non-virtual"><scope>Mapping</scope><name>TO_KOCIEMBA_IDX</name></member>
+      <member refid="class_mapping_1ad9ffbd65c832740f820b7d5dc2e28dc4" prot="public" virt="non-virtual"><scope>Mapping</scope><name>UP</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_7924e68fa63289e5bbb4318a9ae65414" kind="dir">
+    <compoundname>Scripts/Rendering</compoundname>
+    <innerfile refid="_camera_controller_8cs">CameraController.cs</innerfile>
+    <innerfile refid="_cube_animator_8cs">CubeAnimator.cs</innerfile>
+    <innerfile refid="_cube_renderer_8cs">CubeRenderer.cs</innerfile>
+    <innerfile refid="_input_controller_8cs">InputController.cs</innerfile>
+    <innerfile refid="_touch_surfaces_8cs">TouchSurfaces.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Rendering/"/>
+  </compounddef>
+</doxygen>

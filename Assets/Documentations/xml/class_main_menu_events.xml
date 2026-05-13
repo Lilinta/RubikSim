@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_main_menu_events" kind="class" language="C#" prot="public">
+    <compoundname>MainMenuEvents</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_main_menu_events_1a7d89bac034e86120a9b660097e4d5300" prot="private" static="no" mutable="no">
+        <type>UIDocument</type>
+        <definition>UIDocument MainMenuEvents.document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <qualifiedname>MainMenuEvents.document</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="11" column="24" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_events_1afbab7ceebf4a853a21ad05755eb17e6e" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button MainMenuEvents.challenge_mode_button</definition>
+        <argsstring></argsstring>
+        <name>challenge_mode_button</name>
+        <qualifiedname>MainMenuEvents.challenge_mode_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="12" column="20" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_events_1ae864754a7a47067590983deff53b9606" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button MainMenuEvents.free_mode_button</definition>
+        <argsstring></argsstring>
+        <name>free_mode_button</name>
+        <qualifiedname>MainMenuEvents.free_mode_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="13" column="20" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_events_1aca3486f9de0c33a09103a3cd15f95745" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button MainMenuEvents.multiplayer_mode_button</definition>
+        <argsstring></argsstring>
+        <name>multiplayer_mode_button</name>
+        <qualifiedname>MainMenuEvents.multiplayer_mode_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="14" column="20" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_main_menu_events_1aeeeed60b1e0f4b6e0eb7ded8652108f5" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button MainMenuEvents.exit_button</definition>
+        <argsstring></argsstring>
+        <name>exit_button</name>
+        <qualifiedname>MainMenuEvents.exit_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="15" column="20" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_main_menu_events_1a5ae8dd301c720e9ba9ebfc71427f9b8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>MainMenuEvents.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="17" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="17" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_events_1a44175db2a087ed78f510dc0a1264158c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>MainMenuEvents.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="31" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="31" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_events_1a38c4c791b9219444f7fdfbd674899592" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.OnChallengeModeClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnChallengeModeClick</name>
+        <qualifiedname>MainMenuEvents.OnChallengeModeClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="39" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="39" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_events_1a9ff1a42c7685e8e6a3c33d60297c41bb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.OnFreeModeClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnFreeModeClick</name>
+        <qualifiedname>MainMenuEvents.OnFreeModeClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="45" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_events_1a87818295b19cb8de1ebc7c22c1161dd2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.OnMultiplayerModeClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnMultiplayerModeClick</name>
+        <qualifiedname>MainMenuEvents.OnMultiplayerModeClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="51" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_main_menu_events_1a1deb4e92f965f9bd3de49d65a2dd723d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MainMenuEvents.OnExitClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnExitClick</name>
+        <qualifiedname>MainMenuEvents.OnExitClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/MainMenuEvents.cs" line="56" column="18" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="56" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles UI navigation for the Main Menu. Switches between scenes based on user selection. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>MainMenuEvents</label>
+        <link refid="class_main_menu_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>MainMenuEvents</label>
+        <link refid="class_main_menu_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/MainMenuEvents.cs" line="9" column="7" bodyfile="Scripts/UI/MainMenuEvents.cs" bodystart="10" bodyend="61"/>
+    <listofallmembers>
+      <member refid="class_main_menu_events_1a5ae8dd301c720e9ba9ebfc71427f9b8e" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>Awake</name></member>
+      <member refid="class_main_menu_events_1afbab7ceebf4a853a21ad05755eb17e6e" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>challenge_mode_button</name></member>
+      <member refid="class_main_menu_events_1a7d89bac034e86120a9b660097e4d5300" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>document</name></member>
+      <member refid="class_main_menu_events_1aeeeed60b1e0f4b6e0eb7ded8652108f5" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>exit_button</name></member>
+      <member refid="class_main_menu_events_1ae864754a7a47067590983deff53b9606" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>free_mode_button</name></member>
+      <member refid="class_main_menu_events_1aca3486f9de0c33a09103a3cd15f95745" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>multiplayer_mode_button</name></member>
+      <member refid="class_main_menu_events_1a38c4c791b9219444f7fdfbd674899592" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>OnChallengeModeClick</name></member>
+      <member refid="class_main_menu_events_1a44175db2a087ed78f510dc0a1264158c" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>OnDisable</name></member>
+      <member refid="class_main_menu_events_1a1deb4e92f965f9bd3de49d65a2dd723d" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>OnExitClick</name></member>
+      <member refid="class_main_menu_events_1a9ff1a42c7685e8e6a3c33d60297c41bb" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>OnFreeModeClick</name></member>
+      <member refid="class_main_menu_events_1a87818295b19cb8de1ebc7c22c1161dd2" prot="private" virt="non-virtual"><scope>MainMenuEvents</scope><name>OnMultiplayerModeClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

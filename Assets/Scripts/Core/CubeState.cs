@@ -6,17 +6,19 @@ using static Mapping;
 /// Represents the full logical state of a 3x3 Rubik's Cube.
 /// 
 /// The cube consists of 27 cubies stored in a fixed-size array.
-/// 
 /// State updates occur in two stages:
-/// 1. Permuting cubie positions (corners & edges)
-/// 2. Updating cubie internal orientation
-/// 
-/// This class contains no rendering logic.
+/// 1. Permuting cubie positions (shuffling pointers in the array)
+/// 2. Updating cubie internal orientation (calling ApplyMove on individual cubies)
 /// </summary>
 public class CubeState
 {
+    /// <summary> Array of 27 cubies making up the 3x3x3 cube. </summary>
     Cubie[] cubies;
 
+    /// <summary>
+    /// Initializes a solved 3x3 Rubik's Cube state.
+    /// Cubies that are inside or on faces they don't belong to are assigned -1 for those colors.
+    /// </summary>
     public CubeState()
     {
         cubies = new Cubie[27];
@@ -41,11 +43,9 @@ public class CubeState
 
     /// <summary>
     /// Creates a deep copy of this CubeState.
-    /// 
-    /// Used for search algorithms (e.g., IDA*) where immutable branching
-    /// of states is required.
+    /// Useful for AI search algorithms like IDA* to explore branches without modifying the current state.
     /// </summary>
-    /// <returns>Cloned CubeState</returns>
+    /// <returns>A cloned CubeState instance.</returns>
     public CubeState Clone()
     {
         CubeState res = new CubeState();
@@ -58,6 +58,12 @@ public class CubeState
         }
         return res;
     }
+
+    /// <summary>
+    /// Indexer to access a cubie at a specific array index.
+    /// </summary>
+    /// <param name="index">Array index (0..26).</param>
+    /// <returns>The Cubie object at that index.</returns>
     public Cubie this[int index]
     {
         get => cubies[index];
@@ -118,12 +124,10 @@ public class CubeState
     }
 
     /// <summary>
-    /// Checks whether the cube is in solved state.
-    /// 
-    /// A face is solved if all its corner and edge stickers
-    /// match the color of its center.
+    /// Checks whether the cube is in a solved state.
+    /// A face is solved if all its stickers match the center sticker's color.
     /// </summary>
-    /// <returns>True if solved, otherwise false</returns>
+    /// <returns>True if all faces are uniform in color.</returns>
     public bool IsSolved()
     {
         for (int face = 0; face < 6; ++face)
@@ -139,6 +143,64 @@ public class CubeState
             {
                 if (cubies[center][face] != cubies[i][face]) return false;
             }
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// Validates the cube state to ensure it is physically possible.
+    /// Checks for unique corner and edge combinations and proper color placement.
+    /// </summary>
+    /// <returns>True if the cube state is valid, otherwise false.</returns>
+    public bool IsValid()
+    {
+        bool[] mark = new bool[cubies.Length];
+        foreach (int pos_idx in CORNER_LIST)
+        {
+            Vector3Int pos = IdxToPos(pos_idx);
+            int x_color = cubies[pos_idx][pos.x > 0 ? 0 : 3];
+            int y_color = cubies[pos_idx][pos.y > 0 ? 1 : 4];
+            int z_color = cubies[pos_idx][pos.z > 0 ? 2 : 5];
+            if (x_color == -1 || y_color == -1 || z_color == -1) return false;
+            if (x_color % 3 == y_color % 3 || x_color % 3 == z_color % 3 || y_color % 3 == z_color % 3) return false;
+            bool back = (x_color == 3) || (y_color == 3) || (z_color == 3);
+            bool down = (x_color == 4) || (y_color == 4) || (z_color == 4);
+            bool left = (x_color == 5) || (y_color == 5) || (z_color == 5);
+            int original_pos_idx = PosToIdx(new Vector3Int(back ? -1 : 1, down ? -1 : 1, left ? -1 : 1));
+            if (mark[original_pos_idx]) return false;
+            mark[original_pos_idx] = true;
+        }
+
+        foreach (int pos_idx in EDGE_LIST)
+        {
+            Vector3Int pos = IdxToPos(pos_idx);
+            int x_color = -1;
+            int y_color = -1;
+            int z_color = -1;
+            if (pos.x != 0) x_color = cubies[pos_idx][pos.x > 0 ? 0 : 3];
+            if (pos.y != 0) y_color = cubies[pos_idx][pos.y > 0 ? 1 : 4];
+            if (pos.z != 0) z_color = cubies[pos_idx][pos.z > 0 ? 2 : 5];
+            int cnt = (x_color != -1 ? 1 : 0) + (y_color != -1 ? 1 : 0) + (z_color != -1 ? 1 : 0);
+            if (cnt != 2) return false;
+            bool front = (x_color == 0) || (y_color == 0) || (z_color == 0);
+            bool up = (x_color == 1) || (y_color == 1) || (z_color == 1);
+            bool right = (x_color == 2) || (y_color == 2) || (z_color == 2);
+            bool back = (x_color == 3) || (y_color == 3) || (z_color == 3);
+            bool down = (x_color == 4) || (y_color == 4) || (z_color == 4);
+            bool left = (x_color == 5) || (y_color == 5) || (z_color == 5);
+            if ((front && back) || (up && down) || (right && left)) return false;
+            int original_x = 0;
+            int original_y = 0;
+            int original_z = 0;
+            if (front) original_x = 1;
+            if (back) original_x = -1;
+            if (up) original_y = 1;
+            if (down) original_y = -1;
+            if (right) original_z = 1;
+            if (left) original_z = -1;
+            int original_pos_idx = PosToIdx(new Vector3Int(original_x, original_y, original_z));
+            if (mark[original_pos_idx]) return false;
+            mark[original_pos_idx] = true;
         }
         return true;
     }

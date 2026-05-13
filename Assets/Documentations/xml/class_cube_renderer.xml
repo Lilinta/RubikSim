@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_cube_renderer" kind="class" language="C#" prot="public">
+    <compoundname>CubeRenderer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_cube_renderer_1a76f0ba7d2c05ea9e39b08eaebc84da8f" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject CubeRenderer.cubie_prefab</definition>
+        <argsstring></argsstring>
+        <name>cubie_prefab</name>
+        <qualifiedname>CubeRenderer.cubie_prefab</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="14" column="23" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cube_renderer_1acc283f993759eecbac3078cc76d5b452" prot="private" static="no" mutable="no">
+        <type>GameObject[]</type>
+        <definition>GameObject [] CubeRenderer.cubies</definition>
+        <argsstring></argsstring>
+        <name>cubies</name>
+        <qualifiedname>CubeRenderer.cubies</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="15" column="24" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cube_renderer_1aae4f27c4a89111fa310df9793cac6a62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubeRenderer.Initialize</definition>
+        <argsstring>(CubeState state)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>CubeRenderer.Initialize</qualifiedname>
+        <param>
+          <type><ref refid="class_cube_state" kindref="compound">CubeState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the renderer by creating cubie GameObjects and rendering the initial cube state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="21" column="17" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_renderer_1aa209ca63c47a0e7d78587e19a7e7049e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubeRenderer.RenderState</definition>
+        <argsstring>(CubeState state)</argsstring>
+        <name>RenderState</name>
+        <qualifiedname>CubeRenderer.RenderState</qualifiedname>
+        <param>
+          <type><ref refid="class_cube_state" kindref="compound">CubeState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Updates all cubie positions, rotations, scales, and face colors based on the provided <ref refid="class_cube_state" kindref="compound">CubeState</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This fully synchronizes the visual cube with the logical state.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_cube_state" kindref="compound">CubeState</ref> to render</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="57" column="17" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="57" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cube_renderer_1a8a9977a62312e9b6a9c6270767a037a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>GameObject[]</type>
+        <definition>GameObject[] CubeRenderer.GetLayer</definition>
+        <argsstring>(int face)</argsstring>
+        <name>GetLayer</name>
+        <qualifiedname>CubeRenderer.GetLayer</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Retrieves all 9 cubies belonging to a specific face layer (4 corners, 4 edges, 1 center). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Used by <ref refid="class_cube_animator" kindref="compound">CubeAnimator</ref> to determine which cubies to rotate.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Array of 9 GameObjects in that layer</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="82" column="23" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="82" bodyend="105"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cube_renderer_1a0656c952b329c1e68f05f979f80c2c89" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubeRenderer.CreateCubies</definition>
+        <argsstring>()</argsstring>
+        <name>CreateCubies</name>
+        <qualifiedname>CubeRenderer.CreateCubies</qualifiedname>
+        <briefdescription>
+<para>Instantiates all 27 cubies in correct spatial positions and stores them in an index-based array. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/CubeRenderer.cs" line="31" column="10" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="31" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Responsible for creating and updating the visual representation of the Rubik&apos;s Cube in Unity. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class reads <ref refid="class_cube_state" kindref="compound">CubeState</ref> and updates GameObjects accordingly. It contains no cube logic. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Rendering/CubeRenderer.cs" line="12" column="7" bodyfile="Scripts/Rendering/CubeRenderer.cs" bodystart="13" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_cube_renderer_1a0656c952b329c1e68f05f979f80c2c89" prot="private" virt="non-virtual"><scope>CubeRenderer</scope><name>CreateCubies</name></member>
+      <member refid="class_cube_renderer_1a76f0ba7d2c05ea9e39b08eaebc84da8f" prot="public" virt="non-virtual"><scope>CubeRenderer</scope><name>cubie_prefab</name></member>
+      <member refid="class_cube_renderer_1acc283f993759eecbac3078cc76d5b452" prot="private" virt="non-virtual"><scope>CubeRenderer</scope><name>cubies</name></member>
+      <member refid="class_cube_renderer_1a8a9977a62312e9b6a9c6270767a037a3" prot="public" virt="non-virtual"><scope>CubeRenderer</scope><name>GetLayer</name></member>
+      <member refid="class_cube_renderer_1aae4f27c4a89111fa310df9793cac6a62" prot="public" virt="non-virtual"><scope>CubeRenderer</scope><name>Initialize</name></member>
+      <member refid="class_cube_renderer_1aa209ca63c47a0e7d78587e19a7e7049e" prot="public" virt="non-virtual"><scope>CubeRenderer</scope><name>RenderState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

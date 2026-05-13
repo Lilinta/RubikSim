@@ -1,0 +1,160 @@
+\doxysection{Cubie\+Model Class Reference}
+\hypertarget{class_cubie_model}{}\label{class_cubie_model}\index{CubieModel@{CubieModel}}
+
+
+Mathematical representation of the Rubik\textquotesingle{}s Cube based on cubie permutation and orientation. This model is used by the solver (Kociemba/\+\+Two-\/\+Phase algorithm) rather than for rendering.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cubie_model_ab6cc56d2bb3e37471272c60224276718}{Cubie\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new \doxylink{class_cubie_model}{Cubie\+Model} in the solved state. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_cubie_model_aec5a3ca7fd6fdd0177c7f8759b38d759}{Cubie\+Model}} (\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} state)
+\begin{DoxyCompactList}\small\item\em Converts a standard \doxylink{class_cube_state}{Cube\+State} into a mathematical \doxylink{class_cubie_model}{Cubie\+Model}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_cubie_model}{Cubie\+Model}} \doxymbox{\hyperlink{class_cubie_model_ac364e66e090dc9d18d1fc62d0d7ee476}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of the \doxylink{class_cubie_model}{Cubie\+Model}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cubie_model_a4f6be8ba56b91dbd00bf4f92b7753d88}{Apply\+Move}} (\doxymbox{\hyperlink{class_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Applies a move to the model by repeating a quarter turn. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_cubie_model_ac2bac3679d7f95b17d23110cf3c68bfb}{Is\+Solvable}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current model state is mathematically solvable. Validates corner orientation sum, edge orientation sum, and permutation parity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int\+[$\,$]\+ \doxymbox{\hyperlink{class_cubie_model_a8099667036df88cbbef7987e39ede025}{corner\+\_\+perm}} = new int\+[8]\+
+\begin{DoxyCompactList}\small\item\em Permutation of the 8 corner cubies. \end{DoxyCompactList}\item 
+int\+[$\,$]\+ \doxymbox{\hyperlink{class_cubie_model_ae8c79b1a2a03004a72cc2d011bce2714}{corner\+\_\+ori}} = new int\+[8]\+
+\begin{DoxyCompactList}\small\item\em Orientation of the 8 corner cubies (0, 1, or 2). \end{DoxyCompactList}\item 
+int\+[$\,$]\+ \doxymbox{\hyperlink{class_cubie_model_a24fddfd21000aff30a460c2f78886de3}{edge\+\_\+perm}} = new int\+[12]\+
+\begin{DoxyCompactList}\small\item\em Permutation of the 12 edge cubies. \end{DoxyCompactList}\item 
+int\+[$\,$]\+ \doxymbox{\hyperlink{class_cubie_model_aa61f36891715a1ebe9a0427f706af1c3}{edge\+\_\+ori}} = new int\+[12]\+
+\begin{DoxyCompactList}\small\item\em Orientation of the 12 edge cubies (0 or 1). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Mathematical representation of the Rubik\textquotesingle{}s Cube based on cubie permutation and orientation. This model is used by the solver (Kociemba/\+\+Two-\/\+Phase algorithm) rather than for rendering. 
+
+\label{class_cubie_model_doc-constructors}
+\Hypertarget{class_cubie_model_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cubie_model_ab6cc56d2bb3e37471272c60224276718}\index{CubieModel@{CubieModel}!CubieModel@{CubieModel}}
+\index{CubieModel@{CubieModel}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{CubieModel()}{CubieModel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_cubie_model_ab6cc56d2bb3e37471272c60224276718} 
+Cubie\+Model.\+Cubie\+Model (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a new \doxylink{class_cubie_model}{Cubie\+Model} in the solved state. 
+
+\Hypertarget{class_cubie_model_aec5a3ca7fd6fdd0177c7f8759b38d759}\index{CubieModel@{CubieModel}!CubieModel@{CubieModel}}
+\index{CubieModel@{CubieModel}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{CubieModel()}{CubieModel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_cubie_model_aec5a3ca7fd6fdd0177c7f8759b38d759} 
+Cubie\+Model.\+Cubie\+Model (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_cube_state}{Cube\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Converts a standard \doxylink{class_cube_state}{Cube\+State} into a mathematical \doxylink{class_cubie_model}{Cubie\+Model}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The logical cube state to convert.\\
+\hline
+\end{DoxyParams}
+
+
+\label{class_cubie_model_doc-func-members}
+\Hypertarget{class_cubie_model_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cubie_model_a4f6be8ba56b91dbd00bf4f92b7753d88}\index{CubieModel@{CubieModel}!ApplyMove@{ApplyMove}}
+\index{ApplyMove@{ApplyMove}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{ApplyMove()}{ApplyMove()}}
+{\footnotesize\ttfamily \label{class_cubie_model_a4f6be8ba56b91dbd00bf4f92b7753d88} 
+void Cubie\+Model.\+Apply\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Applies a move to the model by repeating a quarter turn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & The move to apply.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cubie_model_ac364e66e090dc9d18d1fc62d0d7ee476}\index{CubieModel@{CubieModel}!Clone@{Clone}}
+\index{Clone@{Clone}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{class_cubie_model_ac364e66e090dc9d18d1fc62d0d7ee476} 
+\doxymbox{\hyperlink{class_cubie_model}{Cubie\+Model}} Cubie\+Model.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a deep copy of the \doxylink{class_cubie_model}{Cubie\+Model}. 
+
+\begin{DoxyReturn}{Returns}
+A cloned \doxylink{class_cubie_model}{Cubie\+Model}.
+\end{DoxyReturn}
+\Hypertarget{class_cubie_model_ac2bac3679d7f95b17d23110cf3c68bfb}\index{CubieModel@{CubieModel}!IsSolvable@{IsSolvable}}
+\index{IsSolvable@{IsSolvable}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{IsSolvable()}{IsSolvable()}}
+{\footnotesize\ttfamily \label{class_cubie_model_ac2bac3679d7f95b17d23110cf3c68bfb} 
+bool Cubie\+Model.\+Is\+Solvable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current model state is mathematically solvable. Validates corner orientation sum, edge orientation sum, and permutation parity. 
+
+\begin{DoxyReturn}{Returns}
+True if solvable.
+\end{DoxyReturn}
+
+
+\label{class_cubie_model_doc-variable-members}
+\Hypertarget{class_cubie_model_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cubie_model_ae8c79b1a2a03004a72cc2d011bce2714}\index{CubieModel@{CubieModel}!corner\_ori@{corner\_ori}}
+\index{corner\_ori@{corner\_ori}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{corner\_ori}{corner\_ori}}
+{\footnotesize\ttfamily \label{class_cubie_model_ae8c79b1a2a03004a72cc2d011bce2714} 
+int \+[$\,$]\+ Cubie\+Model.\+corner\+\_\+ori = new int\+[8]\+}
+
+
+
+Orientation of the 8 corner cubies (0, 1, or 2). 
+
+\Hypertarget{class_cubie_model_a8099667036df88cbbef7987e39ede025}\index{CubieModel@{CubieModel}!corner\_perm@{corner\_perm}}
+\index{corner\_perm@{corner\_perm}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{corner\_perm}{corner\_perm}}
+{\footnotesize\ttfamily \label{class_cubie_model_a8099667036df88cbbef7987e39ede025} 
+int \+[$\,$]\+ Cubie\+Model.\+corner\+\_\+perm = new int\+[8]\+}
+
+
+
+Permutation of the 8 corner cubies. 
+
+\Hypertarget{class_cubie_model_aa61f36891715a1ebe9a0427f706af1c3}\index{CubieModel@{CubieModel}!edge\_ori@{edge\_ori}}
+\index{edge\_ori@{edge\_ori}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{edge\_ori}{edge\_ori}}
+{\footnotesize\ttfamily \label{class_cubie_model_aa61f36891715a1ebe9a0427f706af1c3} 
+int \+[$\,$]\+ Cubie\+Model.\+edge\+\_\+ori = new int\+[12]\+}
+
+
+
+Orientation of the 12 edge cubies (0 or 1). 
+
+\Hypertarget{class_cubie_model_a24fddfd21000aff30a460c2f78886de3}\index{CubieModel@{CubieModel}!edge\_perm@{edge\_perm}}
+\index{edge\_perm@{edge\_perm}!CubieModel@{CubieModel}}
+\doxysubsubsection{\texorpdfstring{edge\_perm}{edge\_perm}}
+{\footnotesize\ttfamily \label{class_cubie_model_a24fddfd21000aff30a460c2f78886de3} 
+int \+[$\,$]\+ Cubie\+Model.\+edge\+\_\+perm = new int\+[12]\+}
+
+
+
+Permutation of the 12 edge cubies. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Solver/\+\doxymbox{\hyperlink{_cubie_model_8cs}{Cubie\+Model.\+cs}}\end{DoxyCompactItemize}

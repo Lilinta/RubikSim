@@ -1,0 +1,163 @@
+\doxysection{Game\+Manager Class Reference}
+\hypertarget{class_game_manager}{}\label{class_game_manager}\index{GameManager@{GameManager}}
+
+
+Central controller of the game logic. Responsibilities:\+  
+
+
+Inheritance diagram for Game\+Manager:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_game_manager_a57823aded891b017efede1e7c4e1bd78}{Debug\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Debug helper to inspect the mathematical state of the cubies. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_game_manager_a31bdf6c3c101d3164a633eba843bd608}{Apply\+Move}} (\doxymbox{\hyperlink{class_move}{Move}} move, bool animation=true)
+\begin{DoxyCompactList}\small\item\em Attempts to apply a move to the cube. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_game_manager_af5e71ad1f9947c863e37335262e6b073}{Import}} ()
+\begin{DoxyCompactList}\small\item\em Imports physical colors from the UI scene setup to the logical \doxylink{class_cube_state}{Cube\+State}. Used for importing user-\/defined cube configurations. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_game_manager_aa344e962c743cef379f9509418e4c275}{Is\+Solvable}} ()
+\begin{DoxyCompactList}\small\item\em Validates if the current \doxylink{class_cube_state}{Cube\+State} configuration is solvable by the Kociemba algorithm. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_game_manager_a29130044c8fcd6eff082eb95a419ab40}{Scramble}} (bool animation=true)
+\begin{DoxyCompactList}\small\item\em Starts a scramble animation sequence. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ \doxymbox{\hyperlink{class_game_manager_a8c5fc33f2108d9f6d1f4feec9195d2db}{Get\+Solver\+Moves}} ()
+\item 
+void \doxymbox{\hyperlink{class_game_manager_a1fa92c3e2f085a4eb340474804203236}{Solve}} (bool animation=true)
+\item 
+bool \doxymbox{\hyperlink{class_game_manager_a83117f07437de42743711b3b4241b799}{Is\+Solved}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cube_renderer}{Cube\+Renderer}} \doxymbox{\hyperlink{class_game_manager_a9c19f150ad2c89a989602809a2d15bcb}{render}}
+\item 
+\doxymbox{\hyperlink{class_cube_animator}{Cube\+Animator}} \doxymbox{\hyperlink{class_game_manager_ac3ac243b5a86f43928b763882deff38e}{animator}}
+\item 
+\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} \doxymbox{\hyperlink{class_game_manager_a7d7f7b6a375b53bc347d151a79cc56b2}{current\+\_\+state}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Central controller of the game logic. Responsibilities:\+ 
+
+
+\begin{DoxyItemize}
+\item Maintain the current \doxylink{class_cube_state}{Cube\+State} (logical model).
+\item Coordinate animation and rendering.
+\item Apply moves safely (ensuring animations finish before next move).
+\item Trigger solver and scramble sequences. 
+\end{DoxyItemize}
+
+\label{class_game_manager_doc-func-members}
+\Hypertarget{class_game_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_manager_a31bdf6c3c101d3164a633eba843bd608}\index{GameManager@{GameManager}!ApplyMove@{ApplyMove}}
+\index{ApplyMove@{ApplyMove}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{ApplyMove()}{ApplyMove()}}
+{\footnotesize\ttfamily \label{class_game_manager_a31bdf6c3c101d3164a633eba843bd608} 
+bool Game\+Manager.\+Apply\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}}]{move}{, }\item[{bool}]{animation}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Attempts to apply a move to the cube. 
+
+A move can only be applied if no animation is currently running.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \doxylink{class_move}{Move} to apply\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the move was accepted, otherwise false
+\end{DoxyReturn}
+\Hypertarget{class_game_manager_a57823aded891b017efede1e7c4e1bd78}\index{GameManager@{GameManager}!DebugOutput@{DebugOutput}}
+\index{DebugOutput@{DebugOutput}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{DebugOutput()}{DebugOutput()}}
+{\footnotesize\ttfamily \label{class_game_manager_a57823aded891b017efede1e7c4e1bd78} 
+void Game\+Manager.\+Debug\+Output (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Debug helper to inspect the mathematical state of the cubies. 
+
+\Hypertarget{class_game_manager_a8c5fc33f2108d9f6d1f4feec9195d2db}\index{GameManager@{GameManager}!GetSolverMoves@{GetSolverMoves}}
+\index{GetSolverMoves@{GetSolverMoves}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{GetSolverMoves()}{GetSolverMoves()}}
+{\footnotesize\ttfamily \label{class_game_manager_a8c5fc33f2108d9f6d1f4feec9195d2db} 
+List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ Game\+Manager.\+Get\+Solver\+Moves (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_manager_af5e71ad1f9947c863e37335262e6b073}\index{GameManager@{GameManager}!Import@{Import}}
+\index{Import@{Import}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Import()}{Import()}}
+{\footnotesize\ttfamily \label{class_game_manager_af5e71ad1f9947c863e37335262e6b073} 
+void Game\+Manager.\+Import (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Imports physical colors from the UI scene setup to the logical \doxylink{class_cube_state}{Cube\+State}. Used for importing user-\/defined cube configurations. 
+
+\Hypertarget{class_game_manager_aa344e962c743cef379f9509418e4c275}\index{GameManager@{GameManager}!IsSolvable@{IsSolvable}}
+\index{IsSolvable@{IsSolvable}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{IsSolvable()}{IsSolvable()}}
+{\footnotesize\ttfamily \label{class_game_manager_aa344e962c743cef379f9509418e4c275} 
+bool Game\+Manager.\+Is\+Solvable (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Validates if the current \doxylink{class_cube_state}{Cube\+State} configuration is solvable by the Kociemba algorithm. 
+
+\Hypertarget{class_game_manager_a83117f07437de42743711b3b4241b799}\index{GameManager@{GameManager}!IsSolved@{IsSolved}}
+\index{IsSolved@{IsSolved}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{IsSolved()}{IsSolved()}}
+{\footnotesize\ttfamily \label{class_game_manager_a83117f07437de42743711b3b4241b799} 
+bool Game\+Manager.\+Is\+Solved (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_game_manager_a29130044c8fcd6eff082eb95a419ab40}\index{GameManager@{GameManager}!Scramble@{Scramble}}
+\index{Scramble@{Scramble}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Scramble()}{Scramble()}}
+{\footnotesize\ttfamily \label{class_game_manager_a29130044c8fcd6eff082eb95a419ab40} 
+void Game\+Manager.\+Scramble (\begin{DoxyParamCaption}\item[{bool}]{animation}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Starts a scramble animation sequence. 
+
+\Hypertarget{class_game_manager_a1fa92c3e2f085a4eb340474804203236}\index{GameManager@{GameManager}!Solve@{Solve}}
+\index{Solve@{Solve}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily \label{class_game_manager_a1fa92c3e2f085a4eb340474804203236} 
+void Game\+Manager.\+Solve (\begin{DoxyParamCaption}\item[{bool}]{animation}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+\label{class_game_manager_doc-variable-members}
+\Hypertarget{class_game_manager_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_game_manager_ac3ac243b5a86f43928b763882deff38e}\index{GameManager@{GameManager}!animator@{animator}}
+\index{animator@{animator}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{animator}{animator}}
+{\footnotesize\ttfamily \label{class_game_manager_ac3ac243b5a86f43928b763882deff38e} 
+\doxymbox{\hyperlink{class_cube_animator}{Cube\+Animator}} Game\+Manager.\+animator}
+
+\Hypertarget{class_game_manager_a7d7f7b6a375b53bc347d151a79cc56b2}\index{GameManager@{GameManager}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily \label{class_game_manager_a7d7f7b6a375b53bc347d151a79cc56b2} 
+\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} Game\+Manager.\+current\+\_\+state}
+
+\Hypertarget{class_game_manager_a9c19f150ad2c89a989602809a2d15bcb}\index{GameManager@{GameManager}!render@{render}}
+\index{render@{render}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{render}{render}}
+{\footnotesize\ttfamily \label{class_game_manager_a9c19f150ad2c89a989602809a2d15bcb} 
+\doxymbox{\hyperlink{class_cube_renderer}{Cube\+Renderer}} Game\+Manager.\+render}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Game/\+\doxymbox{\hyperlink{_game_manager_8cs}{Game\+Manager.\+cs}}\end{DoxyCompactItemize}

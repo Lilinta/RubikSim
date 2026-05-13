@@ -1,20 +1,39 @@
-using System;
 using System.Collections.Generic;
-using static Coordinate;
+
+/// <summary>
+/// Precomputes and stores pruning tables (distance heuristics) for the solver.
+/// Each table stores the minimum number of moves required to reach the target 
+/// coordinate from a given coordinate, used to prune search branches in IDA*.
+/// </summary>
 public static class PruningTables
 {
+    /// <summary> Minimum moves to solve CO and EO simultaneously. </summary>
     public static byte[,] co_eo_prune;   // [2187,2048]
+    /// <summary> Minimum moves to solve EO and UD-Slice position. </summary>
     public static byte[,] eo_uds_prune;  // [2048,495]
+    /// <summary> Minimum moves to solve CP and UD-Slice permutation. </summary>
     public static byte[,] cp_uds2_prune;  // [40320,24]
+    /// <summary> Minimum moves to solve EP and UD-Slice permutation. </summary>
     public static byte[,] ep_uds2_prune;  // [40320,24]
+
+    /// <summary> The targeted co index </summary>
     static int _co;
+    /// <summary> The targeted eo index </summary>
     static int _eo;
+    /// <summary> The targeted uds index </summary>
     static int _uds;
+    /// <summary> The targeted cp index </summary>
     static int _cp;
+    /// <summary> The targeted ep index </summary>
     static int _ep;
+    /// <summary> The targeted uds2 index </summary>
     static int _uds2;
+    /// <summary> Checks if it has been initalized yet </summary>
     static bool initialized = false;
 
+    /// <summary>
+    /// Initializes and fills all pruning tables using Breadth-First Search (BFS).
+    /// </summary>
     public static void Init()
     {
         if (initialized) return;
@@ -46,8 +65,7 @@ public static class PruningTables
         Build_EP_UDS2();
     }
 
-    // =====================================================
-
+    /// <summary> Fills a 2D byte array with a specific value. </summary>
     static void Fill(byte[,] table, byte val)
     {
         for (int i = 0; i < table.GetLength(0); i++)
@@ -55,10 +73,9 @@ public static class PruningTables
                 table[i, j] = val;
     }
 
-    // =====================================================
-    // PHASE 1
-    // =====================================================
+    // --- PHASE 1 BFS BUILDERS ---
 
+    /// <summary> Precomputes co_eo_prune. </summary>
     static void Build_CO_EO()
     {
         Queue<(int co, int eo)> q = new Queue<(int, int)>();
@@ -84,6 +101,7 @@ public static class PruningTables
         }
     }
 
+    /// <summary> Precomputes eo_uds_prune. </summary>
     static void Build_EO_UDS()
     {
         Queue<(int eo, int uds)> q = new Queue<(int, int)>();
@@ -109,10 +127,9 @@ public static class PruningTables
         }
     }
 
-    // =====================================================
-    // PHASE 2
-    // =====================================================
+    // --- PHASE 2 BFS BUILDERS ---
 
+    /// <summary> Precomputes cp_uds2_prune. </summary>
     static void Build_CP_UDS2()
     {
         Queue<(int cp, int uds2)> q = new Queue<(int, int)>();
@@ -138,6 +155,7 @@ public static class PruningTables
         }
     }
 
+    /// <summary> Precomputes ep_uds2_prune. </summary>
     static void Build_EP_UDS2()
     {
         Queue<(int ep, int uds2)> q = new Queue<(int, int)>();
@@ -163,34 +181,3 @@ public static class PruningTables
         }
     }
 }
-
-//public class PruningTables
-//{
-//    public static byte[] prune_phase_1;
-//    public static byte[] prune_phase_2;
-
-//    static PruningTables()
-//    {
-
-//    }
-
-//    static void BuildPhase1Prune()
-//    {
-
-//    }
-
-//    static void BuildPhase2Prune()
-//    {
-
-//    }
-
-//    public static int GetPhase1Heuristic(int co, int eo, int mec)
-//    {
-//        return 0;
-//    }
-
-//    public static int GetPhase2Heuristic(int cp, int ep)
-//    {
-//        return 0;
-//    }
-//}

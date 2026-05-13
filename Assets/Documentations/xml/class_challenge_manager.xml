@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_challenge_manager" kind="class" language="C#" prot="public">
+    <compoundname>ChallengeManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_challenge_manager_1a277ca967fd83378f37938873539c4022" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager ChallengeManager.game_manager</definition>
+        <argsstring></argsstring>
+        <name>game_manager</name>
+        <qualifiedname>ChallengeManager.game_manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="11" column="24" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_challenge_manager_1ac24fd52f81d5c6027915a9b92a205ea2" prot="public" static="no" mutable="no">
+        <type><ref refid="class_challenge_mode_events" kindref="compound">ChallengeModeEvents</ref></type>
+        <definition>ChallengeModeEvents ChallengeManager.challenge_mode_events</definition>
+        <argsstring></argsstring>
+        <name>challenge_mode_events</name>
+        <qualifiedname>ChallengeManager.challenge_mode_events</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="12" column="32" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_challenge_manager_1ace5e26cebbcc766133b9495dd4c43785" prot="public" static="no" mutable="no">
+        <type>AudioSource</type>
+        <definition>AudioSource ChallengeManager.celebration_sound</definition>
+        <argsstring></argsstring>
+        <name>celebration_sound</name>
+        <qualifiedname>ChallengeManager.celebration_sound</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="13" column="24" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_challenge_manager_1a7047dd81603fee2e17a547b082700d9f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ChallengeManager.time</definition>
+        <argsstring></argsstring>
+        <name>time</name>
+        <qualifiedname>ChallengeManager.time</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="14" column="19" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_challenge_manager_1a9e54520f473e31a18d10afaf0fc744db" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ChallengeManager.finished</definition>
+        <argsstring></argsstring>
+        <name>finished</name>
+        <qualifiedname>ChallengeManager.finished</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="15" column="10" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_challenge_manager_1a15dfadd0f1038f4239274b3edd273e0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeManager.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>ChallengeManager.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="17" column="10" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_challenge_manager_1a62cb1f1da05c5301502a5c5777e673c0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChallengeManager.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>ChallengeManager.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/ChallengeManager.cs" line="24" column="10" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="24" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Orchestrates the Challenge Mode experience: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Handles initialization (scrambling the cube).</para>
+</listitem><listitem><para>Tracks player duration.</para>
+</listitem><listitem><para>Detects the solved state to end the challenge. </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ChallengeManager</label>
+        <link refid="class_challenge_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ChallengeManager</label>
+        <link refid="class_challenge_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>challenge_mode_events</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ChallengeModeEvents</label>
+        <link refid="class_challenge_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="3">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Game/ChallengeManager.cs" line="9" column="7" bodyfile="Scripts/Game/ChallengeManager.cs" bodystart="10" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_challenge_manager_1ace5e26cebbcc766133b9495dd4c43785" prot="public" virt="non-virtual"><scope>ChallengeManager</scope><name>celebration_sound</name></member>
+      <member refid="class_challenge_manager_1ac24fd52f81d5c6027915a9b92a205ea2" prot="public" virt="non-virtual"><scope>ChallengeManager</scope><name>challenge_mode_events</name></member>
+      <member refid="class_challenge_manager_1a9e54520f473e31a18d10afaf0fc744db" prot="private" virt="non-virtual"><scope>ChallengeManager</scope><name>finished</name></member>
+      <member refid="class_challenge_manager_1a277ca967fd83378f37938873539c4022" prot="public" virt="non-virtual"><scope>ChallengeManager</scope><name>game_manager</name></member>
+      <member refid="class_challenge_manager_1a15dfadd0f1038f4239274b3edd273e0d" prot="private" virt="non-virtual"><scope>ChallengeManager</scope><name>Start</name></member>
+      <member refid="class_challenge_manager_1a7047dd81603fee2e17a547b082700d9f" prot="private" virt="non-virtual"><scope>ChallengeManager</scope><name>time</name></member>
+      <member refid="class_challenge_manager_1a62cb1f1da05c5301502a5c5777e673c0" prot="private" virt="non-virtual"><scope>ChallengeManager</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

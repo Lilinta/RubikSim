@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/LeaderboardStyle.uss?fileID=7433441132597879392&amp;guid=d2a75d25335cc954b852ce7ed4927eb8&amp;type=3#LeaderboardStyle"/>
+    <ui:MultiColumnListView columns="" sort-column-descriptions="">
+        <ui:Columns>
+            <ui:Column name="Rank" title="Rank" min-width="50px"/>
+        </ui:Columns>
+    </ui:MultiColumnListView>
+</ui:UXML>

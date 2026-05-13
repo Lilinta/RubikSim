@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using UnityEngine;
 
 /// <summary>
@@ -17,16 +16,28 @@ using UnityEngine;
 /// </summary>
 static class Mapping
 {
+    /// <summary> Index for the Front face (usually Blue). </summary>
     public const int FRONT = 0;
+    /// <summary> Index for the Up/Top face (usually Yellow). </summary>
     public const int UP = 1;
+    /// <summary> Index for the Right face (usually Red). </summary>
     public const int RIGHT = 2;
+    /// <summary> Index for the Back face (usually Green). </summary>
     public const int BACK = 3;
+    /// <summary> Index for the Down/Bottom face (usually White). </summary>
     public const int DOWN = 4;
+    /// <summary> Index for the Left face (usually Orange/Magenta). </summary>
     public const int LEFT = 5;
+    /// <summary> List of indices representing the 8 corner cubies in the internal array. </summary>
     public static int[] CORNER_LIST = new int[] {0, 2, 20, 18, 6, 8, 26, 24};
+    /// <summary> List of indices representing the 12 edge cubies in the internal array. </summary>
     public static int[] EDGE_LIST = new int[] { 9, 1, 11, 19, 15, 7, 17, 25, 3, 5, 23, 21};
+    /// <summary> Mapping array to convert internal indices to Kociemba solver indexing format. </summary>
     public static int[] TO_KOCIEMBA_IDX;
 
+    /// <summary>
+    /// Static constructor to initialize precomputed mapping tables.
+    /// </summary>
     static Mapping()
     {
         TO_KOCIEMBA_IDX = new int[27];
@@ -43,17 +54,15 @@ static class Mapping
             TO_KOCIEMBA_IDX[EDGE_LIST[i]] = i;
         }
     }
+
     /// <summary>
     /// Converts a linear cubie index (0..26) into its 3D position in cube space.
     /// 
     /// Coordinate system:
     /// x, y, z ∈ {-1, 0, 1}
-    /// 
-    /// The mapping assumes a fixed ordering of cubies and is used
-    /// to convert between array-based storage and spatial positioning.
     /// </summary>
-    /// <param name="idx">Linear cubie index (0..26)</param>
-    /// <returns>3D position as Vector3Int</returns>
+    /// <param name="idx">Linear cubie index (0..26).</param>
+    /// <returns>3D position as Vector3Int.</returns>
     public static Vector3Int IdxToPos(int idx)
     {
         return new Vector3Int(1 - idx / 9, 1 - (idx % 9 / 3), 1 - idx % 3);
@@ -61,23 +70,19 @@ static class Mapping
 
     /// <summary>
     /// Converts a 3D cube position (x,y,z) into its linear array index (0..26).
-    /// 
-    /// This is the inverse function of IdxToPos().
     /// </summary>
-    /// <param name="Pos">Position in cube space (x,y,z)</param>
-    /// <returns>Linear cubie index</returns>
+    /// <param name="Pos">Position in cube space (x,y,z) where components are in {-1, 0, 1}.</param>
+    /// <returns>Linear cubie index.</returns>
     public static int PosToIdx(Vector3Int Pos)
     {
         return 9 * (1 - Pos.x) + 3 * (1 - Pos.y) + (1 - Pos.z);
     }
 
     /// <summary>
-    /// Returns the Unity color corresponding to a given face index.
-    /// 
-    /// This is used for rendering purposes only and does not affect cube logic.
+    /// Returns the Unity Color corresponding to a given face index.
     /// </summary>
-    /// <param name="face">Face index constant</param>
-    /// <returns>Color associated with that face</returns>
+    /// <param name="face">The face index constant.</param>
+    /// <returns>The Unity Color associated with that face.</returns>
     public static Color GetColor(int face)
     {
         if (face == FRONT) return Color.blue;
@@ -90,13 +95,28 @@ static class Mapping
     }
 
     /// <summary>
-    /// Returns the 4 adjacent face indices surrounding a given face,
-    /// ordered in clockwise direction relative to looking directly at that face.
-    /// 
-    /// Used for rotating cubie face colors when a move is applied.
+    /// Maps a Unity Color back to its corresponding face index.
     /// </summary>
-    /// <param name="face">Face index</param>
-    /// <returns>Array of 4 adjacent face indices (clockwise)</returns>
+    /// <param name="color">The Unity Color to check.</param>
+    /// <returns>Face index constant, or -1 if no match found.</returns>
+    public static int GetColorIdx(Color color)
+    {
+        if (color == Color.blue) return FRONT;
+        else if (color == Color.yellow) return UP;
+        else if (color == Color.red) return RIGHT;
+        else if (color == Color.green) return BACK;
+        else if (color == Color.white) return DOWN;
+        else if (color == Color.magenta) return LEFT;
+        else return -1;
+    }
+
+    /// <summary>
+    /// Returns the 4 adjacent face indices surrounding a given face,
+    /// ordered clockwise when looking directly at that face.
+    /// </summary>
+    /// <param name="face">Target face index.</param>
+    /// <returns>Array of 4 adjacent face indices.</returns>
+    /// <exception cref="Exception">Thrown if face index is invalid.</exception>
     public static int[] GetAdjacent(int face)
     {
         if (face == FRONT)
@@ -130,13 +150,10 @@ static class Mapping
     }
 
     /// <summary>
-    /// Returns the 4 corner cubie indices of a given face,
-    /// ordered in clockwise direction.
-    /// 
-    /// Used to permute corner cubies during face rotation.
+    /// Returns the 4 corner cubie indices of a given face, ordered clockwise.
     /// </summary>
-    /// <param name="face">Face index</param>
-    /// <returns>Array of 4 cubie indices (corners)</returns>
+    /// <param name="face">Target face index.</param>
+    /// <returns>Array of 4 cubie indices (corners).</returns>
     public static int[] GetCorners(int face)
     {
         if (face == FRONT)
@@ -170,13 +187,10 @@ static class Mapping
     }
 
     /// <summary>
-    /// Returns the 4 edge cubie indices of a given face,
-    /// ordered in clockwise direction.
-    /// 
-    /// Used to permute edge cubies during face rotation.
+    /// Returns the 4 edge cubie indices of a given face, ordered clockwise.
     /// </summary>
-    /// <param name="face">Face index</param>
-    /// <returns>Array of 4 cubie indices (edges)</returns>
+    /// <param name="face">Target face index.</param>
+    /// <returns>Array of 4 cubie indices (edges).</returns>
     public static int[] GetEdges(int face)
     {
         if (face == FRONT)
@@ -211,12 +225,9 @@ static class Mapping
 
     /// <summary>
     /// Returns the center cubie index of a given face.
-    /// 
-    /// Center cubies never change position but their orientation
-    /// still changes during face rotations.
     /// </summary>
-    /// <param name="face">Face index</param>
-    /// <returns>Center cubie index</returns>
+    /// <param name="face">Target face index.</param>
+    /// <returns>Center cubie index.</returns>
     public static int GetCenter(int face)
     {
         if (face == FRONT) return 4;
@@ -229,12 +240,10 @@ static class Mapping
     }
 
     /// <summary>
-    /// Returns the 3D rotation axis for a given face.
-    /// 
-    /// This is used for animation in Unity when rotating a layer.
+    /// Returns the 3D rotation axis for a given face used for Unity animations.
     /// </summary>
-    /// <param name="face">Face index</param>
-    /// <returns>Rotation axis vector</returns>
+    /// <param name="face">Face index.</param>
+    /// <returns>Rotation axis as a Vector3Int.</returns>
     public static Vector3Int GetAxis(int face)
     {
         if (face == FRONT) return new Vector3Int(1, 0, 0);
@@ -246,6 +255,12 @@ static class Mapping
         else throw new Exception("GetAxis: Invalid value for face");
     }
 
+    /// <summary>
+    /// Converts a move index (0..17) to a Move object.
+    /// Mapping: 6 faces * 3 types (normal, 180, reverse).
+    /// </summary>
+    /// <param name="idx">Move index.</param>
+    /// <returns>A Move object representation.</returns>
     public static Move IdxToMove(int idx)
     {
         if (idx >= 18 || idx < 0) throw new Exception("IdxToMove: Invalid value for idx");;
@@ -256,6 +271,11 @@ static class Mapping
         else return new Move(face, true, false);
     }
 
+    /// <summary>
+    /// Converts a Move object to its corresponding integer index (0..17).
+    /// </summary>
+    /// <param name="move">Move object to convert.</param>
+    /// <returns>Integer index of the move.</returns>
     public static int MoveToIdx(Move move)
     {
         return move.face * 3 + Convert.ToInt32(move.rev) * 2 + Convert.ToInt32(move.is180) * 1;

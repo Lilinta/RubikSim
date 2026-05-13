@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/ChallengeModeStyle.uss?fileID=7433441132597879392&amp;guid=f052b22d182e8e441a9464abfe04b01c&amp;type=3#ChallengeModeStyle"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1; align-content: flex-start; flex-basis: auto; flex-direction: row; justify-content: space-between;">
+        <ui:Button text="&lt;&lt;" name="ReturnButton" style="width: 50px; height: 50px; margin-top: 12px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px; flex-direction: column;"/>
+        <ui:Label text="Label" name="TimerLabel" style="height: 50px; width: 200px; -unity-text-align: middle-center; font-size: 35px; -unity-text-outline-color: rgb(76, 76, 76); color: rgb(0, 255, 30); margin-top: 12px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px;"/>
+    </ui:VisualElement>
+</ui:UXML>

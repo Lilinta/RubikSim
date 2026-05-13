@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// Temporary input handler used for testing cube interactions via keyboard.
+/// Only function when pkey is pressed.
 /// 
 /// This controller maps specific keyboard keys to Rubik’s Cube face moves
 /// and forwards them to <see cref="GameManager"/> for execution.
@@ -22,6 +23,8 @@ using UnityEngine.InputSystem;
 ///
 /// Pressing:
 ///     K → Triggers a scramble sequence.
+///     S → Triggers a solving sequence
+///     Q → Debug Output
 ///
 /// This script uses Unity's new Input System (<see cref="UnityEngine.InputSystem"/>)
 /// and checks for key presses every frame in <see cref="Update"/>.
@@ -37,6 +40,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
+        if (!Keyboard.current.pKey.isPressed) return;
         if (Keyboard.current.fKey.wasPressedThisFrame || Keyboard.current.digit0Key.wasPressedThisFrame)
         {
             gameManager.ApplyMove(new Move(0, Keyboard.current.shiftKey.isPressed));

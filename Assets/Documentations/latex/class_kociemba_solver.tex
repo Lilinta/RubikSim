@@ -1,0 +1,60 @@
+\doxysection{Kociemba\+Solver Class Reference}
+\hypertarget{class_kociemba_solver}{}\label{class_kociemba_solver}\index{KociembaSolver@{KociembaSolver}}
+
+
+The main solver class coordinating the Two-\/\+Phase Kociemba algorithm.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_kociemba_solver_ab96f1064a15ce885532a65ffdd48eab9}{Kociemba\+Solver}} ()
+\begin{DoxyCompactList}\small\item\em Initializes solver. \end{DoxyCompactList}\item 
+List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ \doxymbox{\hyperlink{class_kociemba_solver_ab67fcc5651c4c71642aff9b1e6118559}{Solve}} (\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} state)
+\begin{DoxyCompactList}\small\item\em Calculates the optimal (or near-\/optimal) solution for a given cube state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The main solver class coordinating the Two-\/\+Phase Kociemba algorithm. 
+
+\label{class_kociemba_solver_doc-constructors}
+\Hypertarget{class_kociemba_solver_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_kociemba_solver_ab96f1064a15ce885532a65ffdd48eab9}\index{KociembaSolver@{KociembaSolver}!KociembaSolver@{KociembaSolver}}
+\index{KociembaSolver@{KociembaSolver}!KociembaSolver@{KociembaSolver}}
+\doxysubsubsection{\texorpdfstring{KociembaSolver()}{KociembaSolver()}}
+{\footnotesize\ttfamily \label{class_kociemba_solver_ab96f1064a15ce885532a65ffdd48eab9} 
+Kociemba\+Solver.\+Kociemba\+Solver (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes solver. 
+
+
+
+\label{class_kociemba_solver_doc-func-members}
+\Hypertarget{class_kociemba_solver_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_kociemba_solver_ab67fcc5651c4c71642aff9b1e6118559}\index{KociembaSolver@{KociembaSolver}!Solve@{Solve}}
+\index{Solve@{Solve}!KociembaSolver@{KociembaSolver}}
+\doxysubsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily \label{class_kociemba_solver_ab67fcc5651c4c71642aff9b1e6118559} 
+List$<$ \doxymbox{\hyperlink{class_move}{Move}} $>$ Kociemba\+Solver.\+Solve (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_cube_state}{Cube\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the optimal (or near-\/optimal) solution for a given cube state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & The current physical state of the cube.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of \doxylink{class_move}{Move} objects to solve the cube.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Solver/\+\doxymbox{\hyperlink{_kociemba_solver_8cs}{Kociemba\+Solver.\+cs}}\end{DoxyCompactItemize}

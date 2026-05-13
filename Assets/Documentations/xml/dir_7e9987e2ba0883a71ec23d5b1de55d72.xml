@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_7e9987e2ba0883a71ec23d5b1de55d72" kind="dir">
+    <compoundname>Scripts/Game</compoundname>
+    <innerfile refid="_challenge_manager_8cs">ChallengeManager.cs</innerfile>
+    <innerfile refid="_game_manager_8cs">GameManager.cs</innerfile>
+    <innerfile refid="_solver_manager_8cs">SolverManager.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Game/"/>
+  </compounddef>
+</doxygen>

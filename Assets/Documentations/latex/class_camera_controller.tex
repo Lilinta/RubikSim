@@ -1,0 +1,86 @@
+\doxysection{Camera\+Controller Class Reference}
+\hypertarget{class_camera_controller}{}\label{class_camera_controller}\index{CameraController@{CameraController}}
+
+
+Controls camera orbit and zoom around a target point using Unity\textquotesingle{}s New Input System.  
+
+
+Inheritance diagram for Camera\+Controller:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera \doxymbox{\hyperlink{class_camera_controller_a53c76c1371f4e5575793b1fb66a7f53b}{cam}}
+\item 
+float \doxymbox{\hyperlink{class_camera_controller_a8ed06bba3c7a7202e4f67299341267e6}{rotate\+\_\+sensitivity}} = 100f
+\item 
+float \doxymbox{\hyperlink{class_camera_controller_ad47c6f319a98a9b0709afde15aa813a1}{zoom\+\_\+sensitivity}} = 300f
+\item 
+Vector3 \doxymbox{\hyperlink{class_camera_controller_ad3a0b0ab324774254514b2c744aecfb8}{target}} = Vector3.\+zero
+\item 
+float \doxymbox{\hyperlink{class_camera_controller_a6c1a8c2ca7e67154970931ed2a88563e}{min\+Zoom}} = 5f
+\item 
+float \doxymbox{\hyperlink{class_camera_controller_a5ede1338f553ab75fb61f85405fda8e7}{max\+Zoom}} = 70f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls camera orbit and zoom around a target point using Unity\textquotesingle{}s New Input System. 
+
+Features:\+
+\begin{DoxyItemize}
+\item Mouse scroll to zoom in/\+out by adjusting camera field of view (FOV)
+\item Right mouse drag to orbit the camera around a target position
+\item Camera always looks at the target after movement
+\end{DoxyItemize}
+
+This script is purely for scene navigation and does not interact with the Rubik\textquotesingle{}s Cube logic. 
+
+\label{class_camera_controller_doc-variable-members}
+\Hypertarget{class_camera_controller_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_camera_controller_a53c76c1371f4e5575793b1fb66a7f53b}\index{CameraController@{CameraController}!cam@{cam}}
+\index{cam@{cam}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{cam}{cam}}
+{\footnotesize\ttfamily \label{class_camera_controller_a53c76c1371f4e5575793b1fb66a7f53b} 
+Camera Camera\+Controller.\+cam}
+
+\Hypertarget{class_camera_controller_a5ede1338f553ab75fb61f85405fda8e7}\index{CameraController@{CameraController}!maxZoom@{maxZoom}}
+\index{maxZoom@{maxZoom}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{maxZoom}{maxZoom}}
+{\footnotesize\ttfamily \label{class_camera_controller_a5ede1338f553ab75fb61f85405fda8e7} 
+float Camera\+Controller.\+max\+Zoom = 70f}
+
+\Hypertarget{class_camera_controller_a6c1a8c2ca7e67154970931ed2a88563e}\index{CameraController@{CameraController}!minZoom@{minZoom}}
+\index{minZoom@{minZoom}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{minZoom}{minZoom}}
+{\footnotesize\ttfamily \label{class_camera_controller_a6c1a8c2ca7e67154970931ed2a88563e} 
+float Camera\+Controller.\+min\+Zoom = 5f}
+
+\Hypertarget{class_camera_controller_a8ed06bba3c7a7202e4f67299341267e6}\index{CameraController@{CameraController}!rotate\_sensitivity@{rotate\_sensitivity}}
+\index{rotate\_sensitivity@{rotate\_sensitivity}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{rotate\_sensitivity}{rotate\_sensitivity}}
+{\footnotesize\ttfamily \label{class_camera_controller_a8ed06bba3c7a7202e4f67299341267e6} 
+float Camera\+Controller.\+rotate\+\_\+sensitivity = 100f}
+
+\Hypertarget{class_camera_controller_ad3a0b0ab324774254514b2c744aecfb8}\index{CameraController@{CameraController}!target@{target}}
+\index{target@{target}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{target}{target}}
+{\footnotesize\ttfamily \label{class_camera_controller_ad3a0b0ab324774254514b2c744aecfb8} 
+Vector3 Camera\+Controller.\+target = Vector3.\+zero}
+
+\Hypertarget{class_camera_controller_ad47c6f319a98a9b0709afde15aa813a1}\index{CameraController@{CameraController}!zoom\_sensitivity@{zoom\_sensitivity}}
+\index{zoom\_sensitivity@{zoom\_sensitivity}!CameraController@{CameraController}}
+\doxysubsubsection{\texorpdfstring{zoom\_sensitivity}{zoom\_sensitivity}}
+{\footnotesize\ttfamily \label{class_camera_controller_ad47c6f319a98a9b0709afde15aa813a1} 
+float Camera\+Controller.\+zoom\+\_\+sensitivity = 300f}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Rendering/\+\doxymbox{\hyperlink{_camera_controller_8cs}{Camera\+Controller.\+cs}}\end{DoxyCompactItemize}

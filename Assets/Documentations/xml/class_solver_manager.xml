@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_solver_manager" kind="class" language="C#" prot="public">
+    <compoundname>SolverManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_solver_manager_1a49872fb96d95ad30250b19d98331dd49" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager SolverManager.game_manager</definition>
+        <argsstring></argsstring>
+        <name>game_manager</name>
+        <qualifiedname>SolverManager.game_manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="10" column="24" bodyfile="Scripts/Game/SolverManager.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_solver_manager_1a2da0909385241871ad190a21b3f9e8cd" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_move" kindref="compound">Move</ref> &gt;</type>
+        <definition>List&lt;Move&gt; SolverManager.current_moves</definition>
+        <argsstring></argsstring>
+        <name>current_moves</name>
+        <qualifiedname>SolverManager.current_moves</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="11" column="10" bodyfile="Scripts/Game/SolverManager.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_solver_manager_1a698dd560d75eb635204413fda7895d97" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SolverManager.idx</definition>
+        <argsstring></argsstring>
+        <name>idx</name>
+        <qualifiedname>SolverManager.idx</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="12" column="9" bodyfile="Scripts/Game/SolverManager.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_solver_manager_1a707e28ec290de87b793d0a50730e8d97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SolverManager.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>SolverManager.Init</qualifiedname>
+        <briefdescription>
+<para>Fetches the solution from the solver and resets the playback pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="17" column="17" bodyfile="Scripts/Game/SolverManager.cs" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solver_manager_1a3db6c4c08801ef596e39ce7c64f150ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SolverManager.Backward</definition>
+        <argsstring>()</argsstring>
+        <name>Backward</name>
+        <qualifiedname>SolverManager.Backward</qualifiedname>
+        <briefdescription>
+<para>Reverts the previous move in the sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="26" column="17" bodyfile="Scripts/Game/SolverManager.cs" bodystart="26" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_solver_manager_1a6349b47e27b50ddf8d85c4c209fb8905" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SolverManager.Forward</definition>
+        <argsstring>()</argsstring>
+        <name>Forward</name>
+        <qualifiedname>SolverManager.Forward</qualifiedname>
+        <briefdescription>
+<para>Applies the next move in the sequence. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Game/SolverManager.cs" line="38" column="17" bodyfile="Scripts/Game/SolverManager.cs" bodystart="38" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Manages the step-by-step playback of the solver&apos;s solution. Allows the user to move forward and backward through the calculated moves. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SolverManager</label>
+        <link refid="class_solver_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="3">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>SolverManager</label>
+        <link refid="class_solver_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Game/SolverManager.cs" line="8" column="7" bodyfile="Scripts/Game/SolverManager.cs" bodystart="9" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_solver_manager_1a3db6c4c08801ef596e39ce7c64f150ab" prot="public" virt="non-virtual"><scope>SolverManager</scope><name>Backward</name></member>
+      <member refid="class_solver_manager_1a2da0909385241871ad190a21b3f9e8cd" prot="private" virt="non-virtual"><scope>SolverManager</scope><name>current_moves</name></member>
+      <member refid="class_solver_manager_1a6349b47e27b50ddf8d85c4c209fb8905" prot="public" virt="non-virtual"><scope>SolverManager</scope><name>Forward</name></member>
+      <member refid="class_solver_manager_1a49872fb96d95ad30250b19d98331dd49" prot="public" virt="non-virtual"><scope>SolverManager</scope><name>game_manager</name></member>
+      <member refid="class_solver_manager_1a698dd560d75eb635204413fda7895d97" prot="private" virt="non-virtual"><scope>SolverManager</scope><name>idx</name></member>
+      <member refid="class_solver_manager_1a707e28ec290de87b793d0a50730e8d97" prot="public" virt="non-virtual"><scope>SolverManager</scope><name>Init</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

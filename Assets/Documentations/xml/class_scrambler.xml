@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_scrambler" kind="class" language="C#" prot="public">
+    <compoundname>Scrambler</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_scrambler_1a4caebf22b483e5cde34bb96535c04493" prot="private" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random Scrambler.rng</definition>
+        <argsstring></argsstring>
+        <name>rng</name>
+        <qualifiedname>Scrambler.rng</qualifiedname>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+<para>Internal random number generator for scramble generation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Scrambler.cs" line="17" column="27" bodyfile="Scripts/Core/Scrambler.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_scrambler_1a1ae6f4c56e4b60e72c7c3e3713ca8669" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_move" kindref="compound">Move</ref> &gt;</type>
+        <definition>static List&lt; Move &gt; Scrambler.GenerateScramble</definition>
+        <argsstring>(int len=-1)</argsstring>
+        <name>GenerateScramble</name>
+        <qualifiedname>Scrambler.GenerateScramble</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>len</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+<para>Generates a scramble sequence of specified length. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The sequence satisfies constraints to prevent trivial or redundant moves, such as moving the same face twice or sandwiching opposite faces.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of moves in the scramble. If -1, a random length between 20 and 30 is used.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A List of random <ref refid="class_move" kindref="compound">Move</ref> objects representing the scramble.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Scrambler.cs" line="27" column="24" bodyfile="Scripts/Core/Scrambler.cs" bodystart="27" bodyend="50"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Generates random scramble sequences for the Rubik&apos;s Cube. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The generated sequence avoids:<itemizedlist>
+<listitem><para>Two consecutive moves on the same face (e.g., R R)</para>
+</listitem><listitem><para>Redundant patterns such as ABA where A and B are opposite faces belonging to the same axis group (e.g., U D U is invalid).</para>
+</listitem></itemizedlist>
+</para>
+<para>This produces more realistic and effective scrambles similar to official World Cube Association (WCA) rules. </para>
+    </detaileddescription>
+    <location file="Scripts/Core/Scrambler.cs" line="14" column="1" bodyfile="Scripts/Core/Scrambler.cs" bodystart="15" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_scrambler_1a1ae6f4c56e4b60e72c7c3e3713ca8669" prot="public" virt="non-virtual"><scope>Scrambler</scope><name>GenerateScramble</name></member>
+      <member refid="class_scrambler_1a4caebf22b483e5cde34bb96535c04493" prot="private" virt="non-virtual"><scope>Scrambler</scope><name>rng</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

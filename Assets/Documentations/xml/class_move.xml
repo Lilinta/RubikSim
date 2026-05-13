@@ -1,0 +1,280 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_move" kind="class" language="C#" prot="public">
+    <compoundname>Move</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_move_1a5991c96f7dc2a28a88914f97d1ad27b0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Move.face</definition>
+        <argsstring></argsstring>
+        <name>face</name>
+        <qualifiedname>Move.face</qualifiedname>
+        <briefdescription>
+<para>The index of the face being rotated (FRONT, UP, RIGHT, etc.). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="16" column="16" bodyfile="Scripts/Core/Move.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_1aa2aa3da1b9e01423c9005fe70e4ae0f6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Move.rev</definition>
+        <argsstring></argsstring>
+        <name>rev</name>
+        <qualifiedname>Move.rev</qualifiedname>
+        <briefdescription>
+<para>True if the rotation is counter-clockwise (Reverse). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="18" column="17" bodyfile="Scripts/Core/Move.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_1a9febd7b347395fa040153d609c406b11" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Move.is180</definition>
+        <argsstring></argsstring>
+        <name>is180</name>
+        <qualifiedname>Move.is180</qualifiedname>
+        <briefdescription>
+<para>True if the rotation is 180 degrees. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="20" column="17" bodyfile="Scripts/Core/Move.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_move_1a3404bb18b336b4b73a694ba04182019f" prot="private" static="yes" mutable="no">
+        <type>Random</type>
+        <definition>Random Move.rng</definition>
+        <argsstring></argsstring>
+        <name>rng</name>
+        <qualifiedname>Move.rng</qualifiedname>
+        <initializer>= new Random()</initializer>
+        <briefdescription>
+<para>Shared random number generator for generating random moves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="23" column="27" bodyfile="Scripts/Core/Move.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_move_1a9142d9caa44ca547568c5b6183dce2a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Move.Move</definition>
+        <argsstring>()</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move.Move</qualifiedname>
+        <briefdescription>
+<para>Initializes a default move (Face -1, no rotation). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="28" column="12" bodyfile="Scripts/Core/Move.cs" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_1a85007162b85ccec224d3bbdbfdd9c8b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Move.Move</definition>
+        <argsstring>(int _face)</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move.Move</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_face</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a move with a specific face and default 90-degree clockwise rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="39" column="12" bodyfile="Scripts/Core/Move.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_1a311ba258166ab0499384992b8c19da0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Move.Move</definition>
+        <argsstring>(int _face, bool _rev)</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move.Move</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_face</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_rev</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a move with a specific face and direction (90-degree rotation). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_rev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for counter-clockwise, false for clockwise.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="51" column="12" bodyfile="Scripts/Core/Move.cs" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_1a22569998f6e40e7cf5f49ff7f76c4971" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Move.Move</definition>
+        <argsstring>(int _face, bool _rev, bool _is180)</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move.Move</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>_face</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_rev</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_is180</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a move with specific face, direction, and rotation type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_rev</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for counter-clockwise.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>_is180</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True for 180-degree rotation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="64" column="12" bodyfile="Scripts/Core/Move.cs" bodystart="64" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_1a73e6c67661a25fa52ffbb6323a67344a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_move" kindref="compound">Move</ref></type>
+        <definition>Move Move.GetInvertedMove</definition>
+        <argsstring>()</argsstring>
+        <name>GetInvertedMove</name>
+        <qualifiedname>Move.GetInvertedMove</qualifiedname>
+        <briefdescription>
+<para>Returns a new move that is the logical inverse of the current move. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The inverted <ref refid="class_move" kindref="compound">Move</ref> object.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="94" column="17" bodyfile="Scripts/Core/Move.cs" bodystart="94" bodyend="97"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_move_1a05af98850891e881af40d7d73dfd583f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_move" kindref="compound">Move</ref></type>
+        <definition>static Move Move.GetRandomMove</definition>
+        <argsstring>()</argsstring>
+        <name>GetRandomMove</name>
+        <qualifiedname>Move.GetRandomMove</qualifiedname>
+        <briefdescription>
+<para>Generates a random valid move. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each move has:<itemizedlist>
+<listitem><para>Random face (0..5)</para>
+</listitem><listitem><para>Random type (normal, reverse, 180°)</para>
+</listitem></itemizedlist>
+</para>
+<para>Useful for scrambling.</para>
+<para><simplesect kind="return"><para>A new random <ref refid="class_move" kindref="compound">Move</ref> object.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Move.cs" line="81" column="24" bodyfile="Scripts/Core/Move.cs" bodystart="81" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a single face rotation move on the Rubik&apos;s Cube. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A move consists of:<itemizedlist>
+<listitem><para>face: which face to rotate (0..5)</para>
+</listitem><listitem><para>rev: whether rotation is counter-clockwise (90 degrees CCW)</para>
+</listitem><listitem><para>is180: whether rotation is a double turn (180 degrees)</para>
+</listitem></itemizedlist>
+</para>
+<para>Moves are intended to be immutable after creation. </para>
+    </detaileddescription>
+    <location file="Scripts/Core/Move.cs" line="13" column="7" bodyfile="Scripts/Core/Move.cs" bodystart="14" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_move_1a5991c96f7dc2a28a88914f97d1ad27b0" prot="public" virt="non-virtual"><scope>Move</scope><name>face</name></member>
+      <member refid="class_move_1a73e6c67661a25fa52ffbb6323a67344a" prot="public" virt="non-virtual"><scope>Move</scope><name>GetInvertedMove</name></member>
+      <member refid="class_move_1a05af98850891e881af40d7d73dfd583f" prot="public" virt="non-virtual"><scope>Move</scope><name>GetRandomMove</name></member>
+      <member refid="class_move_1a9febd7b347395fa040153d609c406b11" prot="public" virt="non-virtual"><scope>Move</scope><name>is180</name></member>
+      <member refid="class_move_1a9142d9caa44ca547568c5b6183dce2a8" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="class_move_1a85007162b85ccec224d3bbdbfdd9c8b3" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="class_move_1a311ba258166ab0499384992b8c19da0b" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="class_move_1a22569998f6e40e7cf5f49ff7f76c4971" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="class_move_1aa2aa3da1b9e01423c9005fe70e4ae0f6" prot="public" virt="non-virtual"><scope>Move</scope><name>rev</name></member>
+      <member refid="class_move_1a3404bb18b336b4b73a694ba04182019f" prot="private" virt="non-virtual"><scope>Move</scope><name>rng</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

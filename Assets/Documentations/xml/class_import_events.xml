@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_import_events" kind="class" language="C#" prot="public">
+    <compoundname>ImportEvents</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_import_events_1a3168a89c5a5a17cce6c5f891486d97fa" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject ImportEvents.import_container</definition>
+        <argsstring></argsstring>
+        <name>import_container</name>
+        <qualifiedname>ImportEvents.import_container</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="6" column="23" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_import_events_1a7032aec5190a400e00101cfefb3df596" prot="public" static="no" mutable="no">
+        <type><ref refid="class_touch_surfaces" kindref="compound">TouchSurfaces</ref></type>
+        <definition>TouchSurfaces ImportEvents.touch_surfaces</definition>
+        <argsstring></argsstring>
+        <name>touch_surfaces</name>
+        <qualifiedname>ImportEvents.touch_surfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="7" column="26" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_import_events_1a0ebf4a0f128e9bd5469c533e099ba26f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager ImportEvents.game_manager</definition>
+        <argsstring></argsstring>
+        <name>game_manager</name>
+        <qualifiedname>ImportEvents.game_manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="8" column="24" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_import_events_1aba1a3efc714ce79b53e19b7850fe950e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_free_mode_events" kindref="compound">FreeModeEvents</ref></type>
+        <definition>FreeModeEvents ImportEvents.free_mode_events</definition>
+        <argsstring></argsstring>
+        <name>free_mode_events</name>
+        <qualifiedname>ImportEvents.free_mode_events</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="9" column="27" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_import_events_1a23a5d8aed56ab08064d5c7a0e12cd180" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImportEvents.OnCancelButtonClick</definition>
+        <argsstring>()</argsstring>
+        <name>OnCancelButtonClick</name>
+        <qualifiedname>ImportEvents.OnCancelButtonClick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="10" column="17" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_import_events_1a9950e2f9ac0f438a01b184b828e1e573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ImportEvents.OnConfirmButtonClick</definition>
+        <argsstring>()</argsstring>
+        <name>OnConfirmButtonClick</name>
+        <qualifiedname>ImportEvents.OnConfirmButtonClick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/ImportEvents.cs" line="18" column="17" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ImportEvents</label>
+        <link refid="class_import_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="8">
+        <label>FreeModeEvents</label>
+        <link refid="class_free_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>solver_manager</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>touch_surfaces</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ImportEvents</label>
+        <link refid="class_import_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>touch_surfaces</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>free_mode_events</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="9">
+        <label>SolverManager</label>
+        <link refid="class_solver_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>TouchSurfaces</label>
+        <link refid="class_touch_surfaces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>manager</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/ImportEvents.cs" line="4" column="7" bodyfile="Scripts/UI/ImportEvents.cs" bodystart="5" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_import_events_1aba1a3efc714ce79b53e19b7850fe950e" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>free_mode_events</name></member>
+      <member refid="class_import_events_1a0ebf4a0f128e9bd5469c533e099ba26f" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>game_manager</name></member>
+      <member refid="class_import_events_1a3168a89c5a5a17cce6c5f891486d97fa" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>import_container</name></member>
+      <member refid="class_import_events_1a23a5d8aed56ab08064d5c7a0e12cd180" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>OnCancelButtonClick</name></member>
+      <member refid="class_import_events_1a9950e2f9ac0f438a01b184b828e1e573" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>OnConfirmButtonClick</name></member>
+      <member refid="class_import_events_1a7032aec5190a400e00101cfefb3df596" prot="public" virt="non-virtual"><scope>ImportEvents</scope><name>touch_surfaces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

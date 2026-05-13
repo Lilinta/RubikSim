@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_input_controller" kind="class" language="C#" prot="public">
+    <compoundname>InputController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_input_controller_1aa07f8935ed606c164ce25aabde591104" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager InputController.gameManager</definition>
+        <argsstring></argsstring>
+        <name>gameManager</name>
+        <qualifiedname>InputController.gameManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/InputController.cs" line="39" column="24" bodyfile="Scripts/Rendering/InputController.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_input_controller_1ad9e34992c71083e5b53669fa7ba33144" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void InputController.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>InputController.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/InputController.cs" line="41" column="10" bodyfile="Scripts/Rendering/InputController.cs" bodystart="41" bodyend="80"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Temporary input handler used for testing cube interactions via keyboard. Only function when pkey is pressed. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This controller maps specific keyboard keys to Rubik’s Cube face moves and forwards them to GameManager for execution. It is designed for rapid debugging and development before the final mouse-based gesture input system is implemented.</para>
+<para>Key mappings: F or 0 → Front face U or 1 → Up face R or 2 → Right face B or 3 → Back face D or 4 → Down face L or 5 → Left face</para>
+<para>Holding the Shift key while pressing a face key will apply the move in reverse (counter–clockwise).</para>
+<para>Pressing: K → Triggers a scramble sequence. S → Triggers a solving sequence Q → Debug Output</para>
+<para>This script uses Unity&apos;s new Input System (UnityEngine.InputSystem) and checks for key presses every frame in Update.</para>
+<para>Note: This controller is intended only for development and testing purposes. In the final version of the application, cube manipulation will be driven by mouse drag gestures and raycasting instead of direct keyboard input. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>InputController</label>
+        <link refid="class_input_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="3">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>InputController</label>
+        <link refid="class_input_controller"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>gameManager</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Rendering/InputController.cs" line="37" column="7" bodyfile="Scripts/Rendering/InputController.cs" bodystart="38" bodyend="81"/>
+    <listofallmembers>
+      <member refid="class_input_controller_1aa07f8935ed606c164ce25aabde591104" prot="public" virt="non-virtual"><scope>InputController</scope><name>gameManager</name></member>
+      <member refid="class_input_controller_1ad9e34992c71083e5b53669fa7ba33144" prot="private" virt="non-virtual"><scope>InputController</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

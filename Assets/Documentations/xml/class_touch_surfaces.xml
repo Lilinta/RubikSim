@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_touch_surfaces" kind="class" language="C#" prot="public">
+    <compoundname>TouchSurfaces</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_touch_surfaces_1acce9c5a050bfdfc97530745accff9bbc" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager TouchSurfaces.manager</definition>
+        <argsstring></argsstring>
+        <name>manager</name>
+        <qualifiedname>TouchSurfaces.manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/TouchSurfaces.cs" line="12" column="24" bodyfile="Scripts/Rendering/TouchSurfaces.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_touch_surfaces_1aeb8679572dcad562ea54c1bb842ab293" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool TouchSurfaces.enable</definition>
+        <argsstring></argsstring>
+        <name>enable</name>
+        <qualifiedname>TouchSurfaces.enable</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/TouchSurfaces.cs" line="13" column="17" bodyfile="Scripts/Rendering/TouchSurfaces.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_touch_surfaces_1a091dc3eac8f40f26315c19d83d9e2166" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void TouchSurfaces.Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>TouchSurfaces.Update</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Rendering/TouchSurfaces.cs" line="15" column="10" bodyfile="Scripts/Rendering/TouchSurfaces.cs" bodystart="15" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles user interaction with the cube using Raycasting. Detects clicks on specific &quot;TouchQuad&quot; colliders and translates them into logical cube moves. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>TouchSurfaces</label>
+        <link refid="class_touch_surfaces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="3">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="1">
+        <label>TouchSurfaces</label>
+        <link refid="class_touch_surfaces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>manager</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/Rendering/TouchSurfaces.cs" line="10" column="7" bodyfile="Scripts/Rendering/TouchSurfaces.cs" bodystart="11" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_touch_surfaces_1aeb8679572dcad562ea54c1bb842ab293" prot="public" virt="non-virtual"><scope>TouchSurfaces</scope><name>enable</name></member>
+      <member refid="class_touch_surfaces_1acce9c5a050bfdfc97530745accff9bbc" prot="public" virt="non-virtual"><scope>TouchSurfaces</scope><name>manager</name></member>
+      <member refid="class_touch_surfaces_1a091dc3eac8f40f26315c19d83d9e2166" prot="private" virt="non-virtual"><scope>TouchSurfaces</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

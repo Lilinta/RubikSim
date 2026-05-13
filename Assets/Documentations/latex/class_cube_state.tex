@@ -1,0 +1,145 @@
+\doxysection{Cube\+State Class Reference}
+\hypertarget{class_cube_state}{}\label{class_cube_state}\index{CubeState@{CubeState}}
+
+
+Represents the full logical state of a 3x3 Rubik\textquotesingle{}s Cube.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cube_state_a34a88d82d702e3dac2c5c3d0a0862323}{Cube\+State}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a solved 3x3 Rubik\textquotesingle{}s Cube state. Cubies that are inside or on faces they don\textquotesingle{}t belong to are assigned -\/1 for those colors. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} \doxymbox{\hyperlink{class_cube_state_aa11a5282d16427ddafb21a2889fdbd89}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Creates a deep copy of this \doxylink{class_cube_state}{Cube\+State}. Useful for AI search algorithms like IDA\texorpdfstring{$\ast$}{*} to explore branches without modifying the current state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cube_state_aaab9444d4ed836e51f53b66a49015ee7}{Apply\+Move}} (\doxymbox{\hyperlink{class_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Applies a move to the cube state. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_cube_state_aef91d0fda6fd48d2944a1875cce8fdc0}{Is\+Solved}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether the cube is in a solved state. A face is solved if all its stickers match the center sticker\textquotesingle{}s color. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_cube_state_ae0b2ef17e1e0425ae573a53f57f7e159}{Is\+Valid}} ()
+\begin{DoxyCompactList}\small\item\em Validates the cube state to ensure it is physically possible. Checks for unique corner and edge combinations and proper color placement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_cubie}{Cubie}} \doxymbox{\hyperlink{class_cube_state_aaaaef5797e38934aa6b6f937bd91922c}{this\+[int index]\+}}\hspace{0.3cm}{\ttfamily  \+[get, set]\+}
+\begin{DoxyCompactList}\small\item\em Indexer to access a cubie at a specific array index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the full logical state of a 3x3 Rubik\textquotesingle{}s Cube. 
+
+The cube consists of 27 cubies stored in a fixed-\/size array. State updates occur in two stages:\+
+\begin{DoxyEnumerate}
+\item Permuting cubie positions (shuffling pointers in the array)
+\item Updating cubie internal orientation (calling Apply\+Move on individual cubies) 
+\end{DoxyEnumerate}
+
+\label{class_cube_state_doc-constructors}
+\Hypertarget{class_cube_state_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_cube_state_a34a88d82d702e3dac2c5c3d0a0862323}\index{CubeState@{CubeState}!CubeState@{CubeState}}
+\index{CubeState@{CubeState}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{CubeState()}{CubeState()}}
+{\footnotesize\ttfamily \label{class_cube_state_a34a88d82d702e3dac2c5c3d0a0862323} 
+Cube\+State.\+Cube\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a solved 3x3 Rubik\textquotesingle{}s Cube state. Cubies that are inside or on faces they don\textquotesingle{}t belong to are assigned -\/1 for those colors. 
+
+
+
+\label{class_cube_state_doc-func-members}
+\Hypertarget{class_cube_state_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cube_state_aaab9444d4ed836e51f53b66a49015ee7}\index{CubeState@{CubeState}!ApplyMove@{ApplyMove}}
+\index{ApplyMove@{ApplyMove}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{ApplyMove()}{ApplyMove()}}
+{\footnotesize\ttfamily \label{class_cube_state_aaab9444d4ed836e51f53b66a49015ee7} 
+void Cube\+State.\+Apply\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Applies a move to the cube state. 
+
+Steps:\+
+\begin{DoxyEnumerate}
+\item Permute corner cubies
+\item Permute edge cubies
+\item Update orientation of affected cubies
+\end{DoxyEnumerate}
+
+This function maintains cube validity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \doxylink{class_move}{Move} to apply\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cube_state_aa11a5282d16427ddafb21a2889fdbd89}\index{CubeState@{CubeState}!Clone@{Clone}}
+\index{Clone@{Clone}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \label{class_cube_state_aa11a5282d16427ddafb21a2889fdbd89} 
+\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} Cube\+State.\+Clone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a deep copy of this \doxylink{class_cube_state}{Cube\+State}. Useful for AI search algorithms like IDA\texorpdfstring{$\ast$}{*} to explore branches without modifying the current state. 
+
+\begin{DoxyReturn}{Returns}
+A cloned \doxylink{class_cube_state}{Cube\+State} instance.
+\end{DoxyReturn}
+\Hypertarget{class_cube_state_aef91d0fda6fd48d2944a1875cce8fdc0}\index{CubeState@{CubeState}!IsSolved@{IsSolved}}
+\index{IsSolved@{IsSolved}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{IsSolved()}{IsSolved()}}
+{\footnotesize\ttfamily \label{class_cube_state_aef91d0fda6fd48d2944a1875cce8fdc0} 
+bool Cube\+State.\+Is\+Solved (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks whether the cube is in a solved state. A face is solved if all its stickers match the center sticker\textquotesingle{}s color. 
+
+\begin{DoxyReturn}{Returns}
+True if all faces are uniform in color.
+\end{DoxyReturn}
+\Hypertarget{class_cube_state_ae0b2ef17e1e0425ae573a53f57f7e159}\index{CubeState@{CubeState}!IsValid@{IsValid}}
+\index{IsValid@{IsValid}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{IsValid()}{IsValid()}}
+{\footnotesize\ttfamily \label{class_cube_state_ae0b2ef17e1e0425ae573a53f57f7e159} 
+bool Cube\+State.\+Is\+Valid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Validates the cube state to ensure it is physically possible. Checks for unique corner and edge combinations and proper color placement. 
+
+\begin{DoxyReturn}{Returns}
+True if the cube state is valid, otherwise false.
+\end{DoxyReturn}
+
+
+\label{class_cube_state_doc-property-members}
+\Hypertarget{class_cube_state_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_cube_state_aaaaef5797e38934aa6b6f937bd91922c}\index{CubeState@{CubeState}!this\+[int index]\+@{this[int index]}}
+\index{this\+[int index]\+@{this[int index]}!CubeState@{CubeState}}
+\doxysubsubsection{\texorpdfstring{this[int index]}{this[int index]}}
+{\footnotesize\ttfamily \label{class_cube_state_aaaaef5797e38934aa6b6f937bd91922c} 
+\doxymbox{\hyperlink{class_cubie}{Cubie}} Cube\+State.\+this\+[int index]\+\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indexer to access a cubie at a specific array index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Array index (0..26).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_cubie}{Cubie} object at that index.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Core/\+\doxymbox{\hyperlink{_cube_state_8cs}{Cube\+State.\+cs}}\end{DoxyCompactItemize}

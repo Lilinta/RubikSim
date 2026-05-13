@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/FreeModeStyle.uss?fileID=7433441132597879392&amp;guid=e5769e3c2b0d88141a4e081196467daf&amp;type=3#FreeModeStyle"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1; display: flex;">
+        <ui:Button text="&lt;&lt;" name="ReturnButton" style="width: 50px; height: 50px; margin-top: 12px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px;"/>
+        <ui:VisualElement name="FlexBox" style="flex-grow: 1; justify-content: flex-end;">
+            <ui:Button text="Import" name="ImportButton" class="button"/>
+            <ui:Button text="Scramble" name="ScrambleButton" class="button"/>
+            <ui:Button text="Solve&#10;" name="SolveButton" class="button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="SolverContainer" style="flex-grow: 1; overflow: visible; display: none;">
+        <ui:Button text="&lt;&lt;" name="SolverReturnButton" style="width: 50px; height: 50px; margin-top: 12px; margin-right: 12px; margin-bottom: 12px; margin-left: 12px;"/>
+        <ui:VisualElement name="SolverFlexBox" style="flex-grow: 1; justify-content: center; flex-direction: row; align-content: flex-start; align-items: flex-end;">
+            <ui:Button text="&lt;" name="SolverBackwardButton" style="width: 50px; height: 50px; margin-top: 12px; margin-right: 100px; margin-bottom: 12px; margin-left: 100px;"/>
+            <ui:Button text="&gt;" name="SolverForwardButton" style="width: 50px; height: 50px; margin-top: 12px; margin-right: 100px; margin-bottom: 12px; margin-left: 100px;"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

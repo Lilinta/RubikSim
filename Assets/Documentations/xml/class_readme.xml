@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_readme" kind="class" language="C#" prot="public">
+    <compoundname>Readme</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ScriptableObject</basecompoundref>
+    <innerclass refid="class_readme_1_1_section" prot="public">Readme::Section</innerclass>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_readme_1afb1dac08d4516f9bb4b60c403a31cb68" prot="public" static="no" mutable="no">
+        <type>Texture2D</type>
+        <definition>Texture2D Readme.icon</definition>
+        <argsstring></argsstring>
+        <name>icon</name>
+        <qualifiedname>Readme.icon</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TutorialInfo/Scripts/Readme.cs" line="6" column="22" bodyfile="TutorialInfo/Scripts/Readme.cs" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_readme_1a5d06a945d74a34026b56a6d2ddd65d24" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Readme.title</definition>
+        <argsstring></argsstring>
+        <name>title</name>
+        <qualifiedname>Readme.title</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TutorialInfo/Scripts/Readme.cs" line="7" column="19" bodyfile="TutorialInfo/Scripts/Readme.cs" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_readme_1af02800ff1d374e5942fc0bc86f0c1c4e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_readme_1_1_section" kindref="compound">Section</ref>[]</type>
+        <definition>Section [] Readme.sections</definition>
+        <argsstring></argsstring>
+        <name>sections</name>
+        <qualifiedname>Readme.sections</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TutorialInfo/Scripts/Readme.cs" line="8" column="20" bodyfile="TutorialInfo/Scripts/Readme.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_readme_1a4ac0c7dc3f5e6ec524c5a4168ddede40" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Readme.loadedLayout</definition>
+        <argsstring></argsstring>
+        <name>loadedLayout</name>
+        <qualifiedname>Readme.loadedLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="TutorialInfo/Scripts/Readme.cs" line="9" column="17" bodyfile="TutorialInfo/Scripts/Readme.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Readme</label>
+        <link refid="class_readme"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Readme</label>
+        <link refid="class_readme"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>sections</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Readme.Section</label>
+        <link refid="class_readme_1_1_section"/>
+      </node>
+      <node id="2">
+        <label>ScriptableObject</label>
+      </node>
+    </collaborationgraph>
+    <location file="TutorialInfo/Scripts/Readme.cs" line="4" column="7" bodyfile="TutorialInfo/Scripts/Readme.cs" bodystart="5" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_readme_1afb1dac08d4516f9bb4b60c403a31cb68" prot="public" virt="non-virtual"><scope>Readme</scope><name>icon</name></member>
+      <member refid="class_readme_1a4ac0c7dc3f5e6ec524c5a4168ddede40" prot="public" virt="non-virtual"><scope>Readme</scope><name>loadedLayout</name></member>
+      <member refid="class_readme_1af02800ff1d374e5942fc0bc86f0c1c4e" prot="public" virt="non-virtual"><scope>Readme</scope><name>sections</name></member>
+      <member refid="class_readme_1a5d06a945d74a34026b56a6d2ddd65d24" prot="public" virt="non-virtual"><scope>Readme</scope><name>title</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

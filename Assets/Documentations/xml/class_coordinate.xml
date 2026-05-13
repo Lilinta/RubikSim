@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_coordinate" kind="class" language="C#" prot="public">
+    <compoundname>Coordinate</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_coordinate_1a564a2844092f4c007bf0e4244b27645a" prot="private" static="yes" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Coordinate.fact</definition>
+        <argsstring></argsstring>
+        <name>fact</name>
+        <qualifiedname>Coordinate.fact</qualifiedname>
+        <initializer>= new int[13]</initializer>
+        <briefdescription>
+<para>fact[i] = i-th factorial </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="12" column="16" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_coordinate_1ad4e909f9d4ee6367a2acfc0b05874526" prot="private" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] Coordinate.comb</definition>
+        <argsstring></argsstring>
+        <name>comb</name>
+        <qualifiedname>Coordinate.comb</qualifiedname>
+        <initializer>= new int[13, 13]</initializer>
+        <briefdescription>
+<para>comb[n, k] = nCK </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="16" column="16" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_coordinate_1a2fea93e87b51253631c3d0655e26855f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static Coordinate.Coordinate</definition>
+        <argsstring>()</argsstring>
+        <name>Coordinate</name>
+        <qualifiedname>Coordinate.Coordinate</qualifiedname>
+        <briefdescription>
+<para>Precomputes factorials and combinations (nCk). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="21" column="12" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="21" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a6dc3889eec92307cb337416bc59c206b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Coordinate.IsSliceEdge</definition>
+        <argsstring>(int e)</argsstring>
+        <name>IsSliceEdge</name>
+        <qualifiedname>Coordinate.IsSliceEdge</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Check if a edge is in UD-Slice. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="129" column="17" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a41d4142ccf7cad16dfd8fed9f6dd9bc3" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.PermToIdx</definition>
+        <argsstring>(int[] perm, int n)</argsstring>
+        <name>PermToIdx</name>
+        <qualifiedname>Coordinate.PermToIdx</qualifiedname>
+        <param>
+          <type>int[]</type>
+          <declname>perm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Converts a permutation to its factoradic index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="202" column="16" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="202" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a86b27d79051c4d2e8c4d578ec5e8962f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.IdxToPerm</definition>
+        <argsstring>(int idx, int[] perm, int n)</argsstring>
+        <name>IdxToPerm</name>
+        <qualifiedname>Coordinate.IdxToPerm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>perm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Converts a factoradic index back to a permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="220" column="17" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="220" bodyend="244"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_coordinate_1ae7234edd248246ace682aa883fc77ecd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeCO</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeCO</name>
+        <qualifiedname>Coordinate.EncodeCO</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes corner orientation into an index (0..2186). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="40" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="40" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a8ad413edaec6d7becfd9f3d65c752e82" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeCO</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeCO</name>
+        <qualifiedname>Coordinate.DecodeCO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes index back into corner orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="49" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="49" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a03bd1b4cbe0ec47eb9cb890c547bc08a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeEO</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeEO</name>
+        <qualifiedname>Coordinate.EncodeEO</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes edge orientation into an index (0..2047). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="62" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a6f65721aa7301fae5adbcad4ecf5060e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeEO</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeEO</name>
+        <qualifiedname>Coordinate.DecodeEO</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes index back into edge orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="71" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="71" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a7f95c605582c5ca434d7276e88db7527" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeUDSlice</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeUDSlice</name>
+        <qualifiedname>Coordinate.EncodeUDSlice</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes the position of the 4 edges in the UD-slice (0..494). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="84" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a1f6500ea35281594f8a2202f1b4b6e24" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeUDSlice</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeUDSlice</name>
+        <qualifiedname>Coordinate.DecodeUDSlice</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes UD-slice position into edge permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="101" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="101" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1ab93e61ae81e56c4928edbc7c48a06ffc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeCornerPerm</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeCornerPerm</name>
+        <qualifiedname>Coordinate.EncodeCornerPerm</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes corner permutation (8!) into index (0..40319). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="137" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a5d988691e93947bfda68d3bfca6025ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeCornerPerm</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeCornerPerm</name>
+        <qualifiedname>Coordinate.DecodeCornerPerm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes index into corner permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="143" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1abc6e6f9f75bbfa0b17fb3cba08a846fe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeEdgePerm</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeEdgePerm</name>
+        <qualifiedname>Coordinate.EncodeEdgePerm</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes permutation of 8 edges not in UD-slice. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="149" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="149" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1ad6a88828158c99481e4588ea2eef0fc6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeEdgePerm</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeEdgePerm</name>
+        <qualifiedname>Coordinate.DecodeEdgePerm</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes index into the 8 non-slice edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="161" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="161" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a9ccd0a78d4f236fa845cc6263c9218cc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int Coordinate.EncodeUDSlice2</definition>
+        <argsstring>(CubieModel c)</argsstring>
+        <name>EncodeUDSlice2</name>
+        <qualifiedname>Coordinate.EncodeUDSlice2</qualifiedname>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Encodes permutation of the 4 UD-slice edges. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="176" column="23" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="176" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_coordinate_1a10a073cc65f8bbdb07f2fee0477fd272" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Coordinate.DecodeUDSlice2</definition>
+        <argsstring>(int idx, CubieModel c)</argsstring>
+        <name>DecodeUDSlice2</name>
+        <qualifiedname>Coordinate.DecodeUDSlice2</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Decodes index into UD-slice edge permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Coordinate.cs" line="188" column="24" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="188" bodyend="199"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Static utility class to encode/decode <ref refid="class_cubie_model" kindref="compound">CubieModel</ref> states into coordinate indices. These coordinates are used for <ref refid="class_move" kindref="compound">Move</ref> and Pruning tables in the Two-Phase algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/Coordinate.cs" line="7" column="15" bodyfile="Scripts/Solver/Coordinate.cs" bodystart="8" bodyend="245"/>
+    <listofallmembers>
+      <member refid="class_coordinate_1ad4e909f9d4ee6367a2acfc0b05874526" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>comb</name></member>
+      <member refid="class_coordinate_1a2fea93e87b51253631c3d0655e26855f" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>Coordinate</name></member>
+      <member refid="class_coordinate_1a8ad413edaec6d7becfd9f3d65c752e82" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeCO</name></member>
+      <member refid="class_coordinate_1a5d988691e93947bfda68d3bfca6025ab" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeCornerPerm</name></member>
+      <member refid="class_coordinate_1ad6a88828158c99481e4588ea2eef0fc6" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeEdgePerm</name></member>
+      <member refid="class_coordinate_1a6f65721aa7301fae5adbcad4ecf5060e" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeEO</name></member>
+      <member refid="class_coordinate_1a1f6500ea35281594f8a2202f1b4b6e24" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeUDSlice</name></member>
+      <member refid="class_coordinate_1a10a073cc65f8bbdb07f2fee0477fd272" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>DecodeUDSlice2</name></member>
+      <member refid="class_coordinate_1ae7234edd248246ace682aa883fc77ecd" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeCO</name></member>
+      <member refid="class_coordinate_1ab93e61ae81e56c4928edbc7c48a06ffc" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeCornerPerm</name></member>
+      <member refid="class_coordinate_1abc6e6f9f75bbfa0b17fb3cba08a846fe" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeEdgePerm</name></member>
+      <member refid="class_coordinate_1a03bd1b4cbe0ec47eb9cb890c547bc08a" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeEO</name></member>
+      <member refid="class_coordinate_1a7f95c605582c5ca434d7276e88db7527" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeUDSlice</name></member>
+      <member refid="class_coordinate_1a9ccd0a78d4f236fa845cc6263c9218cc" prot="public" virt="non-virtual"><scope>Coordinate</scope><name>EncodeUDSlice2</name></member>
+      <member refid="class_coordinate_1a564a2844092f4c007bf0e4244b27645a" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>fact</name></member>
+      <member refid="class_coordinate_1a86b27d79051c4d2e8c4d578ec5e8962f" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>IdxToPerm</name></member>
+      <member refid="class_coordinate_1a6dc3889eec92307cb337416bc59c206b" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>IsSliceEdge</name></member>
+      <member refid="class_coordinate_1a41d4142ccf7cad16dfd8fed9f6dd9bc3" prot="private" virt="non-virtual"><scope>Coordinate</scope><name>PermToIdx</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

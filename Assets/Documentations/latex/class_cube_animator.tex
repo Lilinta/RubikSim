@@ -1,0 +1,84 @@
+\doxysection{Cube\+Animator Class Reference}
+\hypertarget{class_cube_animator}{}\label{class_cube_animator}\index{CubeAnimator@{CubeAnimator}}
+
+
+Handles visual animation of cube layer rotations in Unity.  
+
+
+Inheritance diagram for Cube\+Animator:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube_animator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \doxymbox{\hyperlink{class_cube_animator_af92dfe465af2781d89e8a1086a74326b}{Animate\+Move}} (\doxymbox{\hyperlink{class_move}{Move}} move)
+\begin{DoxyCompactList}\small\item\em Animates a single face rotation by:\+ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_cube_animator_a41fa18534ecebf8b5a761e7363a9a62e}{rotate\+\_\+speed}} = 200f
+\item 
+\doxymbox{\hyperlink{class_cube_renderer}{Cube\+Renderer}} \doxymbox{\hyperlink{class_cube_animator_a89a1bec30183fc7dda7978af9f5b04c4}{render}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles visual animation of cube layer rotations in Unity. 
+
+This class does not modify \doxylink{class_cube_state}{Cube\+State}. It only performs temporary Game\+Object transformations for visual effect. 
+
+\label{class_cube_animator_doc-func-members}
+\Hypertarget{class_cube_animator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cube_animator_af92dfe465af2781d89e8a1086a74326b}\index{CubeAnimator@{CubeAnimator}!AnimateMove@{AnimateMove}}
+\index{AnimateMove@{AnimateMove}!CubeAnimator@{CubeAnimator}}
+\doxysubsubsection{\texorpdfstring{AnimateMove()}{AnimateMove()}}
+{\footnotesize\ttfamily \label{class_cube_animator_af92dfe465af2781d89e8a1086a74326b} 
+IEnumerator Cube\+Animator.\+Animate\+Move (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_move}{Move}}}]{move}{}\end{DoxyParamCaption})}
+
+
+
+Animates a single face rotation by:\+ 
+
+
+\begin{DoxyItemize}
+\item Grouping affected cubies under a temporary pivot
+\item Rotating the pivot smoothly
+\item Restoring cubies to original hierarchy
+\end{DoxyItemize}
+
+Supports normal, reverse, and 180-\/degree rotations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em move} & \doxylink{class_move}{Move} describing which face and direction to rotate\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coroutine for animation
+\end{DoxyReturn}
+
+
+\label{class_cube_animator_doc-variable-members}
+\Hypertarget{class_cube_animator_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cube_animator_a89a1bec30183fc7dda7978af9f5b04c4}\index{CubeAnimator@{CubeAnimator}!render@{render}}
+\index{render@{render}!CubeAnimator@{CubeAnimator}}
+\doxysubsubsection{\texorpdfstring{render}{render}}
+{\footnotesize\ttfamily \label{class_cube_animator_a89a1bec30183fc7dda7978af9f5b04c4} 
+\doxymbox{\hyperlink{class_cube_renderer}{Cube\+Renderer}} Cube\+Animator.\+render}
+
+\Hypertarget{class_cube_animator_a41fa18534ecebf8b5a761e7363a9a62e}\index{CubeAnimator@{CubeAnimator}!rotate\_speed@{rotate\_speed}}
+\index{rotate\_speed@{rotate\_speed}!CubeAnimator@{CubeAnimator}}
+\doxysubsubsection{\texorpdfstring{rotate\_speed}{rotate\_speed}}
+{\footnotesize\ttfamily \label{class_cube_animator_a41fa18534ecebf8b5a761e7363a9a62e} 
+float Cube\+Animator.\+rotate\+\_\+speed = 200f}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Rendering/\+\doxymbox{\hyperlink{_cube_animator_8cs}{Cube\+Animator.\+cs}}\end{DoxyCompactItemize}

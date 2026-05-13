@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_cubie" kind="class" language="C#" prot="public">
+    <compoundname>Cubie</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_cubie_1a39e96a809e9eb148b11dce1e7616524f" prot="private" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] Cubie.color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <qualifiedname>Cubie.color</qualifiedname>
+        <briefdescription>
+<para>Internal array storing the face color indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Cubie.cs" line="16" column="9" bodyfile="Scripts/Core/Cubie.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_cubie_1a42f175e577ec79bd5b964cd556a6e9eb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Cubie.this[int index]</definition>
+        <argsstring></argsstring>
+        <name>this[int index]</name>
+        <qualifiedname>Cubie.this[int index]</qualifiedname>
+        <briefdescription>
+<para>Indexer to get or set the color index of a specific face of this cubie. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The face index constant (0..5).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The color index present on that face.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Cubie.cs" line="35" column="16" bodyfile="Scripts/Core/Cubie.cs" bodystart="36" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cubie_1aa1866b569e691d135a290ccff2ecc2ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Cubie.Cubie</definition>
+        <argsstring>()</argsstring>
+        <name>Cubie</name>
+        <qualifiedname>Cubie.Cubie</qualifiedname>
+        <briefdescription>
+<para>Initializes a new <ref refid="class_cubie" kindref="compound">Cubie</ref> with default face colors corresponding to face indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Cubie.cs" line="21" column="12" bodyfile="Scripts/Core/Cubie.cs" bodystart="21" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_1a42403b7e36fe3f78648a3fd8fc703d38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Cubie.ApplyMove</definition>
+        <argsstring>(Move move)</argsstring>
+        <name>ApplyMove</name>
+        <qualifiedname>Cubie.ApplyMove</qualifiedname>
+        <param>
+          <type><ref refid="class_move" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Applies a face rotation to this cubie by permuting its internal face colors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This does NOT change the cubie&apos;s position in the 3D grid. It updates which color faces which direction after a rotation.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_move" kindref="compound">Move</ref> object describing the rotation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Core/Cubie.cs" line="48" column="17" bodyfile="Scripts/Core/Cubie.cs" bodystart="48" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Represents a single cubie (small cube) of the Rubik&apos;s Cube. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Each cubie stores the color index of its 6 faces. The cubie itself does not know its spatial position; that is handled by <ref refid="class_cube_state" kindref="compound">CubeState</ref>.</para>
+<para>Rotation affects only the ordering of its face colors. </para>
+    </detaileddescription>
+    <location file="Scripts/Core/Cubie.cs" line="13" column="7" bodyfile="Scripts/Core/Cubie.cs" bodystart="14" bodyend="67"/>
+    <listofallmembers>
+      <member refid="class_cubie_1a42403b7e36fe3f78648a3fd8fc703d38" prot="public" virt="non-virtual"><scope>Cubie</scope><name>ApplyMove</name></member>
+      <member refid="class_cubie_1a39e96a809e9eb148b11dce1e7616524f" prot="private" virt="non-virtual"><scope>Cubie</scope><name>color</name></member>
+      <member refid="class_cubie_1aa1866b569e691d135a290ccff2ecc2ec" prot="public" virt="non-virtual"><scope>Cubie</scope><name>Cubie</name></member>
+      <member refid="class_cubie_1a42f175e577ec79bd5b964cd556a6e9eb" prot="public" virt="non-virtual"><scope>Cubie</scope><name>this[int index]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

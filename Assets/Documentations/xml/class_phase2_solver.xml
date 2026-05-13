@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_phase2_solver" kind="class" language="C#" prot="public">
+    <compoundname>Phase2Solver</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_phase2_solver_1a11fbd3bc0cf792b96a75eb37deaf5feb" prot="private" static="no" mutable="no">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt;int&gt; Phase2Solver.solution</definition>
+        <argsstring></argsstring>
+        <name>solution</name>
+        <qualifiedname>Phase2Solver.solution</qualifiedname>
+        <initializer>= new List&lt;int&gt;()</initializer>
+        <briefdescription>
+<para>Phase 2&apos;s Result. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="12" column="18" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_phase2_solver_1a0661f5b90a2d3af3068e06a0fcc36627" prot="private" static="yes" mutable="no">
+        <type>readonly int[]</type>
+        <definition>readonly int [] Phase2Solver.phase2_moves</definition>
+        <argsstring></argsstring>
+        <name>phase2_moves</name>
+        <qualifiedname>Phase2Solver.phase2_moves</qualifiedname>
+        <initializer>                                         =
+{
+    3,4,5,        
+    12,13,14,     
+    1,            
+    10,           
+    7,            
+    16            
+}</initializer>
+        <briefdescription>
+<para>Valid moves for Phase 2: {U, U2, U&apos;, D, D2, D&apos;, F2, B2, R2, L2}. These are mapped to the standard 0-17 move indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="18" column="33" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="18" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_phase2_solver_1aa307e715b151df83c734aea2637d24fe" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Phase2Solver._cp</definition>
+        <argsstring></argsstring>
+        <name>_cp</name>
+        <qualifiedname>Phase2Solver._cp</qualifiedname>
+        <briefdescription>
+<para>Target Corner Permutation index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="29" column="16" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_phase2_solver_1a9393cc57b4fceb40dbe5c78bd420694e" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Phase2Solver._ep</definition>
+        <argsstring></argsstring>
+        <name>_ep</name>
+        <qualifiedname>Phase2Solver._ep</qualifiedname>
+        <briefdescription>
+<para>Target Edge Permutation index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="31" column="16" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_phase2_solver_1a347ee69f01667bdbdf8bc8f9d4cc1fbd" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Phase2Solver._uds2</definition>
+        <argsstring></argsstring>
+        <name>_uds2</name>
+        <qualifiedname>Phase2Solver._uds2</qualifiedname>
+        <briefdescription>
+<para>Target UD-Slice Permutation index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="33" column="16" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_phase2_solver_1a99d151ccebc9bef2f60652a6ad56384c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Phase2Solver.Phase2Solver</definition>
+        <argsstring>()</argsstring>
+        <name>Phase2Solver</name>
+        <qualifiedname>Phase2Solver.Phase2Solver</qualifiedname>
+        <briefdescription>
+<para>Initializes the Phase 2 solver and sets the target solved indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="38" column="12" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_phase2_solver_1a4213fd44265081bda749c8a0eaaeaa2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; int &gt;</type>
+        <definition>List&lt; int &gt; Phase2Solver.Solve</definition>
+        <argsstring>(int cp, int ep, int uds2)</argsstring>
+        <name>Solve</name>
+        <qualifiedname>Phase2Solver.Solve</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>uds2</declname>
+        </param>
+        <briefdescription>
+<para>Solves Phase 2 using IDA* search. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="49" column="17" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="49" bodyend="61"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_phase2_solver_1a40313c5356d3e7d231ad21bdc7f1c882" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Phase2Solver.Search</definition>
+        <argsstring>(int cp, int ep, int uds2, int depth, int bound, int prev_face, int prev_prev_face)</argsstring>
+        <name>Search</name>
+        <qualifiedname>Phase2Solver.Search</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>uds2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>depth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bound</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prev_face</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>prev_prev_face</declname>
+        </param>
+        <briefdescription>
+<para>Recursive IDA* search restricted to Phase 2 allowed moves. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="66" column="9" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="66" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_phase2_solver_1a70a87c81072952a292b7895d3353333b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Phase2Solver.Heuristic</definition>
+        <argsstring>(int cp, int ep, int uds2)</argsstring>
+        <name>Heuristic</name>
+        <qualifiedname>Phase2Solver.Heuristic</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>cp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ep</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>uds2</declname>
+        </param>
+        <briefdescription>
+<para>Distance heuristic for Phase 2 based on permutation pruning tables. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/Phase2Solver.cs" line="112" column="9" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="112" bodyend="117"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Implements Phase 2 of the Kociemba algorithm. Goal: Solve the remaining permutations of corners and edges. Constraint: Only moves that preserve Phase 1 state are allowed (U, D, R2, L2, F2, B2). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/Phase2Solver.cs" line="9" column="7" bodyfile="Scripts/Solver/Phase2Solver.cs" bodystart="10" bodyend="118"/>
+    <listofallmembers>
+      <member refid="class_phase2_solver_1aa307e715b151df83c734aea2637d24fe" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>_cp</name></member>
+      <member refid="class_phase2_solver_1a9393cc57b4fceb40dbe5c78bd420694e" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>_ep</name></member>
+      <member refid="class_phase2_solver_1a347ee69f01667bdbdf8bc8f9d4cc1fbd" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>_uds2</name></member>
+      <member refid="class_phase2_solver_1a70a87c81072952a292b7895d3353333b" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>Heuristic</name></member>
+      <member refid="class_phase2_solver_1a0661f5b90a2d3af3068e06a0fcc36627" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>phase2_moves</name></member>
+      <member refid="class_phase2_solver_1a99d151ccebc9bef2f60652a6ad56384c" prot="public" virt="non-virtual"><scope>Phase2Solver</scope><name>Phase2Solver</name></member>
+      <member refid="class_phase2_solver_1a40313c5356d3e7d231ad21bdc7f1c882" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>Search</name></member>
+      <member refid="class_phase2_solver_1a11fbd3bc0cf792b96a75eb37deaf5feb" prot="private" virt="non-virtual"><scope>Phase2Solver</scope><name>solution</name></member>
+      <member refid="class_phase2_solver_1a4213fd44265081bda749c8a0eaaeaa2e" prot="public" virt="non-virtual"><scope>Phase2Solver</scope><name>Solve</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

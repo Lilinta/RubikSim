@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="_camera_controller_8cs" kind="file" language="C#">
+    <compoundname>CameraController.cs</compoundname>
+    <innerclass refid="class_camera_controller" prot="public">CameraController</innerclass>
+    <innernamespace refid="namespace_unity_engine_1_1_input_system">UnityEngine::InputSystem</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">UnityEngine.InputSystem;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_camera_controller" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_camera_controller" kindref="compound">CameraController</ref><sp/>:<sp/>MonoBehaviour</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Camera<sp/><ref refid="class_camera_controller_1a53c76c1371f4e5575793b1fb66a7f53b" kindref="member">cam</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_camera_controller_1a8ed06bba3c7a7202e4f67299341267e6" kindref="member">rotate_sensitivity</ref><sp/>=<sp/>100f;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_camera_controller_1ad47c6f319a98a9b0709afde15aa813a1" kindref="member">zoom_sensitivity</ref><sp/>=<sp/>300f;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Vector3<sp/><ref refid="class_camera_controller_1ad3a0b0ab324774254514b2c744aecfb8" kindref="member">target</ref><sp/>=<sp/>Vector3.zero;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_camera_controller_1a6c1a8c2ca7e67154970931ed2a88563e" kindref="member">minZoom</ref><sp/>=<sp/>5f;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_camera_controller_1a5ede1338f553ab75fb61f85405fda8e7" kindref="member">maxZoom</ref><sp/>=<sp/>70f;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Update()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>scroll<sp/>=<sp/>Mouse.current.scroll.ReadValue();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scroll.y<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cam.fieldOfView<sp/>-=<sp/>scroll.y<sp/>*<sp/><ref refid="class_camera_controller_1ad47c6f319a98a9b0709afde15aa813a1" kindref="member">zoom_sensitivity</ref><sp/>*<sp/>Time.deltaTime;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cam.fieldOfView<sp/>=<sp/>Mathf.Clamp(<ref refid="class_camera_controller_1a53c76c1371f4e5575793b1fb66a7f53b" kindref="member">cam</ref>.fieldOfView,<sp/><ref refid="class_camera_controller_1a6c1a8c2ca7e67154970931ed2a88563e" kindref="member">minZoom</ref>,<sp/><ref refid="class_camera_controller_1a5ede1338f553ab75fb61f85405fda8e7" kindref="member">maxZoom</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Mouse.current.rightButton.IsPressed())</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Vector2<sp/>delta<sp/>=<sp/>Mouse.current.delta.ReadValue();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.RotateAround(<ref refid="class_camera_controller_1ad3a0b0ab324774254514b2c744aecfb8" kindref="member">target</ref>,<sp/>Vector3.up,<sp/>delta.x*<ref refid="class_camera_controller_1a8ed06bba3c7a7202e4f67299341267e6" kindref="member">rotate_sensitivity</ref>*Time.deltaTime);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.RotateAround(<ref refid="class_camera_controller_1ad3a0b0ab324774254514b2c744aecfb8" kindref="member">target</ref>,<sp/>transform.right,<sp/>-delta.y*<ref refid="class_camera_controller_1a8ed06bba3c7a7202e4f67299341267e6" kindref="member">rotate_sensitivity</ref>*Time.deltaTime);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>transform.LookAt(<ref refid="class_camera_controller_1ad3a0b0ab324774254514b2c744aecfb8" kindref="member">target</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Scripts/Rendering/CameraController.cs"/>
+  </compounddef>
+</doxygen>

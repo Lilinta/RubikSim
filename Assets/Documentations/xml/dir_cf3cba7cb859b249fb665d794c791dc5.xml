@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_cf3cba7cb859b249fb665d794c791dc5" kind="dir">
+    <compoundname>Scripts/UI</compoundname>
+    <innerfile refid="_challenge_mode_events_8cs">ChallengeModeEvents.cs</innerfile>
+    <innerfile refid="_face_button_events_8cs">FaceButtonEvents.cs</innerfile>
+    <innerfile refid="_free_mode_events_8cs">FreeModeEvents.cs</innerfile>
+    <innerfile refid="_import_events_8cs">ImportEvents.cs</innerfile>
+    <innerfile refid="_main_menu_events_8cs">MainMenuEvents.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/UI/"/>
+  </compounddef>
+</doxygen>

@@ -1,11 +1,20 @@
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Implements Phase 2 of the Kociemba algorithm.
+/// Goal: Solve the remaining permutations of corners and edges.
+/// Constraint: Only moves that preserve Phase 1 state are allowed (U, D, R2, L2, F2, B2).
+/// </summary>
 public class Phase2Solver
 {
+    /// <summary> Phase 2's Result </summary>
     private List<int> solution = new List<int>();
 
-    // 10 moves hợp lệ trong phase 2 (map vào 0..17)
+    /// <summary>
+    /// Valid moves for Phase 2: {U, U2, U', D, D2, D', F2, B2, R2, L2}.
+    /// These are mapped to the standard 0-17 move indices.
+    /// </summary>
     private static readonly int[] phase2_moves =
     {
         3,4,5,        // U
@@ -16,10 +25,16 @@ public class Phase2Solver
         16            // L2
     };
 
+    /// <summary> Target Corner Permutation index </summary>
     static int _cp;
+    /// <summary> Target Edge Permutation index </summary>
     static int _ep;
+    /// <summary> Target UD-Slice Permutation index </summary>
     static int _uds2;
 
+    /// <summary>
+    /// Initializes the Phase 2 solver and sets the target solved indices.
+    /// </summary>
     public Phase2Solver()
     {
         CubieModel cm = new CubieModel();
@@ -27,6 +42,10 @@ public class Phase2Solver
         _ep = Coordinate.EncodeEdgePerm(cm);
         _uds2 = Coordinate.EncodeUDSlice2(cm);
     }
+
+    /// <summary>
+    /// Solves Phase 2 using IDA* search.
+    /// </summary>
     public List<int> Solve(int cp, int ep, int uds2)
     {
         solution.Clear();
@@ -41,6 +60,9 @@ public class Phase2Solver
         }
     }
 
+    /// <summary>
+    /// Recursive IDA* search restricted to Phase 2 allowed moves.
+    /// </summary>
     int Search(int cp, int ep, int uds2, int depth, int bound, int prev_face, int prev_prev_face)
     {
         int h = Heuristic(cp, ep, uds2);
@@ -84,6 +106,9 @@ public class Phase2Solver
         return min;
     }
 
+    /// <summary>
+    /// Distance heuristic for Phase 2 based on permutation pruning tables.
+    /// </summary>
     int Heuristic(int cp, int ep, int uds2)
     {
         byte h1 = PruningTables.cp_uds2_prune[cp, uds2];

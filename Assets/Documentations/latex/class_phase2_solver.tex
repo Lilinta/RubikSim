@@ -1,0 +1,52 @@
+\doxysection{Phase2\+Solver Class Reference}
+\hypertarget{class_phase2_solver}{}\label{class_phase2_solver}\index{Phase2Solver@{Phase2Solver}}
+
+
+Implements Phase 2 of the Kociemba algorithm. Goal:\+ Solve the remaining permutations of corners and edges. Constraint:\+ Only moves that preserve Phase 1 state are allowed (U, D, R2, L2, F2, B2).  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_phase2_solver_a99d151ccebc9bef2f60652a6ad56384c}{Phase2\+Solver}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Phase 2 solver and sets the target solved indices. \end{DoxyCompactList}\item 
+List$<$ int $>$ \doxymbox{\hyperlink{class_phase2_solver_a4213fd44265081bda749c8a0eaaeaa2e}{Solve}} (int cp, int ep, int uds2)
+\begin{DoxyCompactList}\small\item\em Solves Phase 2 using IDA\texorpdfstring{$\ast$}{*} search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements Phase 2 of the Kociemba algorithm. Goal:\+ Solve the remaining permutations of corners and edges. Constraint:\+ Only moves that preserve Phase 1 state are allowed (U, D, R2, L2, F2, B2). 
+
+\label{class_phase2_solver_doc-constructors}
+\Hypertarget{class_phase2_solver_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_phase2_solver_a99d151ccebc9bef2f60652a6ad56384c}\index{Phase2Solver@{Phase2Solver}!Phase2Solver@{Phase2Solver}}
+\index{Phase2Solver@{Phase2Solver}!Phase2Solver@{Phase2Solver}}
+\doxysubsubsection{\texorpdfstring{Phase2Solver()}{Phase2Solver()}}
+{\footnotesize\ttfamily \label{class_phase2_solver_a99d151ccebc9bef2f60652a6ad56384c} 
+Phase2\+Solver.\+Phase2\+Solver (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the Phase 2 solver and sets the target solved indices. 
+
+
+
+\label{class_phase2_solver_doc-func-members}
+\Hypertarget{class_phase2_solver_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_phase2_solver_a4213fd44265081bda749c8a0eaaeaa2e}\index{Phase2Solver@{Phase2Solver}!Solve@{Solve}}
+\index{Solve@{Solve}!Phase2Solver@{Phase2Solver}}
+\doxysubsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily \label{class_phase2_solver_a4213fd44265081bda749c8a0eaaeaa2e} 
+List$<$ int $>$ Phase2\+Solver.\+Solve (\begin{DoxyParamCaption}\item[{int}]{cp}{, }\item[{int}]{ep}{, }\item[{int}]{uds2}{}\end{DoxyParamCaption})}
+
+
+
+Solves Phase 2 using IDA\texorpdfstring{$\ast$}{*} search. 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Solver/\+\doxymbox{\hyperlink{_phase2_solver_8cs}{Phase2\+Solver.\+cs}}\end{DoxyCompactItemize}

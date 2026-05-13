@@ -1,16 +1,32 @@
 using System;
 using static Mapping;
+
+/// <summary>
+/// Precomputes and stores transition tables for all cube coordinates.
+/// These tables allow the solver to find the next coordinate index given a move
+/// without performing expensive CubieModel simulations.
+/// </summary>
 public static class MoveTables
 {
+    /// <summary> Transition table for Corner Orientation. </summary>
     public static int[,] co_move;      // [2187, 18]
+    /// <summary> Transition table for Edge Orientation. </summary>
     public static int[,] eo_move;      // [2048, 18]
+    /// <summary> Transition table for UD-Slice position (Phase 1). </summary>
     public static int[,] uds_move;     // [495, 18]
+    /// <summary> Transition table for Corner Permutation (Phase 2). </summary>
     public static int[,] cp_move;      // [40320, 18]
+    /// <summary> Transition table for Edge Permutation (Phase 2). </summary>
     public static int[,] ep_move;      // [40320, 18]
+    /// <summary> Transition table for UD-Slice permutation (Phase 2). </summary>
     public static int[,] uds2_move;    // [24, 18]
 
+    /// <summary> Checks if it has been initialized </summary>
     static bool initialized = false;
 
+    /// <summary>
+    /// Initializes all transition tables if they haven't been built yet.
+    /// </summary>
     public static void Init()
     {
         if (initialized) return;
@@ -31,8 +47,7 @@ public static class MoveTables
         BuildUDSlice2Move();
     }
 
-    // =========================================================
-
+    /// <summary> Precomputes co_move </summary>
     static void BuildCOMove()
     {
         for (int i = 0; i < 2187; i++)
@@ -49,6 +64,7 @@ public static class MoveTables
         }
     }
 
+    /// <summary> Precomputes eo_move </summary>
     static void BuildEOMove()
     {
         for (int i = 0; i < 2048; i++)
@@ -65,6 +81,7 @@ public static class MoveTables
         }
     }
 
+    /// <summary> Precomputes uds_move </summary>
     static void BuildUDSliceMove()
     {
         for (int i = 0; i < 495; i++)
@@ -81,6 +98,7 @@ public static class MoveTables
         }
     }
 
+    /// <summary> Precomputes cp_move </summary>
     static void BuildCPMove()
     {
         for (int i = 0; i < 40320; i++)
@@ -97,6 +115,7 @@ public static class MoveTables
         }
     }
 
+    /// <summary> Precomputes ep_move </summary>
     static void BuildEPMove()
     {
         for (int i = 0; i < 40320; i++)
@@ -113,6 +132,7 @@ public static class MoveTables
         }
     }
 
+    /// <summary> Precomputes uds2_move </summary>
     static void BuildUDSlice2Move()
     {
         for (int i = 0; i < 24; i++)
@@ -129,68 +149,3 @@ public static class MoveTables
         }
     }
 }
-
-//using System.Collections.Generic;
-//using static Mapping;
-//using static Coordinate;
-
-//public static class MoveTables
-//{
-//    public static int[,] move_co;
-//    public static int[,] move_eo;
-//    public static int[,] move_mec;
-
-//    public static int[,] move_cp;
-//    public static int[,] move_ep;
-//    static CubeState state;
-//    static MoveTables()
-//    {
-//        state = new CubeState();
-//        BuildPhase1Tables();
-//        BuildPhase2Tables();
-//    }
-
-//    static void BuildPhase1Tables()
-//    {
-//        move_co = new int[2187, 18];
-//        for (int co = 0; co < 2187; co++)
-//        {
-//            for (int m = 0; m < 18; m++)
-//            {
-//                ApplyCornerOriIdx(state, co);
-//                state.ApplyMove(IdxToMove(m));
-//                move_co[co, m] = GetCornerOriIdx(state);
-//            }
-//        }
-
-//        move_eo = new int[2048, 18];
-//        for (int eo = 0; eo < 2048; eo++)
-//        {
-//            for (int m = 0; m < 18; m++)
-//            {
-//                ApplyEdgeOriIdx(state, eo);
-//                state.ApplyMove(IdxToMove(m));
-//                move_eo[eo, m] = GetEdgeOriIdx(state);
-//            }
-//        }
-
-//        move_mec = new int[495, 18];
-//        for (int mec = 0; mec < 495; mec++)
-//        {
-//            for (int m = 0; m < 18; m++)
-//            {
-//                ApplyMiddleEdgeCombIdx(state, mec);
-//                state.ApplyMove(IdxToMove(m));
-//                move_mec[mec, m] = GetMiddleEdgeCombIdx(state);
-//            }
-//        }
-//    }
-
-//    static void BuildPhase2Tables()
-//    {
-//        move_cp = new int[40320, 10];
-
-//        move_ep = new int[40320, 10];
-
-//    }
-//}

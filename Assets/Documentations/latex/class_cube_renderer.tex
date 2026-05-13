@@ -1,0 +1,100 @@
+\doxysection{Cube\+Renderer Class Reference}
+\hypertarget{class_cube_renderer}{}\label{class_cube_renderer}\index{CubeRenderer@{CubeRenderer}}
+
+
+Responsible for creating and updating the visual representation of the Rubik\textquotesingle{}s Cube in Unity.  
+
+
+Inheritance diagram for Cube\+Renderer:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_cube_renderer}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_cube_renderer_aae4f27c4a89111fa310df9793cac6a62}{Initialize}} (\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} state)
+\begin{DoxyCompactList}\small\item\em Initializes the renderer by creating cubie Game\+Objects and rendering the initial cube state. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_cube_renderer_aa209ca63c47a0e7d78587e19a7e7049e}{Render\+State}} (\doxymbox{\hyperlink{class_cube_state}{Cube\+State}} state)
+\begin{DoxyCompactList}\small\item\em Updates all cubie positions, rotations, scales, and face colors based on the provided \doxylink{class_cube_state}{Cube\+State}. \end{DoxyCompactList}\item 
+Game\+Object\+[$\,$]\+ \doxymbox{\hyperlink{class_cube_renderer_a8a9977a62312e9b6a9c6270767a037a3}{Get\+Layer}} (int face)
+\begin{DoxyCompactList}\small\item\em Retrieves all 9 cubies belonging to a specific face layer (4 corners, 4 edges, 1 center). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Game\+Object \doxymbox{\hyperlink{class_cube_renderer_a76f0ba7d2c05ea9e39b08eaebc84da8f}{cubie\+\_\+prefab}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Responsible for creating and updating the visual representation of the Rubik\textquotesingle{}s Cube in Unity. 
+
+This class reads \doxylink{class_cube_state}{Cube\+State} and updates Game\+Objects accordingly. It contains no cube logic. 
+
+\label{class_cube_renderer_doc-func-members}
+\Hypertarget{class_cube_renderer_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cube_renderer_a8a9977a62312e9b6a9c6270767a037a3}\index{CubeRenderer@{CubeRenderer}!GetLayer@{GetLayer}}
+\index{GetLayer@{GetLayer}!CubeRenderer@{CubeRenderer}}
+\doxysubsubsection{\texorpdfstring{GetLayer()}{GetLayer()}}
+{\footnotesize\ttfamily \label{class_cube_renderer_a8a9977a62312e9b6a9c6270767a037a3} 
+Game\+Object\+[$\,$]\+ Cube\+Renderer.\+Get\+Layer (\begin{DoxyParamCaption}\item[{int}]{face}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all 9 cubies belonging to a specific face layer (4 corners, 4 edges, 1 center). 
+
+Used by \doxylink{class_cube_animator}{Cube\+Animator} to determine which cubies to rotate.
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & Face index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Array of 9 Game\+Objects in that layer
+\end{DoxyReturn}
+\Hypertarget{class_cube_renderer_aae4f27c4a89111fa310df9793cac6a62}\index{CubeRenderer@{CubeRenderer}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!CubeRenderer@{CubeRenderer}}
+\doxysubsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily \label{class_cube_renderer_aae4f27c4a89111fa310df9793cac6a62} 
+void Cube\+Renderer.\+Initialize (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_cube_state}{Cube\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the renderer by creating cubie Game\+Objects and rendering the initial cube state. 
+
+\Hypertarget{class_cube_renderer_aa209ca63c47a0e7d78587e19a7e7049e}\index{CubeRenderer@{CubeRenderer}!RenderState@{RenderState}}
+\index{RenderState@{RenderState}!CubeRenderer@{CubeRenderer}}
+\doxysubsubsection{\texorpdfstring{RenderState()}{RenderState()}}
+{\footnotesize\ttfamily \label{class_cube_renderer_aa209ca63c47a0e7d78587e19a7e7049e} 
+void Cube\+Renderer.\+Render\+State (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_cube_state}{Cube\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Updates all cubie positions, rotations, scales, and face colors based on the provided \doxylink{class_cube_state}{Cube\+State}. 
+
+This fully synchronizes the visual cube with the logical state.
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & \doxylink{class_cube_state}{Cube\+State} to render\\
+\hline
+\end{DoxyParams}
+
+
+\label{class_cube_renderer_doc-variable-members}
+\Hypertarget{class_cube_renderer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cube_renderer_a76f0ba7d2c05ea9e39b08eaebc84da8f}\index{CubeRenderer@{CubeRenderer}!cubie\_prefab@{cubie\_prefab}}
+\index{cubie\_prefab@{cubie\_prefab}!CubeRenderer@{CubeRenderer}}
+\doxysubsubsection{\texorpdfstring{cubie\_prefab}{cubie\_prefab}}
+{\footnotesize\ttfamily \label{class_cube_renderer_a76f0ba7d2c05ea9e39b08eaebc84da8f} 
+Game\+Object Cube\+Renderer.\+cubie\+\_\+prefab}
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Rendering/\+\doxymbox{\hyperlink{_cube_renderer_8cs}{Cube\+Renderer.\+cs}}\end{DoxyCompactItemize}

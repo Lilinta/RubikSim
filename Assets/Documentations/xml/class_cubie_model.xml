@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_cubie_model" kind="class" language="C#" prot="public">
+    <compoundname>CubieModel</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_cubie_model_1a8099667036df88cbbef7987e39ede025" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] CubieModel.corner_perm</definition>
+        <argsstring></argsstring>
+        <name>corner_perm</name>
+        <qualifiedname>CubieModel.corner_perm</qualifiedname>
+        <initializer>= new int[8]</initializer>
+        <briefdescription>
+<para>Permutation of the 8 corner cubies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="12" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1ae8c79b1a2a03004a72cc2d011bce2714" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] CubieModel.corner_ori</definition>
+        <argsstring></argsstring>
+        <name>corner_ori</name>
+        <qualifiedname>CubieModel.corner_ori</qualifiedname>
+        <initializer>= new int[8]</initializer>
+        <briefdescription>
+<para>Orientation of the 8 corner cubies (0, 1, or 2). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="14" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1a24fddfd21000aff30a460c2f78886de3" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] CubieModel.edge_perm</definition>
+        <argsstring></argsstring>
+        <name>edge_perm</name>
+        <qualifiedname>CubieModel.edge_perm</qualifiedname>
+        <initializer>= new int[12]</initializer>
+        <briefdescription>
+<para>Permutation of the 12 edge cubies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="17" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1aa61f36891715a1ebe9a0427f706af1c3" prot="public" static="no" mutable="no">
+        <type>int[]</type>
+        <definition>int [] CubieModel.edge_ori</definition>
+        <argsstring></argsstring>
+        <name>edge_ori</name>
+        <qualifiedname>CubieModel.edge_ori</qualifiedname>
+        <initializer>= new int[12]</initializer>
+        <briefdescription>
+<para>Orientation of the 12 edge cubies (0 or 1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="19" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_cubie_model_1a54f382f794b763a5521ccc9283b512b5" prot="private" static="yes" mutable="no">
+        <type>int[][]</type>
+        <definition>int [][] CubieModel.FACE_CORNERS</definition>
+        <argsstring></argsstring>
+        <name>FACE_CORNERS</name>
+        <qualifiedname>CubieModel.FACE_CORNERS</qualifiedname>
+        <initializer>                        =
+{
+    new int[] { 0, 4, 5, 1 },
+    new int[] { 0, 1, 2, 3 },
+    new int[] { 0, 3, 7, 4 },
+    new int[] { 3, 2, 6, 7 },
+    new int[] { 5, 4, 7, 6 },
+    new int[] { 2, 1, 5, 6 },
+}</initializer>
+        <briefdescription>
+<para>Indices of corners affected by each face rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="22" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="22" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1a8ba4fa23e1fa51b3cbed62e0207a7834" prot="private" static="yes" mutable="no">
+        <type>int[][]</type>
+        <definition>int [][] CubieModel.FACE_EDGES</definition>
+        <argsstring></argsstring>
+        <name>FACE_EDGES</name>
+        <qualifiedname>CubieModel.FACE_EDGES</qualifiedname>
+        <initializer>                      =
+{
+    new int[] { 1, 8, 5, 9 },
+    new int[] { 0, 1, 2, 3 },
+    new int[] { 0, 11, 4, 8 },
+    new int[] { 11, 3, 10, 7 },
+    new int[] { 5, 4, 7, 6 },
+    new int[] { 2, 9, 6, 10 }
+}</initializer>
+        <briefdescription>
+<para>Indices of edges affected by each face rotation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="33" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="33" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1a6b7e54b12dff3b9558a6b53375067d73" prot="private" static="yes" mutable="no">
+        <type>int[][]</type>
+        <definition>int [][] CubieModel.CORNER_ORI_DELTA</definition>
+        <argsstring></argsstring>
+        <name>CORNER_ORI_DELTA</name>
+        <qualifiedname>CubieModel.CORNER_ORI_DELTA</qualifiedname>
+        <initializer>                            =
+{
+    new int[] { 2, 1, 0, 0, 1, 2, 0, 0 },
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 1, 0, 0, 2, 2, 0, 0, 1 },
+    new int[] { 0, 0, 2, 1, 0, 0, 1, 2 },
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 0, 2, 1, 0, 0, 1, 2, 0 },
+}</initializer>
+        <briefdescription>
+<para>Predefined orientation changes for corners after a 90-degree clockwise turn. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="44" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="44" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_cubie_model_1a7f41b0b29d3d9ea6fe8f7d0e87285107" prot="private" static="yes" mutable="no">
+        <type>int[][]</type>
+        <definition>int [][] CubieModel.EDGE_ORI_DELTA</definition>
+        <argsstring></argsstring>
+        <name>EDGE_ORI_DELTA</name>
+        <qualifiedname>CubieModel.EDGE_ORI_DELTA</qualifiedname>
+        <initializer>                          =
+{
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 },
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+    new int[] { 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 1, 0 },
+}</initializer>
+        <briefdescription>
+<para>Predefined orientation changes for edges after a 90-degree clockwise turn. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="55" column="16" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="55" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_cubie_model_1ab6cc56d2bb3e37471272c60224276718" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CubieModel.CubieModel</definition>
+        <argsstring>()</argsstring>
+        <name>CubieModel</name>
+        <qualifiedname>CubieModel.CubieModel</qualifiedname>
+        <briefdescription>
+<para>Initializes a new <ref refid="class_cubie_model" kindref="compound">CubieModel</ref> in the solved state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="68" column="12" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="68" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1aec5a3ca7fd6fdd0177c7f8759b38d759" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CubieModel.CubieModel</definition>
+        <argsstring>(CubeState state)</argsstring>
+        <name>CubieModel</name>
+        <qualifiedname>CubieModel.CubieModel</qualifiedname>
+        <param>
+          <type><ref refid="class_cube_state" kindref="compound">CubeState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Converts a standard <ref refid="class_cube_state" kindref="compound">CubeState</ref> into a mathematical <ref refid="class_cubie_model" kindref="compound">CubieModel</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logical cube state to convert.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="86" column="12" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="86" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1ac364e66e090dc9d18d1fc62d0d7ee476" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_cubie_model" kindref="compound">CubieModel</ref></type>
+        <definition>CubieModel CubieModel.Clone</definition>
+        <argsstring>()</argsstring>
+        <name>Clone</name>
+        <qualifiedname>CubieModel.Clone</qualifiedname>
+        <briefdescription>
+<para>Creates a deep copy of the <ref refid="class_cubie_model" kindref="compound">CubieModel</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A cloned <ref refid="class_cubie_model" kindref="compound">CubieModel</ref>.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="179" column="23" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="179" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1a4f6be8ba56b91dbd00bf4f92b7753d88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubieModel.ApplyMove</definition>
+        <argsstring>(Move move)</argsstring>
+        <name>ApplyMove</name>
+        <qualifiedname>CubieModel.ApplyMove</qualifiedname>
+        <param>
+          <type><ref refid="class_move" kindref="compound">Move</ref></type>
+          <declname>move</declname>
+        </param>
+        <briefdescription>
+<para>Applies a move to the model by repeating a quarter turn. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The move to apply.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="195" column="17" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="195" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1ac2bac3679d7f95b17d23110cf3c68bfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CubieModel.IsSolvable</definition>
+        <argsstring>()</argsstring>
+        <name>IsSolvable</name>
+        <qualifiedname>CubieModel.IsSolvable</qualifiedname>
+        <briefdescription>
+<para>Checks if the current model state is mathematically solvable. Validates corner orientation sum, edge orientation sum, and permutation parity. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if solvable.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="251" column="17" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="251" bodyend="269"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_cubie_model_1a90c1fa06c139994c08d79dcdfa71e147" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubieModel.ApplyQuarterClockwiseMove</definition>
+        <argsstring>(int face)</argsstring>
+        <name>ApplyQuarterClockwiseMove</name>
+        <qualifiedname>CubieModel.ApplyQuarterClockwiseMove</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>face</declname>
+        </param>
+        <briefdescription>
+<para>Internal method to apply a 90-degree clockwise rotation to a specific face. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>face</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Face index.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="213" column="18" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="213" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1a6d7e04f0f23acbdde41a850532e30e22" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CubieModel.Cycle</definition>
+        <argsstring>(int[] arr, int[] p)</argsstring>
+        <name>Cycle</name>
+        <qualifiedname>CubieModel.Cycle</qualifiedname>
+        <param>
+          <type>int[]</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>int[]</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Performs a 4-cycle permutation on an array based on given indices. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array to modify.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The indices defining the cycle.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="235" column="18" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="235" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_cubie_model_1afa9243fbdcbada9d23c8fdfb7c16955c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CubieModel.PermParity</definition>
+        <argsstring>(int[] arr)</argsstring>
+        <name>PermParity</name>
+        <qualifiedname>CubieModel.PermParity</qualifiedname>
+        <param>
+          <type>int[]</type>
+          <declname>arr</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the parity of a permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Permutation array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if odd parity, false if even.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/CubieModel.cs" line="276" column="18" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="276" bodyend="299"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Mathematical representation of the Rubik&apos;s Cube based on cubie permutation and orientation. This model is used by the solver (Kociemba/Two-Phase algorithm) rather than for rendering. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/CubieModel.cs" line="9" column="7" bodyfile="Scripts/Solver/CubieModel.cs" bodystart="10" bodyend="300"/>
+    <listofallmembers>
+      <member refid="class_cubie_model_1a4f6be8ba56b91dbd00bf4f92b7753d88" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>ApplyMove</name></member>
+      <member refid="class_cubie_model_1a90c1fa06c139994c08d79dcdfa71e147" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>ApplyQuarterClockwiseMove</name></member>
+      <member refid="class_cubie_model_1ac364e66e090dc9d18d1fc62d0d7ee476" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>Clone</name></member>
+      <member refid="class_cubie_model_1ae8c79b1a2a03004a72cc2d011bce2714" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>corner_ori</name></member>
+      <member refid="class_cubie_model_1a6b7e54b12dff3b9558a6b53375067d73" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>CORNER_ORI_DELTA</name></member>
+      <member refid="class_cubie_model_1a8099667036df88cbbef7987e39ede025" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>corner_perm</name></member>
+      <member refid="class_cubie_model_1ab6cc56d2bb3e37471272c60224276718" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>CubieModel</name></member>
+      <member refid="class_cubie_model_1aec5a3ca7fd6fdd0177c7f8759b38d759" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>CubieModel</name></member>
+      <member refid="class_cubie_model_1a6d7e04f0f23acbdde41a850532e30e22" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>Cycle</name></member>
+      <member refid="class_cubie_model_1aa61f36891715a1ebe9a0427f706af1c3" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>edge_ori</name></member>
+      <member refid="class_cubie_model_1a7f41b0b29d3d9ea6fe8f7d0e87285107" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>EDGE_ORI_DELTA</name></member>
+      <member refid="class_cubie_model_1a24fddfd21000aff30a460c2f78886de3" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>edge_perm</name></member>
+      <member refid="class_cubie_model_1a54f382f794b763a5521ccc9283b512b5" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>FACE_CORNERS</name></member>
+      <member refid="class_cubie_model_1a8ba4fa23e1fa51b3cbed62e0207a7834" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>FACE_EDGES</name></member>
+      <member refid="class_cubie_model_1ac2bac3679d7f95b17d23110cf3c68bfb" prot="public" virt="non-virtual"><scope>CubieModel</scope><name>IsSolvable</name></member>
+      <member refid="class_cubie_model_1afa9243fbdcbada9d23c8fdfb7c16955c" prot="private" virt="non-virtual"><scope>CubieModel</scope><name>PermParity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

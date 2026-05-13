@@ -1,13 +1,26 @@
 using System;
 using System.Collections.Generic;
 
+/// <summary>
+/// Implements Phase 1 of the Kociemba algorithm.
+/// Goal: Orient all corners and edges, and place the 4 UD-slice edges into the middle slice.
+/// Uses IDA* search with heuristics from pruning tables.
+/// </summary>
 public class Phase1Solver
 {
+    /// <summary> Phase 1's Result </summary>
     private List<int> solution = new List<int>();
+
+    /// <summary> Target Corner Orientation index </summary>
     static int _co;
+    /// <summary> Target Edge Orientation index </summary>
     static int _eo;
+    /// <summary> Target UD-Slice position index </summary>
     static int _uds;
 
+    /// <summary>
+    /// Initializes the Phase 1 solver and sets the target solved indices.
+    /// </summary>
     public Phase1Solver()
     {
         CubieModel cm = new CubieModel();
@@ -15,6 +28,14 @@ public class Phase1Solver
         _eo = Coordinate.EncodeEO(cm);
         _uds = Coordinate.EncodeUDSlice(cm);
     }
+
+    /// <summary>
+    /// Solves Phase 1 using Iterative Deepening A* (IDA*).
+    /// </summary>
+    /// <param name="co">Current Corner Orientation index.</param>
+    /// <param name="eo">Current Edge Orientation index.</param>
+    /// <param name="uds">Current UD-Slice position index.</param>
+    /// <returns>A list of move indices representing the Phase 1 solution.</returns>
     public List<int> Solve(int co, int eo, int uds)
     {
         PruningTables.Init();
@@ -31,6 +52,14 @@ public class Phase1Solver
         }
     }
 
+    /// <summary>
+    /// Recursive depth-first search for IDA*.
+    /// </summary>
+    /// <param name="depth">Current search depth.</param>
+    /// <param name="bound">Maximum allowed depth (f-score limit).</param>
+    /// <param name="prev_face">The face of the last move to avoid redundant turns (e.g., R followed by R).</param>
+    /// <param name="prev_prev_face">The face of the move before last (to handle cases like R L R).</param>
+    /// <returns>-1 if solved, otherwise returns the minimum f-score encountered that exceeded bound.</returns>
     int Search(int co, int eo, int uds, int depth, int bound, int prev_face, int prev_prev_face)
     {
         int h = Heuristic(co, eo, uds);
@@ -73,6 +102,10 @@ public class Phase1Solver
         return min;
     }
 
+    /// <summary>
+    /// Calculates the lower bound of moves remaining using pruning tables.
+    /// Uses the maximum of available heuristics to remain admissible.
+    /// </summary>
     int Heuristic(int co, int eo, int uds)
     {
         byte h1 = PruningTables.co_eo_prune[co, eo];
@@ -80,111 +113,3 @@ public class Phase1Solver
         return Math.Max(h1, h2);
     }
 }
-
-//using System.Collections.Generic;
-
-///// <summary>
-///// IDA* solver for Phase 1 of Kociemba's Two-Phase algorithm.
-///// 
-///// Goal of Phase 1:
-///// Bring the cube from any state into group G1 where:
-///// - All corner orientations are correct (CO = 0)
-///// - All edge orientations are correct (EO = 0)
-///// - All UD-slice edges are in the middle layer (UDS = 0)
-/////
-///// This solver operates purely on coordinate representation:
-///// (co, eo, uds) without using CubeState or Cubie.
-///// </summary>
-//public class Phase1Solver
-//{
-//    private List<int> solutionMoves = new List<int>();
-//    private int maxDepth;
-
-//    /// <summary>
-//    /// Solve Phase 1 starting from given coordinates.
-//    /// Returns a sequence of move indices (0..17).
-//    /// </summary>
-//    public List<int> Solve(int co, int eo, int uds)
-//    {
-//        solutionMoves.Clear();
-
-//        maxDepth = PruningTables.GetPhase1Heuristic(co, eo, uds);
-
-//        while (true)
-//        {
-//            if (Search(co, eo, uds, 0, -1))
-//                return new List<int>(solutionMoves);
-
-//            maxDepth++;
-//        }
-//    }
-
-//    /// <summary>
-//    /// Recursive IDA* search.
-//    /// </summary>
-//    /// <param name="co">corner orientation coordinate</param>
-//    /// <param name="eo">edge orientation coordinate</param>
-//    /// <param name="uds">UD-slice coordinate</param>
-//    /// <param name="depth">current search depth</param>
-//    /// <param name="lastMove">previous move index (for pruning)</param>
-//    /// <returns>true if goal found within bound</returns>
-//    private bool Search(int co, int eo, int uds, int depth, int lastMove)
-//    {
-//        int h = PruningTables.GetPhase1Heuristic(co, eo, uds);
-
-//        if (depth + h > maxDepth)
-//            return false;
-
-//        // Goal: reached G1
-//        if (h == 0)
-//            return true;
-
-//        for (int move = 0; move < 18; move++)
-//        {
-//            // --- Move pruning rules ---
-
-//            // Do not apply same face twice in a row
-//            if (lastMove != -1 && move / 3 == lastMove / 3)
-//                continue;
-
-//            // Optional stronger pruning:
-//            // avoid sequences like R L R (opposite faces)
-//            if (lastMove != -1 && IsOppositeFace(move, lastMove))
-//                continue;
-
-//            int nextCO = MoveTables.moveCO[co, move];
-//            int nextEO = MoveTables.moveEO[eo, move];
-//            int nextUDS = MoveTables.moveUDS[uds, move];
-
-//            solutionMoves.Add(move);
-
-//            if (Search(nextCO, nextEO, nextUDS, depth + 1, move))
-//                return true;
-
-//            solutionMoves.RemoveAt(solutionMoves.Count - 1);
-//        }
-
-//        return false;
-//    }
-
-//    /// <summary>
-//    /// Checks if two moves are on opposite faces (e.g. F vs B, U vs D, R vs L).
-//    /// Used for additional pruning to reduce symmetric branches.
-//    /// </summary>
-//    private bool IsOppositeFace(int m1, int m2)
-//    {
-//        int f1 = m1 / 3;
-//        int f2 = m2 / 3;
-
-//        // Faces are indexed 0..5 in Mapping:
-//        // FRONT(0) opposite BACK(3)
-//        // UP(1) opposite DOWN(4)
-//        // RIGHT(2) opposite LEFT(5)
-//        return (f1 == 0 && f2 == 3) ||
-//               (f1 == 3 && f2 == 0) ||
-//               (f1 == 1 && f2 == 4) ||
-//               (f1 == 4 && f2 == 1) ||
-//               (f1 == 2 && f2 == 5) ||
-//               (f1 == 5 && f2 == 2);
-//    }
-//}

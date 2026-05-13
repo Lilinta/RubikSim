@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="dir_4edcbb236dfd51dd81727243a38df6a0" kind="dir">
+    <compoundname>Scripts</compoundname>
+    <innerdir refid="dir_2d7708a101661e394f02dd24c82fe353">Scripts/Core</innerdir>
+    <innerdir refid="dir_7e9987e2ba0883a71ec23d5b1de55d72">Scripts/Game</innerdir>
+    <innerdir refid="dir_7924e68fa63289e5bbb4318a9ae65414">Scripts/Rendering</innerdir>
+    <innerdir refid="dir_5731c39f04496b079ea102b455316d3a">Scripts/Solver</innerdir>
+    <innerdir refid="dir_cf3cba7cb859b249fb665d794c791dc5">Scripts/UI</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/"/>
+  </compounddef>
+</doxygen>

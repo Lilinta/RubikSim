@@ -1,0 +1,64 @@
+\doxysection{Phase1\+Solver Class Reference}
+\hypertarget{class_phase1_solver}{}\label{class_phase1_solver}\index{Phase1Solver@{Phase1Solver}}
+
+
+Implements Phase 1 of the Kociemba algorithm. Goal:\+ Orient all corners and edges, and place the 4 UD-\/slice edges into the middle slice. Uses IDA\texorpdfstring{$\ast$}{*} search with heuristics from pruning tables.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_phase1_solver_a11838f53adbace09340fac150d86075f}{Phase1\+Solver}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the Phase 1 solver and sets the target solved indices. \end{DoxyCompactList}\item 
+List$<$ int $>$ \doxymbox{\hyperlink{class_phase1_solver_a2cc3740215c15fb38f7caab938ff6e22}{Solve}} (int co, int eo, int uds)
+\begin{DoxyCompactList}\small\item\em Solves Phase 1 using Iterative Deepening A\texorpdfstring{$\ast$}{*} (IDA\texorpdfstring{$\ast$}{*}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implements Phase 1 of the Kociemba algorithm. Goal:\+ Orient all corners and edges, and place the 4 UD-\/slice edges into the middle slice. Uses IDA\texorpdfstring{$\ast$}{*} search with heuristics from pruning tables. 
+
+\label{class_phase1_solver_doc-constructors}
+\Hypertarget{class_phase1_solver_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_phase1_solver_a11838f53adbace09340fac150d86075f}\index{Phase1Solver@{Phase1Solver}!Phase1Solver@{Phase1Solver}}
+\index{Phase1Solver@{Phase1Solver}!Phase1Solver@{Phase1Solver}}
+\doxysubsubsection{\texorpdfstring{Phase1Solver()}{Phase1Solver()}}
+{\footnotesize\ttfamily \label{class_phase1_solver_a11838f53adbace09340fac150d86075f} 
+Phase1\+Solver.\+Phase1\+Solver (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the Phase 1 solver and sets the target solved indices. 
+
+
+
+\label{class_phase1_solver_doc-func-members}
+\Hypertarget{class_phase1_solver_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_phase1_solver_a2cc3740215c15fb38f7caab938ff6e22}\index{Phase1Solver@{Phase1Solver}!Solve@{Solve}}
+\index{Solve@{Solve}!Phase1Solver@{Phase1Solver}}
+\doxysubsubsection{\texorpdfstring{Solve()}{Solve()}}
+{\footnotesize\ttfamily \label{class_phase1_solver_a2cc3740215c15fb38f7caab938ff6e22} 
+List$<$ int $>$ Phase1\+Solver.\+Solve (\begin{DoxyParamCaption}\item[{int}]{co}{, }\item[{int}]{eo}{, }\item[{int}]{uds}{}\end{DoxyParamCaption})}
+
+
+
+Solves Phase 1 using Iterative Deepening A\texorpdfstring{$\ast$}{*} (IDA\texorpdfstring{$\ast$}{*}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em co} & Current Corner Orientation index.\\
+\hline
+{\em eo} & Current Edge Orientation index.\\
+\hline
+{\em uds} & Current UD-\/\+Slice position index.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of move indices representing the Phase 1 solution.
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Solver/\+\doxymbox{\hyperlink{_phase1_solver_8cs}{Phase1\+Solver.\+cs}}\end{DoxyCompactItemize}

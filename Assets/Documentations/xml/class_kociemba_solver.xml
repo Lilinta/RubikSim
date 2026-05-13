@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_kociemba_solver" kind="class" language="C#" prot="public">
+    <compoundname>KociembaSolver</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_kociemba_solver_1a3ba5c160f7d1c8b1db848d69e7fc6ebc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_phase1_solver" kindref="compound">Phase1Solver</ref></type>
+        <definition>Phase1Solver KociembaSolver.phase1</definition>
+        <argsstring></argsstring>
+        <name>phase1</name>
+        <qualifiedname>KociembaSolver.phase1</qualifiedname>
+        <initializer>= new <ref refid="class_phase1_solver" kindref="compound">Phase1Solver</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/KociembaSolver.cs" line="10" column="26" bodyfile="Scripts/Solver/KociembaSolver.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_kociemba_solver_1a96603dbb4fd3d40371fbcf40accb0a52" prot="private" static="no" mutable="no">
+        <type><ref refid="class_phase2_solver" kindref="compound">Phase2Solver</ref></type>
+        <definition>Phase2Solver KociembaSolver.phase2</definition>
+        <argsstring></argsstring>
+        <name>phase2</name>
+        <qualifiedname>KociembaSolver.phase2</qualifiedname>
+        <initializer>= new <ref refid="class_phase2_solver" kindref="compound">Phase2Solver</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/KociembaSolver.cs" line="11" column="26" bodyfile="Scripts/Solver/KociembaSolver.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_kociemba_solver_1ab96f1064a15ce885532a65ffdd48eab9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KociembaSolver.KociembaSolver</definition>
+        <argsstring>()</argsstring>
+        <name>KociembaSolver</name>
+        <qualifiedname>KociembaSolver.KociembaSolver</qualifiedname>
+        <briefdescription>
+<para>Initializes solver. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/KociembaSolver.cs" line="16" column="12" bodyfile="Scripts/Solver/KociembaSolver.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_kociemba_solver_1ab67fcc5651c4c71642aff9b1e6118559" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="class_move" kindref="compound">Move</ref> &gt;</type>
+        <definition>List&lt; Move &gt; KociembaSolver.Solve</definition>
+        <argsstring>(CubeState state)</argsstring>
+        <name>Solve</name>
+        <qualifiedname>KociembaSolver.Solve</qualifiedname>
+        <param>
+          <type><ref refid="class_cube_state" kindref="compound">CubeState</ref></type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Calculates the optimal (or near-optimal) solution for a given cube state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The current physical state of the cube.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A list of <ref refid="class_move" kindref="compound">Move</ref> objects to solve the cube.</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/KociembaSolver.cs" line="27" column="17" bodyfile="Scripts/Solver/KociembaSolver.cs" bodystart="27" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>The main solver class coordinating the Two-Phase Kociemba algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/KociembaSolver.cs" line="8" column="7" bodyfile="Scripts/Solver/KociembaSolver.cs" bodystart="9" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_kociemba_solver_1ab96f1064a15ce885532a65ffdd48eab9" prot="public" virt="non-virtual"><scope>KociembaSolver</scope><name>KociembaSolver</name></member>
+      <member refid="class_kociemba_solver_1a3ba5c160f7d1c8b1db848d69e7fc6ebc" prot="private" virt="non-virtual"><scope>KociembaSolver</scope><name>phase1</name></member>
+      <member refid="class_kociemba_solver_1a96603dbb4fd3d40371fbcf40accb0a52" prot="private" virt="non-virtual"><scope>KociembaSolver</scope><name>phase2</name></member>
+      <member refid="class_kociemba_solver_1ab67fcc5651c4c71642aff9b1e6118559" prot="public" virt="non-virtual"><scope>KociembaSolver</scope><name>Solve</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

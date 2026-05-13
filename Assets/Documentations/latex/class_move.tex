@@ -1,0 +1,191 @@
+\doxysection{Move Class Reference}
+\hypertarget{class_move}{}\label{class_move}\index{Move@{Move}}
+
+
+Represents a single face rotation move on the Rubik\textquotesingle{}s Cube.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_move_a9142d9caa44ca547568c5b6183dce2a8}{Move}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a default move (Face -\/1, no rotation). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move_a85007162b85ccec224d3bbdbfdd9c8b3}{Move}} (int \+\_\+face)
+\begin{DoxyCompactList}\small\item\em Initializes a move with a specific face and default 90-\/degree clockwise rotation. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move_a311ba258166ab0499384992b8c19da0b}{Move}} (int \+\_\+face, bool \+\_\+rev)
+\begin{DoxyCompactList}\small\item\em Initializes a move with a specific face and direction (90-\/degree rotation). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move_a22569998f6e40e7cf5f49ff7f76c4971}{Move}} (int \+\_\+face, bool \+\_\+rev, bool \+\_\+is180)
+\begin{DoxyCompactList}\small\item\em Initializes a move with specific face, direction, and rotation type. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_move}{Move}} \doxymbox{\hyperlink{class_move_a73e6c67661a25fa52ffbb6323a67344a}{Get\+Inverted\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Returns a new move that is the logical inverse of the current move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_move}{Move}} \doxymbox{\hyperlink{class_move_a05af98850891e881af40d7d73dfd583f}{Get\+Random\+Move}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random valid move. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_move_a5991c96f7dc2a28a88914f97d1ad27b0}{face}}
+\begin{DoxyCompactList}\small\item\em The index of the face being rotated (FRONT, UP, RIGHT, etc.). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_move_aa2aa3da1b9e01423c9005fe70e4ae0f6}{rev}}
+\begin{DoxyCompactList}\small\item\em True if the rotation is counter-\/clockwise (Reverse). \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_move_a9febd7b347395fa040153d609c406b11}{is180}}
+\begin{DoxyCompactList}\small\item\em True if the rotation is 180 degrees. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single face rotation move on the Rubik\textquotesingle{}s Cube. 
+
+A move consists of:\+
+\begin{DoxyItemize}
+\item face:\+ which face to rotate (0..5)
+\item rev:\+ whether rotation is counter-\/clockwise (90 degrees CCW)
+\item is180:\+ whether rotation is a double turn (180 degrees)
+\end{DoxyItemize}
+
+Moves are intended to be immutable after creation. 
+
+\label{class_move_doc-constructors}
+\Hypertarget{class_move_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_move_a9142d9caa44ca547568c5b6183dce2a8}\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_move_a9142d9caa44ca547568c5b6183dce2a8} 
+Move.\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a default move (Face -\/1, no rotation). 
+
+\Hypertarget{class_move_a85007162b85ccec224d3bbdbfdd9c8b3}\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_move_a85007162b85ccec224d3bbdbfdd9c8b3} 
+Move.\+Move (\begin{DoxyParamCaption}\item[{int}]{\+\_\+face}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a move with a specific face and default 90-\/degree clockwise rotation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+face} & Face index.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_move_a311ba258166ab0499384992b8c19da0b}\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_move_a311ba258166ab0499384992b8c19da0b} 
+Move.\+Move (\begin{DoxyParamCaption}\item[{int}]{\+\_\+face}{, }\item[{bool}]{\+\_\+rev}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a move with a specific face and direction (90-\/degree rotation). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+face} & Face index.\\
+\hline
+{\em \+\_\+rev} & True for counter-\/clockwise, false for clockwise.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_move_a22569998f6e40e7cf5f49ff7f76c4971}\index{Move@{Move}!Move@{Move}}
+\index{Move@{Move}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_move_a22569998f6e40e7cf5f49ff7f76c4971} 
+Move.\+Move (\begin{DoxyParamCaption}\item[{int}]{\+\_\+face}{, }\item[{bool}]{\+\_\+rev}{, }\item[{bool}]{\+\_\+is180}{}\end{DoxyParamCaption})}
+
+
+
+Initializes a move with specific face, direction, and rotation type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+face} & Face index.\\
+\hline
+{\em \+\_\+rev} & True for counter-\/clockwise.\\
+\hline
+{\em \+\_\+is180} & True for 180-\/degree rotation.\\
+\hline
+\end{DoxyParams}
+
+
+\label{class_move_doc-func-members}
+\Hypertarget{class_move_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_move_a73e6c67661a25fa52ffbb6323a67344a}\index{Move@{Move}!GetInvertedMove@{GetInvertedMove}}
+\index{GetInvertedMove@{GetInvertedMove}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{GetInvertedMove()}{GetInvertedMove()}}
+{\footnotesize\ttfamily \label{class_move_a73e6c67661a25fa52ffbb6323a67344a} 
+\doxymbox{\hyperlink{class_move}{Move}} Move.\+Get\+Inverted\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns a new move that is the logical inverse of the current move. 
+
+\begin{DoxyReturn}{Returns}
+The inverted \doxylink{class_move}{Move} object.
+\end{DoxyReturn}
+\Hypertarget{class_move_a05af98850891e881af40d7d73dfd583f}\index{Move@{Move}!GetRandomMove@{GetRandomMove}}
+\index{GetRandomMove@{GetRandomMove}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{GetRandomMove()}{GetRandomMove()}}
+{\footnotesize\ttfamily \label{class_move_a05af98850891e881af40d7d73dfd583f} 
+\doxymbox{\hyperlink{class_move}{Move}} Move.\+Get\+Random\+Move (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Generates a random valid move. 
+
+Each move has:\+
+\begin{DoxyItemize}
+\item Random face (0..5)
+\item Random type (normal, reverse, 180°)
+\end{DoxyItemize}
+
+Useful for scrambling.
+
+\begin{DoxyReturn}{Returns}
+A new random \doxylink{class_move}{Move} object.
+\end{DoxyReturn}
+
+
+\label{class_move_doc-variable-members}
+\Hypertarget{class_move_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_move_a5991c96f7dc2a28a88914f97d1ad27b0}\index{Move@{Move}!face@{face}}
+\index{face@{face}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{face}{face}}
+{\footnotesize\ttfamily \label{class_move_a5991c96f7dc2a28a88914f97d1ad27b0} 
+int Move.\+face}
+
+
+
+The index of the face being rotated (FRONT, UP, RIGHT, etc.). 
+
+\Hypertarget{class_move_a9febd7b347395fa040153d609c406b11}\index{Move@{Move}!is180@{is180}}
+\index{is180@{is180}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{is180}{is180}}
+{\footnotesize\ttfamily \label{class_move_a9febd7b347395fa040153d609c406b11} 
+bool Move.\+is180}
+
+
+
+True if the rotation is 180 degrees. 
+
+\Hypertarget{class_move_aa2aa3da1b9e01423c9005fe70e4ae0f6}\index{Move@{Move}!rev@{rev}}
+\index{rev@{rev}!Move@{Move}}
+\doxysubsubsection{\texorpdfstring{rev}{rev}}
+{\footnotesize\ttfamily \label{class_move_aa2aa3da1b9e01423c9005fe70e4ae0f6} 
+bool Move.\+rev}
+
+
+
+True if the rotation is counter-\/clockwise (Reverse). 
+
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Scripts/\+\+Core/\+\doxymbox{\hyperlink{_move_8cs}{Move.\+cs}}\end{DoxyCompactItemize}

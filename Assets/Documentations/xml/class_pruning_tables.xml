@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_pruning_tables" kind="class" language="C#" prot="public">
+    <compoundname>PruningTables</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_pruning_tables_1ab42383c9df6d22b8fc04054dd1de2813" prot="public" static="yes" mutable="no">
+        <type>byte[,]</type>
+        <definition>byte [,] PruningTables.co_eo_prune</definition>
+        <argsstring></argsstring>
+        <name>co_eo_prune</name>
+        <qualifiedname>PruningTables.co_eo_prune</qualifiedname>
+        <briefdescription>
+<para>Minimum moves to solve CO and EO simultaneously. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="11" column="24" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a6e98f28021b0503d9fe60c944676e2c8" prot="public" static="yes" mutable="no">
+        <type>byte[,]</type>
+        <definition>byte [,] PruningTables.eo_uds_prune</definition>
+        <argsstring></argsstring>
+        <name>eo_uds_prune</name>
+        <qualifiedname>PruningTables.eo_uds_prune</qualifiedname>
+        <briefdescription>
+<para>Minimum moves to solve EO and UD-Slice position. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="13" column="24" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1aa8cffdc4db1acd1b0e5c70aab46be287" prot="public" static="yes" mutable="no">
+        <type>byte[,]</type>
+        <definition>byte [,] PruningTables.cp_uds2_prune</definition>
+        <argsstring></argsstring>
+        <name>cp_uds2_prune</name>
+        <qualifiedname>PruningTables.cp_uds2_prune</qualifiedname>
+        <briefdescription>
+<para>Minimum moves to solve CP and UD-Slice permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="15" column="24" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a3c5decb130cb1e8be86da77e9abb2bc0" prot="public" static="yes" mutable="no">
+        <type>byte[,]</type>
+        <definition>byte [,] PruningTables.ep_uds2_prune</definition>
+        <argsstring></argsstring>
+        <name>ep_uds2_prune</name>
+        <qualifiedname>PruningTables.ep_uds2_prune</qualifiedname>
+        <briefdescription>
+<para>Minimum moves to solve EP and UD-Slice permutation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="17" column="24" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_pruning_tables_1a95900da66f52c63fb0334581e2d409cd" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._co</definition>
+        <argsstring></argsstring>
+        <name>_co</name>
+        <qualifiedname>PruningTables._co</qualifiedname>
+        <briefdescription>
+<para>The targeted co index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="20" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a0c50a7bc46eaa7ea71901e2d1fab999b" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._eo</definition>
+        <argsstring></argsstring>
+        <name>_eo</name>
+        <qualifiedname>PruningTables._eo</qualifiedname>
+        <briefdescription>
+<para>The targeted eo index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="22" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a7d63c8169f6116bb302a14f4627a4ba9" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._uds</definition>
+        <argsstring></argsstring>
+        <name>_uds</name>
+        <qualifiedname>PruningTables._uds</qualifiedname>
+        <briefdescription>
+<para>The targeted uds index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="24" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a21d233c3af5720177cd9c2a49b514cb2" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._cp</definition>
+        <argsstring></argsstring>
+        <name>_cp</name>
+        <qualifiedname>PruningTables._cp</qualifiedname>
+        <briefdescription>
+<para>The targeted cp index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="26" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a7bb3f69206f3e6b87e1001f2dee90e39" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._ep</definition>
+        <argsstring></argsstring>
+        <name>_ep</name>
+        <qualifiedname>PruningTables._ep</qualifiedname>
+        <briefdescription>
+<para>The targeted ep index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="28" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a5ebca9cf3132fe71b2a4811c769a2df9" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int PruningTables._uds2</definition>
+        <argsstring></argsstring>
+        <name>_uds2</name>
+        <qualifiedname>PruningTables._uds2</qualifiedname>
+        <briefdescription>
+<para>The targeted uds2 index. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="30" column="16" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pruning_tables_1a53178acf7b15a81639b706940a7fc211" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool PruningTables.initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <qualifiedname>PruningTables.initialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Checks if it has been initalized yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="32" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_pruning_tables_1abfe8d299cf9f7aac79d17e5d69dfc753" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>PruningTables.Init</qualifiedname>
+        <briefdescription>
+<para>Initializes and fills all pruning tables using Breadth-First Search (BFS). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="37" column="24" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="37" bodyend="66"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_pruning_tables_1a2e9bbaf812f51178e4c909a6f1d36c8e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Fill</definition>
+        <argsstring>(byte[,] table, byte val)</argsstring>
+        <name>Fill</name>
+        <qualifiedname>PruningTables.Fill</qualifiedname>
+        <param>
+          <type>byte</type>
+          <declname>table</declname>
+          <array>[,]</array>
+        </param>
+        <param>
+          <type>byte</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+<para>Fills a 2D byte array with a specific value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="69" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="69" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pruning_tables_1a14d3011ac69f86e32d5b20a45cbf9b7b" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Build_CO_EO</definition>
+        <argsstring>()</argsstring>
+        <name>Build_CO_EO</name>
+        <qualifiedname>PruningTables.Build_CO_EO</qualifiedname>
+        <briefdescription>
+<para>Precomputes co_eo_prune. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="79" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="79" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pruning_tables_1ad7d8430075dccc8bfb70a6927bdb5a54" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Build_EO_UDS</definition>
+        <argsstring>()</argsstring>
+        <name>Build_EO_UDS</name>
+        <qualifiedname>PruningTables.Build_EO_UDS</qualifiedname>
+        <briefdescription>
+<para>Precomputes eo_uds_prune. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="105" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="105" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pruning_tables_1a913900694cffc70f6d2d555c7029c48a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Build_CP_UDS2</definition>
+        <argsstring>()</argsstring>
+        <name>Build_CP_UDS2</name>
+        <qualifiedname>PruningTables.Build_CP_UDS2</qualifiedname>
+        <briefdescription>
+<para>Precomputes cp_uds2_prune. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="133" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="133" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pruning_tables_1a5a8ab07e53af4d35276957380b2a04bb" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void PruningTables.Build_EP_UDS2</definition>
+        <argsstring>()</argsstring>
+        <name>Build_EP_UDS2</name>
+        <qualifiedname>PruningTables.Build_EP_UDS2</qualifiedname>
+        <briefdescription>
+<para>Precomputes ep_uds2_prune. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/PruningTables.cs" line="159" column="17" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="159" bodyend="182"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Precomputes and stores pruning tables (distance heuristics) for the solver. Each table stores the minimum number of moves required to reach the target coordinate from a given coordinate, used to prune search branches in IDA*. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/PruningTables.cs" line="8" column="15" bodyfile="Scripts/Solver/PruningTables.cs" bodystart="9" bodyend="183"/>
+    <listofallmembers>
+      <member refid="class_pruning_tables_1a95900da66f52c63fb0334581e2d409cd" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_co</name></member>
+      <member refid="class_pruning_tables_1a21d233c3af5720177cd9c2a49b514cb2" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_cp</name></member>
+      <member refid="class_pruning_tables_1a0c50a7bc46eaa7ea71901e2d1fab999b" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_eo</name></member>
+      <member refid="class_pruning_tables_1a7bb3f69206f3e6b87e1001f2dee90e39" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_ep</name></member>
+      <member refid="class_pruning_tables_1a7d63c8169f6116bb302a14f4627a4ba9" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_uds</name></member>
+      <member refid="class_pruning_tables_1a5ebca9cf3132fe71b2a4811c769a2df9" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>_uds2</name></member>
+      <member refid="class_pruning_tables_1a14d3011ac69f86e32d5b20a45cbf9b7b" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>Build_CO_EO</name></member>
+      <member refid="class_pruning_tables_1a913900694cffc70f6d2d555c7029c48a" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>Build_CP_UDS2</name></member>
+      <member refid="class_pruning_tables_1ad7d8430075dccc8bfb70a6927bdb5a54" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>Build_EO_UDS</name></member>
+      <member refid="class_pruning_tables_1a5a8ab07e53af4d35276957380b2a04bb" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>Build_EP_UDS2</name></member>
+      <member refid="class_pruning_tables_1ab42383c9df6d22b8fc04054dd1de2813" prot="public" virt="non-virtual"><scope>PruningTables</scope><name>co_eo_prune</name></member>
+      <member refid="class_pruning_tables_1aa8cffdc4db1acd1b0e5c70aab46be287" prot="public" virt="non-virtual"><scope>PruningTables</scope><name>cp_uds2_prune</name></member>
+      <member refid="class_pruning_tables_1a6e98f28021b0503d9fe60c944676e2c8" prot="public" virt="non-virtual"><scope>PruningTables</scope><name>eo_uds_prune</name></member>
+      <member refid="class_pruning_tables_1a3c5decb130cb1e8be86da77e9abb2bc0" prot="public" virt="non-virtual"><scope>PruningTables</scope><name>ep_uds2_prune</name></member>
+      <member refid="class_pruning_tables_1a2e9bbaf812f51178e4c909a6f1d36c8e" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>Fill</name></member>
+      <member refid="class_pruning_tables_1abfe8d299cf9f7aac79d17e5d69dfc753" prot="public" virt="non-virtual"><scope>PruningTables</scope><name>Init</name></member>
+      <member refid="class_pruning_tables_1a53178acf7b15a81639b706940a7fc211" prot="private" virt="non-virtual"><scope>PruningTables</scope><name>initialized</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

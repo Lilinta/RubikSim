@@ -12,8 +12,12 @@ using static Mapping;
 /// </summary>
 public class Cubie
 {
+    /// <summary> Internal array storing the face color indices. </summary>
     int[] color;
 
+    /// <summary>
+    /// Initializes a new Cubie with default face colors corresponding to face indices.
+    /// </summary>
     public Cubie()
     {
         color = new int[6];
@@ -24,9 +28,10 @@ public class Cubie
     }
 
     /// <summary>
-    /// Gets or sets the color index of a specific face of this cubie.
+    /// Indexer to get or set the color index of a specific face of this cubie.
     /// </summary>
-    /// <param name="index">Face index</param>
+    /// <param name="index">The face index constant (0..5).</param>
+    /// <returns>The color index present on that face.</returns>
     public int this[int index]
     {
         get => color[index];
@@ -34,15 +39,12 @@ public class Cubie
     }
 
     /// <summary>
-    /// Applies a face rotation to this cubie by rotating its face colors.
+    /// Applies a face rotation to this cubie by permuting its internal face colors.
     /// 
-    /// This does NOT change cubie position in the cube.
-    /// It only updates internal orientation (color permutation).
-    /// 
-    /// The rotation direction and type (normal, reverse, 180°)
-    /// are determined by the Move object.
+    /// This does NOT change the cubie's position in the 3D grid.
+    /// It updates which color faces which direction after a rotation.
     /// </summary>
-    /// <param name="move">Move to apply</param>
+    /// <param name="move">The Move object describing the rotation.</param>
     public void ApplyMove(Move move)
     {
         int face = move.face;

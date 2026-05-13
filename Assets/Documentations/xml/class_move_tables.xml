@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_move_tables" kind="class" language="C#" prot="public">
+    <compoundname>MoveTables</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_move_tables_1a5baddf5aae6da9705cbfe997a935a15f" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.co_move</definition>
+        <argsstring></argsstring>
+        <name>co_move</name>
+        <qualifiedname>MoveTables.co_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for Corner Orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="12" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_tables_1aef97b317e1a31be38f5d08ac8512d54f" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.eo_move</definition>
+        <argsstring></argsstring>
+        <name>eo_move</name>
+        <qualifiedname>MoveTables.eo_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for Edge Orientation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="14" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_tables_1aa7e88f989a1807ee020b45a4c1685002" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.uds_move</definition>
+        <argsstring></argsstring>
+        <name>uds_move</name>
+        <qualifiedname>MoveTables.uds_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for UD-Slice position (Phase 1). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="16" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_tables_1af1d487024f1c99555b2922dc8ba5dd07" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.cp_move</definition>
+        <argsstring></argsstring>
+        <name>cp_move</name>
+        <qualifiedname>MoveTables.cp_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for Corner Permutation (Phase 2). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="18" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_tables_1a421d955ccdb432d608491e3171bdbf8b" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.ep_move</definition>
+        <argsstring></argsstring>
+        <name>ep_move</name>
+        <qualifiedname>MoveTables.ep_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for Edge Permutation (Phase 2). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="20" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_move_tables_1abe6c56e30ad15247335e4b475a10886d" prot="public" static="yes" mutable="no">
+        <type>int[,]</type>
+        <definition>int [,] MoveTables.uds2_move</definition>
+        <argsstring></argsstring>
+        <name>uds2_move</name>
+        <qualifiedname>MoveTables.uds2_move</qualifiedname>
+        <briefdescription>
+<para>Transition table for UD-Slice permutation (Phase 2). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="22" column="23" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_move_tables_1a7dffa47626599b9c1c466faaeb2d7728" prot="private" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool MoveTables.initialized</definition>
+        <argsstring></argsstring>
+        <name>initialized</name>
+        <qualifiedname>MoveTables.initialized</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Checks if it has been initialized. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="25" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_move_tables_1a2eccc22dea128c93a26a90800681b0c7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <qualifiedname>MoveTables.Init</qualifiedname>
+        <briefdescription>
+<para>Initializes all transition tables if they haven&apos;t been built yet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="30" column="24" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="30" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_move_tables_1a1e87800e025fb71e8bb1705a623e29a9" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildCOMove</definition>
+        <argsstring>()</argsstring>
+        <name>BuildCOMove</name>
+        <qualifiedname>MoveTables.BuildCOMove</qualifiedname>
+        <briefdescription>
+<para>Precomputes co_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="51" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="51" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_tables_1aab531db41e6299d58ac191bfc67c6d54" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildEOMove</definition>
+        <argsstring>()</argsstring>
+        <name>BuildEOMove</name>
+        <qualifiedname>MoveTables.BuildEOMove</qualifiedname>
+        <briefdescription>
+<para>Precomputes eo_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="68" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="68" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_tables_1a5808c09ed48be6622e2beb0270e7ebb5" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildUDSliceMove</definition>
+        <argsstring>()</argsstring>
+        <name>BuildUDSliceMove</name>
+        <qualifiedname>MoveTables.BuildUDSliceMove</qualifiedname>
+        <briefdescription>
+<para>Precomputes uds_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="85" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="85" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_tables_1a415580dc8bade59feab05cf30ec9b5bf" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildCPMove</definition>
+        <argsstring>()</argsstring>
+        <name>BuildCPMove</name>
+        <qualifiedname>MoveTables.BuildCPMove</qualifiedname>
+        <briefdescription>
+<para>Precomputes cp_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="102" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="102" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_tables_1abd01689a4bedcf2faa2e74cda669fbad" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildEPMove</definition>
+        <argsstring>()</argsstring>
+        <name>BuildEPMove</name>
+        <qualifiedname>MoveTables.BuildEPMove</qualifiedname>
+        <briefdescription>
+<para>Precomputes ep_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="119" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="119" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_move_tables_1ae1535baa53abc4e4e58fd2bed9a2063e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void MoveTables.BuildUDSlice2Move</definition>
+        <argsstring>()</argsstring>
+        <name>BuildUDSlice2Move</name>
+        <qualifiedname>MoveTables.BuildUDSlice2Move</qualifiedname>
+        <briefdescription>
+<para>Precomputes uds2_move. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/Solver/MoveTables.cs" line="136" column="17" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="136" bodyend="150"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Precomputes and stores transition tables for all cube coordinates. These tables allow the solver to find the next coordinate index given a move without performing expensive <ref refid="class_cubie_model" kindref="compound">CubieModel</ref> simulations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Scripts/Solver/MoveTables.cs" line="9" column="15" bodyfile="Scripts/Solver/MoveTables.cs" bodystart="10" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_move_tables_1a1e87800e025fb71e8bb1705a623e29a9" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildCOMove</name></member>
+      <member refid="class_move_tables_1a415580dc8bade59feab05cf30ec9b5bf" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildCPMove</name></member>
+      <member refid="class_move_tables_1aab531db41e6299d58ac191bfc67c6d54" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildEOMove</name></member>
+      <member refid="class_move_tables_1abd01689a4bedcf2faa2e74cda669fbad" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildEPMove</name></member>
+      <member refid="class_move_tables_1ae1535baa53abc4e4e58fd2bed9a2063e" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildUDSlice2Move</name></member>
+      <member refid="class_move_tables_1a5808c09ed48be6622e2beb0270e7ebb5" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>BuildUDSliceMove</name></member>
+      <member refid="class_move_tables_1a5baddf5aae6da9705cbfe997a935a15f" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>co_move</name></member>
+      <member refid="class_move_tables_1af1d487024f1c99555b2922dc8ba5dd07" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>cp_move</name></member>
+      <member refid="class_move_tables_1aef97b317e1a31be38f5d08ac8512d54f" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>eo_move</name></member>
+      <member refid="class_move_tables_1a421d955ccdb432d608491e3171bdbf8b" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>ep_move</name></member>
+      <member refid="class_move_tables_1a2eccc22dea128c93a26a90800681b0c7" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>Init</name></member>
+      <member refid="class_move_tables_1a7dffa47626599b9c1c466faaeb2d7728" prot="private" virt="non-virtual"><scope>MoveTables</scope><name>initialized</name></member>
+      <member refid="class_move_tables_1abe6c56e30ad15247335e4b475a10886d" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>uds2_move</name></member>
+      <member refid="class_move_tables_1aa7e88f989a1807ee020b45a4c1685002" prot="public" virt="non-virtual"><scope>MoveTables</scope><name>uds_move</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

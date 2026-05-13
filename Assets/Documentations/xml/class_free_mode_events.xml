@@ -1,0 +1,511 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.17.0" xml:lang="en-US">
+  <compounddef id="class_free_mode_events" kind="class" language="C#" prot="public">
+    <compoundname>FreeModeEvents</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MonoBehaviour</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_free_mode_events_1aba4a65966ebf6534c78c4b9a551bcd9f" prot="public" static="no" mutable="no">
+        <type><ref refid="class_game_manager" kindref="compound">GameManager</ref></type>
+        <definition>GameManager FreeModeEvents.game_manager</definition>
+        <argsstring></argsstring>
+        <name>game_manager</name>
+        <qualifiedname>FreeModeEvents.game_manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="11" column="24" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a1b57627aa66a66a43cf03f40b4ee604b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_solver_manager" kindref="compound">SolverManager</ref></type>
+        <definition>SolverManager FreeModeEvents.solver_manager</definition>
+        <argsstring></argsstring>
+        <name>solver_manager</name>
+        <qualifiedname>FreeModeEvents.solver_manager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="12" column="26" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1aeb33c986f5ab54e5268488ee25e51f01" prot="public" static="no" mutable="no">
+        <type>GameObject</type>
+        <definition>GameObject FreeModeEvents.import_container</definition>
+        <argsstring></argsstring>
+        <name>import_container</name>
+        <qualifiedname>FreeModeEvents.import_container</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="13" column="23" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1aa647c734f0d1643ae790f06be960e62a" prot="public" static="no" mutable="no">
+        <type><ref refid="class_touch_surfaces" kindref="compound">TouchSurfaces</ref></type>
+        <definition>TouchSurfaces FreeModeEvents.touch_surfaces</definition>
+        <argsstring></argsstring>
+        <name>touch_surfaces</name>
+        <qualifiedname>FreeModeEvents.touch_surfaces</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="14" column="26" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_free_mode_events_1a13137b47cdd1893515f1daed4a3b492a" prot="private" static="no" mutable="no">
+        <type>UIDocument</type>
+        <definition>UIDocument FreeModeEvents.document</definition>
+        <argsstring></argsstring>
+        <name>document</name>
+        <qualifiedname>FreeModeEvents.document</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="15" column="24" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a38b37645905f9aa4f23cd15fe954dfe7" prot="private" static="no" mutable="no">
+        <type>VisualElement</type>
+        <definition>VisualElement FreeModeEvents.container</definition>
+        <argsstring></argsstring>
+        <name>container</name>
+        <qualifiedname>FreeModeEvents.container</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="17" column="27" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1acd08e25a389b7f63c10be04b72395f6a" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.return_button</definition>
+        <argsstring></argsstring>
+        <name>return_button</name>
+        <qualifiedname>FreeModeEvents.return_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="18" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a3ae1c4897ca4667e3586a2634d2ba81d" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.import_button</definition>
+        <argsstring></argsstring>
+        <name>import_button</name>
+        <qualifiedname>FreeModeEvents.import_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="19" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a41846cf3c8c11f1cc5ab89be60191ef2" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.scramble_button</definition>
+        <argsstring></argsstring>
+        <name>scramble_button</name>
+        <qualifiedname>FreeModeEvents.scramble_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="20" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a6c452dedcce0082c56e7cc64d7a58920" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.solve_button</definition>
+        <argsstring></argsstring>
+        <name>solve_button</name>
+        <qualifiedname>FreeModeEvents.solve_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="21" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a4a5e2ea2a0c06aa5fa9f0c6b7e3de5ca" prot="private" static="no" mutable="no">
+        <type>VisualElement</type>
+        <definition>VisualElement FreeModeEvents.solver_container</definition>
+        <argsstring></argsstring>
+        <name>solver_container</name>
+        <qualifiedname>FreeModeEvents.solver_container</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="23" column="27" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1aa5eed745c0bcd5f653493e098ce209bf" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.solver_return_button</definition>
+        <argsstring></argsstring>
+        <name>solver_return_button</name>
+        <qualifiedname>FreeModeEvents.solver_return_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="24" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a6d003105edcd97974c8309cf84efd930" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.solver_backward_button</definition>
+        <argsstring></argsstring>
+        <name>solver_backward_button</name>
+        <qualifiedname>FreeModeEvents.solver_backward_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="25" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a429e3d98b6e423adedaecdbcf3c480fe" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button FreeModeEvents.solver_forward_button</definition>
+        <argsstring></argsstring>
+        <name>solver_forward_button</name>
+        <qualifiedname>FreeModeEvents.solver_forward_button</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="26" column="20" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_free_mode_events_1a59d5de67250ec2e342cb1e23c0dc3545" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool FreeModeEvents.is_solvable</definition>
+        <argsstring></argsstring>
+        <name>is_solvable</name>
+        <qualifiedname>FreeModeEvents.is_solvable</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="28" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_free_mode_events_1a1e0dd686cdc07f06e57af3e8f7f59713" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.Awake</definition>
+        <argsstring>()</argsstring>
+        <name>Awake</name>
+        <qualifiedname>FreeModeEvents.Awake</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="30" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="30" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1ac4605806c2a42799d3b458c71bdcfe25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnDisable</definition>
+        <argsstring>()</argsstring>
+        <name>OnDisable</name>
+        <qualifiedname>FreeModeEvents.OnDisable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="57" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="57" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1aaedea9b5d3fd1b68abe686f7566c69e3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnReturnClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnReturnClick</name>
+        <qualifiedname>FreeModeEvents.OnReturnClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="85" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1a43d7115334b2e00fff6603ac9875fdf7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnImportClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnImportClick</name>
+        <qualifiedname>FreeModeEvents.OnImportClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="91" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="91" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1a56da8d4d2ca3643ad3abb8e4b79bef5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnScrambleClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnScrambleClick</name>
+        <qualifiedname>FreeModeEvents.OnScrambleClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="99" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="99" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1a4fc56f1d2b32692398af360052fb05fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnSolveClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnSolveClick</name>
+        <qualifiedname>FreeModeEvents.OnSolveClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="105" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="105" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1a769063761e9c6ca5d2c8dbe026791241" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnSolverReturnClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnSolverReturnClick</name>
+        <qualifiedname>FreeModeEvents.OnSolverReturnClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="115" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="115" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1acfe3eeb87ab22ff9c518d0696815af39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnSolverBackwardClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnSolverBackwardClick</name>
+        <qualifiedname>FreeModeEvents.OnSolverBackwardClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="123" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="123" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_free_mode_events_1abff548a65f8ee8da5ca008b40cd02dc9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.OnSolverForwardClick</definition>
+        <argsstring>(ClickEvent evt)</argsstring>
+        <name>OnSolverForwardClick</name>
+        <qualifiedname>FreeModeEvents.OnSolverForwardClick</qualifiedname>
+        <param>
+          <type>ClickEvent</type>
+          <declname>evt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="129" column="18" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="129" bodyend="133"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_free_mode_events_1a563d09f27f1970dfa702476f6f49c18c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FreeModeEvents.IsSolvable</definition>
+        <argsstring>()</argsstring>
+        <name>IsSolvable</name>
+        <qualifiedname>FreeModeEvents.IsSolvable</qualifiedname>
+        <briefdescription>
+<para>Checks the current state solvability and updates the Solve button label accordingly. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Scripts/UI/FreeModeEvents.cs" line="72" column="17" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="72" bodyend="83"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Handles UI events for the Free Mode scene. Manages transitions between the main cube view, the import overlay, and the solver playback view. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>FreeModeEvents</label>
+        <link refid="class_free_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>CubeAnimator</label>
+        <link refid="class_cube_animator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>CubeRenderer</label>
+        <link refid="class_cube_renderer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>CubeState</label>
+        <link refid="class_cube_state"/>
+      </node>
+      <node id="1">
+        <label>FreeModeEvents</label>
+        <link refid="class_free_mode_events"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>solver_manager</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>touch_surfaces</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>GameManager</label>
+        <link refid="class_game_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>render</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>animator</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>current_state</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>MonoBehaviour</label>
+      </node>
+      <node id="7">
+        <label>SolverManager</label>
+        <link refid="class_solver_manager"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>game_manager</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>TouchSurfaces</label>
+        <link refid="class_touch_surfaces"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>manager</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Scripts/UI/FreeModeEvents.cs" line="9" column="7" bodyfile="Scripts/UI/FreeModeEvents.cs" bodystart="10" bodyend="134"/>
+    <listofallmembers>
+      <member refid="class_free_mode_events_1a1e0dd686cdc07f06e57af3e8f7f59713" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>Awake</name></member>
+      <member refid="class_free_mode_events_1a38b37645905f9aa4f23cd15fe954dfe7" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>container</name></member>
+      <member refid="class_free_mode_events_1a13137b47cdd1893515f1daed4a3b492a" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>document</name></member>
+      <member refid="class_free_mode_events_1aba4a65966ebf6534c78c4b9a551bcd9f" prot="public" virt="non-virtual"><scope>FreeModeEvents</scope><name>game_manager</name></member>
+      <member refid="class_free_mode_events_1a3ae1c4897ca4667e3586a2634d2ba81d" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>import_button</name></member>
+      <member refid="class_free_mode_events_1aeb33c986f5ab54e5268488ee25e51f01" prot="public" virt="non-virtual"><scope>FreeModeEvents</scope><name>import_container</name></member>
+      <member refid="class_free_mode_events_1a59d5de67250ec2e342cb1e23c0dc3545" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>is_solvable</name></member>
+      <member refid="class_free_mode_events_1a563d09f27f1970dfa702476f6f49c18c" prot="public" virt="non-virtual"><scope>FreeModeEvents</scope><name>IsSolvable</name></member>
+      <member refid="class_free_mode_events_1ac4605806c2a42799d3b458c71bdcfe25" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnDisable</name></member>
+      <member refid="class_free_mode_events_1a43d7115334b2e00fff6603ac9875fdf7" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnImportClick</name></member>
+      <member refid="class_free_mode_events_1aaedea9b5d3fd1b68abe686f7566c69e3" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnReturnClick</name></member>
+      <member refid="class_free_mode_events_1a56da8d4d2ca3643ad3abb8e4b79bef5e" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnScrambleClick</name></member>
+      <member refid="class_free_mode_events_1a4fc56f1d2b32692398af360052fb05fa" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnSolveClick</name></member>
+      <member refid="class_free_mode_events_1acfe3eeb87ab22ff9c518d0696815af39" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnSolverBackwardClick</name></member>
+      <member refid="class_free_mode_events_1abff548a65f8ee8da5ca008b40cd02dc9" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnSolverForwardClick</name></member>
+      <member refid="class_free_mode_events_1a769063761e9c6ca5d2c8dbe026791241" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>OnSolverReturnClick</name></member>
+      <member refid="class_free_mode_events_1acd08e25a389b7f63c10be04b72395f6a" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>return_button</name></member>
+      <member refid="class_free_mode_events_1a41846cf3c8c11f1cc5ab89be60191ef2" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>scramble_button</name></member>
+      <member refid="class_free_mode_events_1a6c452dedcce0082c56e7cc64d7a58920" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>solve_button</name></member>
+      <member refid="class_free_mode_events_1a6d003105edcd97974c8309cf84efd930" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>solver_backward_button</name></member>
+      <member refid="class_free_mode_events_1a4a5e2ea2a0c06aa5fa9f0c6b7e3de5ca" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>solver_container</name></member>
+      <member refid="class_free_mode_events_1a429e3d98b6e423adedaecdbcf3c480fe" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>solver_forward_button</name></member>
+      <member refid="class_free_mode_events_1a1b57627aa66a66a43cf03f40b4ee604b" prot="public" virt="non-virtual"><scope>FreeModeEvents</scope><name>solver_manager</name></member>
+      <member refid="class_free_mode_events_1aa5eed745c0bcd5f653493e098ce209bf" prot="private" virt="non-virtual"><scope>FreeModeEvents</scope><name>solver_return_button</name></member>
+      <member refid="class_free_mode_events_1aa647c734f0d1643ae790f06be960e62a" prot="public" virt="non-virtual"><scope>FreeModeEvents</scope><name>touch_surfaces</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
